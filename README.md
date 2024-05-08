@@ -1,6 +1,6 @@
 # Student Information System
 
-Bu proje, SE 374 Visual Programming dersi kapsamında yapılan bir proje olarak geliştirilmiştir. Projenin amacı, bir okul yönetim sistemi yazılımını içermektedir.
+Bu proje, SE 374 Visual Programming dersi kapsamında yapılan bir dönem projesi olarak geliştirilmiştir. Projenin amacı, bir okul yönetim sistemi yazılımını içermektedir.
 
 Bu projede, öğrenci kaydı, öğretmen kaydı, sınıf atama, öğrenci takibi, kantin işlemleri, kantin kısıtlamaları, devamsızlık bildirimi ve raporlama gibi temel özellikler bulunmaktadır. 
 
