@@ -11,8 +11,6 @@ Bu projede, öğrenci kaydı, öğretmen kaydı, sınıf atama, öğrenci takibi
 3. **Ayarlar:** Proje ayarlarınıza göre gerekli konfigürasyonları yapın.
 4. **Çalıştırma:** Uygulamayı başlatın ve kullanmaya başlayın.
 
-## Katkılar
 
-Her türlü katkı ve geri bildirimleriniz için açığız. Katkı yapmak isterseniz, lütfen bir pull request gönderin.
 
 
