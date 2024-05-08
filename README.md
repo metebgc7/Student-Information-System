@@ -15,6 +15,4 @@ Bu projede, öğrenci kaydı, öğretmen kaydı, sınıf atama, öğrenci takibi
 
 Her türlü katkı ve geri bildirimleriniz için açığız. Katkı yapmak isterseniz, lütfen bir pull request gönderin.
 
-## Lisans
 
-Bu proje MIT lisansı altında lisanslanmıştır. Daha fazla bilgi için [LICENSE](LICENSE) dosyasını inceleyebilirsiniz.
