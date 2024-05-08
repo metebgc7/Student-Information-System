@@ -1,4 +1,4 @@
-# SE374 Visual Programming Projesi: Okul Yönetim Sistemi
+# Student Information System
 
 Bu proje, SE 374 Visual Programming dersi kapsamında yapılan bir proje olarak geliştirilmiştir. Projenin amacı, bir okul yönetim sistemi yazılımını içermektedir.
 
