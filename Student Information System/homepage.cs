@@ -57,59 +57,12 @@ namespace Student_Information_System
             }
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click_2(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblUsers_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void lblNumberofStudent_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click_3(object sender, EventArgs e)
-        {
-
-        }
 
         private void homepage_Load(object sender, EventArgs e)
         {
 
         }
+
     }
 }
