@@ -35,16 +35,13 @@ namespace Student_Information_System
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (txtUsername.Text == "hamdigiller" && txtPassword.Text == "mermermerve")
-            {
-                
-                new homepage().Show();
-                
-                
+            if (txtUsername.Text == "33" && txtPassword.Text == "33")
+            {    
+                this.Hide();
+                new homepage().Show(); 
             }
             else
             {
-
                 MessageBox.Show("Kullanıcı adı veya şifre hatalı, tekrar deneyiniz.");
                 txtUsername.Clear();
                 txtPassword.Clear();
