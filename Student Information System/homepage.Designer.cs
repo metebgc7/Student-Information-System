@@ -95,10 +95,9 @@
             this.panelPagesSidebar.Controls.Add(this.panel3);
             this.panelPagesSidebar.Controls.Add(this.lblMenu);
             this.panelPagesSidebar.Controls.Add(this.panel2);
-            this.panelPagesSidebar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelPagesSidebar.Location = new System.Drawing.Point(0, 0);
+            this.panelPagesSidebar.Location = new System.Drawing.Point(0, 52);
             this.panelPagesSidebar.Name = "panelPagesSidebar";
-            this.panelPagesSidebar.Size = new System.Drawing.Size(209, 650);
+            this.panelPagesSidebar.Size = new System.Drawing.Size(209, 657);
             this.panelPagesSidebar.TabIndex = 0;
             // 
             // lblMenu
@@ -106,7 +105,7 @@
             this.lblMenu.AutoSize = true;
             this.lblMenu.Font = new System.Drawing.Font("Montserrat SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblMenu.ForeColor = System.Drawing.Color.White;
-            this.lblMenu.Location = new System.Drawing.Point(24, 56);
+            this.lblMenu.Location = new System.Drawing.Point(27, 4);
             this.lblMenu.Name = "lblMenu";
             this.lblMenu.Size = new System.Drawing.Size(50, 18);
             this.lblMenu.TabIndex = 0;
@@ -118,9 +117,9 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(209, 0);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(913, 53);
+            this.panel1.Size = new System.Drawing.Size(1122, 53);
             this.panel1.TabIndex = 1;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDown_Event);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mouseMove_Event);
@@ -430,7 +429,7 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.lblStudents);
-            this.panel3.Location = new System.Drawing.Point(12, 146);
+            this.panel3.Location = new System.Drawing.Point(15, 94);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(184, 63);
             this.panel3.TabIndex = 1;
@@ -449,7 +448,7 @@
             // panel7
             // 
             this.panel7.Controls.Add(this.lblUsers);
-            this.panel7.Location = new System.Drawing.Point(12, 459);
+            this.panel7.Location = new System.Drawing.Point(15, 407);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(184, 63);
             this.panel7.TabIndex = 5;
@@ -468,7 +467,7 @@
             // panel6
             // 
             this.panel6.Controls.Add(this.lblCanteen);
-            this.panel6.Location = new System.Drawing.Point(12, 353);
+            this.panel6.Location = new System.Drawing.Point(15, 301);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(184, 63);
             this.panel6.TabIndex = 4;
@@ -487,7 +486,7 @@
             // panel5
             // 
             this.panel5.Controls.Add(this.lblClasses);
-            this.panel5.Location = new System.Drawing.Point(12, 284);
+            this.panel5.Location = new System.Drawing.Point(15, 232);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(184, 63);
             this.panel5.TabIndex = 3;
@@ -506,7 +505,7 @@
             // panel4
             // 
             this.panel4.Controls.Add(this.lblTeachers);
-            this.panel4.Location = new System.Drawing.Point(12, 215);
+            this.panel4.Location = new System.Drawing.Point(15, 163);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(184, 63);
             this.panel4.TabIndex = 2;
@@ -537,7 +536,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.lblHome);
-            this.panel2.Location = new System.Drawing.Point(12, 77);
+            this.panel2.Location = new System.Drawing.Point(15, 25);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(184, 63);
             this.panel2.TabIndex = 0;

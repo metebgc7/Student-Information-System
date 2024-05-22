@@ -45,17 +45,6 @@ namespace Student_Information_System
             mouseDown = false;
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            if (WindowState == FormWindowState.Normal) 
-            {
-                WindowState = FormWindowState.Maximized;
-            }
-            else
-            {
-                WindowState = FormWindowState.Normal;
-            }
-        }
 
 
 
