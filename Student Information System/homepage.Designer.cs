@@ -30,16 +30,31 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(homepage));
             this.panelPagesSidebar = new System.Windows.Forms.Panel();
+            this.pnlUsers = new System.Windows.Forms.Panel();
+            this.lblUsers = new System.Windows.Forms.Label();
+            this.pnlCanteen = new System.Windows.Forms.Panel();
+            this.lblCanteen = new System.Windows.Forms.Label();
+            this.pnlClasses = new System.Windows.Forms.Panel();
+            this.lblClasses = new System.Windows.Forms.Label();
+            this.pnlTeachers = new System.Windows.Forms.Panel();
+            this.lblTeachers = new System.Windows.Forms.Label();
+            this.pnlStudents = new System.Windows.Forms.Panel();
+            this.lblStudents = new System.Windows.Forms.Label();
             this.lblMenu = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lblHome = new System.Windows.Forms.Label();
+            this.pnlTopBar = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.picQuitHome = new System.Windows.Forms.PictureBox();
             this.pnlStudentNumber = new System.Windows.Forms.Panel();
-            this.lblTeacherNumber = new System.Windows.Forms.Panel();
-            this.lblClassNumber = new System.Windows.Forms.Panel();
+            this.lblDataStuNum = new System.Windows.Forms.Label();
             this.lblNumberofStudent = new System.Windows.Forms.Label();
-            this.lblNumberofTeacher = new System.Windows.Forms.Label();
+            this.pnlTeacherNumber = new System.Windows.Forms.Panel();
+            this.lblDataClsNum = new System.Windows.Forms.Label();
             this.lblNumberofClass = new System.Windows.Forms.Label();
+            this.pnlClassNumber = new System.Windows.Forms.Panel();
+            this.lblDataTeachNum = new System.Windows.Forms.Label();
+            this.lblNumberofTeacher = new System.Windows.Forms.Label();
             this.lblReports = new System.Windows.Forms.Label();
             this.lblStudentsAttandance = new System.Windows.Forms.Label();
             this.lblAttandanceofAllStudents = new System.Windows.Forms.Label();
@@ -56,49 +71,135 @@
             this.btnGetStudentsCanteenShopping = new System.Windows.Forms.Button();
             this.btnGetTest1 = new System.Windows.Forms.Button();
             this.btnTest2 = new System.Windows.Forms.Button();
-            this.lblDataStuNum = new System.Windows.Forms.Label();
-            this.lblDataTeachNum = new System.Windows.Forms.Label();
-            this.lblDataClsNum = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.lblUsers = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.lblCanteen = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.lblClasses = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.lblTeachers = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.lblStudents = new System.Windows.Forms.Label();
-            this.lblHome = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panelPagesSidebar.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.pnlStudentNumber.SuspendLayout();
-            this.lblTeacherNumber.SuspendLayout();
-            this.lblClassNumber.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel4.SuspendLayout();
+            this.pnlUsers.SuspendLayout();
+            this.pnlCanteen.SuspendLayout();
+            this.pnlClasses.SuspendLayout();
+            this.pnlTeachers.SuspendLayout();
+            this.pnlStudents.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.pnlTopBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picQuitHome)).BeginInit();
+            this.pnlStudentNumber.SuspendLayout();
+            this.pnlTeacherNumber.SuspendLayout();
+            this.pnlClassNumber.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelPagesSidebar
             // 
             this.panelPagesSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(72)))), ((int)(((byte)(192)))));
-            this.panelPagesSidebar.Controls.Add(this.panel7);
-            this.panelPagesSidebar.Controls.Add(this.panel6);
-            this.panelPagesSidebar.Controls.Add(this.panel5);
-            this.panelPagesSidebar.Controls.Add(this.panel4);
-            this.panelPagesSidebar.Controls.Add(this.panel3);
+            this.panelPagesSidebar.Controls.Add(this.pnlUsers);
+            this.panelPagesSidebar.Controls.Add(this.pnlCanteen);
+            this.panelPagesSidebar.Controls.Add(this.pnlClasses);
+            this.panelPagesSidebar.Controls.Add(this.pnlTeachers);
+            this.panelPagesSidebar.Controls.Add(this.pnlStudents);
             this.panelPagesSidebar.Controls.Add(this.lblMenu);
             this.panelPagesSidebar.Controls.Add(this.panel2);
             this.panelPagesSidebar.Location = new System.Drawing.Point(0, 52);
             this.panelPagesSidebar.Name = "panelPagesSidebar";
-            this.panelPagesSidebar.Size = new System.Drawing.Size(209, 657);
+            this.panelPagesSidebar.Size = new System.Drawing.Size(209, 600);
             this.panelPagesSidebar.TabIndex = 0;
+            // 
+            // pnlUsers
+            // 
+            this.pnlUsers.Controls.Add(this.lblUsers);
+            this.pnlUsers.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pnlUsers.Location = new System.Drawing.Point(15, 407);
+            this.pnlUsers.Name = "pnlUsers";
+            this.pnlUsers.Size = new System.Drawing.Size(184, 63);
+            this.pnlUsers.TabIndex = 5;
+            // 
+            // lblUsers
+            // 
+            this.lblUsers.AutoSize = true;
+            this.lblUsers.Font = new System.Drawing.Font("Montserrat SemiBold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblUsers.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.lblUsers.Location = new System.Drawing.Point(9, 17);
+            this.lblUsers.Name = "lblUsers";
+            this.lblUsers.Size = new System.Drawing.Size(83, 33);
+            this.lblUsers.TabIndex = 0;
+            this.lblUsers.Text = "Users";
+            // 
+            // pnlCanteen
+            // 
+            this.pnlCanteen.Controls.Add(this.lblCanteen);
+            this.pnlCanteen.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pnlCanteen.Location = new System.Drawing.Point(15, 301);
+            this.pnlCanteen.Name = "pnlCanteen";
+            this.pnlCanteen.Size = new System.Drawing.Size(184, 63);
+            this.pnlCanteen.TabIndex = 4;
+            // 
+            // lblCanteen
+            // 
+            this.lblCanteen.AutoSize = true;
+            this.lblCanteen.Font = new System.Drawing.Font("Montserrat SemiBold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblCanteen.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.lblCanteen.Location = new System.Drawing.Point(9, 15);
+            this.lblCanteen.Name = "lblCanteen";
+            this.lblCanteen.Size = new System.Drawing.Size(119, 33);
+            this.lblCanteen.TabIndex = 0;
+            this.lblCanteen.Text = "Canteen";
+            // 
+            // pnlClasses
+            // 
+            this.pnlClasses.Controls.Add(this.lblClasses);
+            this.pnlClasses.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pnlClasses.Location = new System.Drawing.Point(15, 232);
+            this.pnlClasses.Name = "pnlClasses";
+            this.pnlClasses.Size = new System.Drawing.Size(184, 63);
+            this.pnlClasses.TabIndex = 3;
+            // 
+            // lblClasses
+            // 
+            this.lblClasses.AutoSize = true;
+            this.lblClasses.Font = new System.Drawing.Font("Montserrat SemiBold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblClasses.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.lblClasses.Location = new System.Drawing.Point(9, 15);
+            this.lblClasses.Name = "lblClasses";
+            this.lblClasses.Size = new System.Drawing.Size(105, 33);
+            this.lblClasses.TabIndex = 0;
+            this.lblClasses.Text = "Classes";
+            // 
+            // pnlTeachers
+            // 
+            this.pnlTeachers.Controls.Add(this.lblTeachers);
+            this.pnlTeachers.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pnlTeachers.Location = new System.Drawing.Point(15, 163);
+            this.pnlTeachers.Name = "pnlTeachers";
+            this.pnlTeachers.Size = new System.Drawing.Size(184, 63);
+            this.pnlTeachers.TabIndex = 2;
+            // 
+            // lblTeachers
+            // 
+            this.lblTeachers.AutoSize = true;
+            this.lblTeachers.Font = new System.Drawing.Font("Montserrat SemiBold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblTeachers.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.lblTeachers.Location = new System.Drawing.Point(9, 15);
+            this.lblTeachers.Name = "lblTeachers";
+            this.lblTeachers.Size = new System.Drawing.Size(125, 33);
+            this.lblTeachers.TabIndex = 0;
+            this.lblTeachers.Text = "Teachers";
+            // 
+            // pnlStudents
+            // 
+            this.pnlStudents.Controls.Add(this.lblStudents);
+            this.pnlStudents.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pnlStudents.Location = new System.Drawing.Point(15, 94);
+            this.pnlStudents.Name = "pnlStudents";
+            this.pnlStudents.Size = new System.Drawing.Size(184, 63);
+            this.pnlStudents.TabIndex = 1;
+            this.pnlStudents.Click += new System.EventHandler(this.pnlStudents_Click);
+            // 
+            // lblStudents
+            // 
+            this.lblStudents.AutoSize = true;
+            this.lblStudents.Font = new System.Drawing.Font("Montserrat SemiBold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblStudents.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.lblStudents.Location = new System.Drawing.Point(9, 15);
+            this.lblStudents.Name = "lblStudents";
+            this.lblStudents.Size = new System.Drawing.Size(125, 33);
+            this.lblStudents.TabIndex = 0;
+            this.lblStudents.Text = "Students";
             // 
             // lblMenu
             // 
@@ -111,32 +212,38 @@
             this.lblMenu.TabIndex = 0;
             this.lblMenu.Text = "MENU";
             // 
-            // panel1
+            // panel2
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(72)))), ((int)(((byte)(192)))));
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1122, 53);
-            this.panel1.TabIndex = 1;
-            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDown_Event);
-            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mouseMove_Event);
-            this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.mouseUp_Event);
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.lblHome);
+            this.panel2.Location = new System.Drawing.Point(15, 25);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(184, 63);
+            this.panel2.TabIndex = 0;
             // 
-            // pictureBox2
+            // lblHome
             // 
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1065, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(57, 54);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 8;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.lblHome.AutoSize = true;
+            this.lblHome.Font = new System.Drawing.Font("Montserrat SemiBold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblHome.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.lblHome.Location = new System.Drawing.Point(9, 14);
+            this.lblHome.Name = "lblHome";
+            this.lblHome.Size = new System.Drawing.Size(89, 33);
+            this.lblHome.TabIndex = 0;
+            this.lblHome.Text = "Home";
+            // 
+            // pnlTopBar
+            // 
+            this.pnlTopBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(72)))), ((int)(((byte)(192)))));
+            this.pnlTopBar.Controls.Add(this.label1);
+            this.pnlTopBar.Controls.Add(this.picQuitHome);
+            this.pnlTopBar.Location = new System.Drawing.Point(0, 0);
+            this.pnlTopBar.Name = "pnlTopBar";
+            this.pnlTopBar.Size = new System.Drawing.Size(1122, 53);
+            this.pnlTopBar.TabIndex = 1;
+            this.pnlTopBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDown_Event);
+            this.pnlTopBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mouseMove_Event);
+            this.pnlTopBar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.mouseUp_Event);
             // 
             // label1
             // 
@@ -145,6 +252,19 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 18);
             this.label1.TabIndex = 2;
+            // 
+            // picQuitHome
+            // 
+            this.picQuitHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picQuitHome.Image = ((System.Drawing.Image)(resources.GetObject("picQuitHome.Image")));
+            this.picQuitHome.Location = new System.Drawing.Point(1065, 0);
+            this.picQuitHome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picQuitHome.Name = "picQuitHome";
+            this.picQuitHome.Size = new System.Drawing.Size(57, 54);
+            this.picQuitHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picQuitHome.TabIndex = 8;
+            this.picQuitHome.TabStop = false;
+            this.picQuitHome.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pnlStudentNumber
             // 
@@ -156,25 +276,16 @@
             this.pnlStudentNumber.Size = new System.Drawing.Size(266, 173);
             this.pnlStudentNumber.TabIndex = 2;
             // 
-            // lblTeacherNumber
+            // lblDataStuNum
             // 
-            this.lblTeacherNumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(72)))), ((int)(((byte)(192)))));
-            this.lblTeacherNumber.Controls.Add(this.lblDataClsNum);
-            this.lblTeacherNumber.Controls.Add(this.lblNumberofClass);
-            this.lblTeacherNumber.Location = new System.Drawing.Point(813, 77);
-            this.lblTeacherNumber.Name = "lblTeacherNumber";
-            this.lblTeacherNumber.Size = new System.Drawing.Size(264, 173);
-            this.lblTeacherNumber.TabIndex = 3;
-            // 
-            // lblClassNumber
-            // 
-            this.lblClassNumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(72)))), ((int)(((byte)(192)))));
-            this.lblClassNumber.Controls.Add(this.lblDataTeachNum);
-            this.lblClassNumber.Controls.Add(this.lblNumberofTeacher);
-            this.lblClassNumber.Location = new System.Drawing.Point(533, 77);
-            this.lblClassNumber.Name = "lblClassNumber";
-            this.lblClassNumber.Size = new System.Drawing.Size(262, 173);
-            this.lblClassNumber.TabIndex = 3;
+            this.lblDataStuNum.AutoSize = true;
+            this.lblDataStuNum.Font = new System.Drawing.Font("Montserrat", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblDataStuNum.ForeColor = System.Drawing.Color.White;
+            this.lblDataStuNum.Location = new System.Drawing.Point(48, 86);
+            this.lblDataStuNum.Name = "lblDataStuNum";
+            this.lblDataStuNum.Size = new System.Drawing.Size(159, 46);
+            this.lblDataStuNum.TabIndex = 1;
+            this.lblDataStuNum.Text = "StuNum";
             // 
             // lblNumberofStudent
             // 
@@ -188,17 +299,26 @@
             this.lblNumberofStudent.Text = " Number of Student";
             this.lblNumberofStudent.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lblNumberofTeacher
+            // pnlTeacherNumber
             // 
-            this.lblNumberofTeacher.AutoSize = true;
-            this.lblNumberofTeacher.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblNumberofTeacher.ForeColor = System.Drawing.Color.White;
-            this.lblNumberofTeacher.Location = new System.Drawing.Point(18, 22);
-            this.lblNumberofTeacher.Name = "lblNumberofTeacher";
-            this.lblNumberofTeacher.Size = new System.Drawing.Size(230, 27);
-            this.lblNumberofTeacher.TabIndex = 1;
-            this.lblNumberofTeacher.Text = " Number of Teacher";
-            this.lblNumberofTeacher.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.pnlTeacherNumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(72)))), ((int)(((byte)(192)))));
+            this.pnlTeacherNumber.Controls.Add(this.lblDataClsNum);
+            this.pnlTeacherNumber.Controls.Add(this.lblNumberofClass);
+            this.pnlTeacherNumber.Location = new System.Drawing.Point(813, 77);
+            this.pnlTeacherNumber.Name = "pnlTeacherNumber";
+            this.pnlTeacherNumber.Size = new System.Drawing.Size(264, 173);
+            this.pnlTeacherNumber.TabIndex = 3;
+            // 
+            // lblDataClsNum
+            // 
+            this.lblDataClsNum.AutoSize = true;
+            this.lblDataClsNum.Font = new System.Drawing.Font("Montserrat", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblDataClsNum.ForeColor = System.Drawing.Color.White;
+            this.lblDataClsNum.Location = new System.Drawing.Point(56, 86);
+            this.lblDataClsNum.Name = "lblDataClsNum";
+            this.lblDataClsNum.Size = new System.Drawing.Size(153, 46);
+            this.lblDataClsNum.TabIndex = 2;
+            this.lblDataClsNum.Text = "ClsNum";
             // 
             // lblNumberofClass
             // 
@@ -211,6 +331,39 @@
             this.lblNumberofClass.TabIndex = 1;
             this.lblNumberofClass.Text = " Number of Class";
             this.lblNumberofClass.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pnlClassNumber
+            // 
+            this.pnlClassNumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(72)))), ((int)(((byte)(192)))));
+            this.pnlClassNumber.Controls.Add(this.lblDataTeachNum);
+            this.pnlClassNumber.Controls.Add(this.lblNumberofTeacher);
+            this.pnlClassNumber.Location = new System.Drawing.Point(533, 77);
+            this.pnlClassNumber.Name = "pnlClassNumber";
+            this.pnlClassNumber.Size = new System.Drawing.Size(262, 173);
+            this.pnlClassNumber.TabIndex = 3;
+            // 
+            // lblDataTeachNum
+            // 
+            this.lblDataTeachNum.AutoSize = true;
+            this.lblDataTeachNum.Font = new System.Drawing.Font("Montserrat", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblDataTeachNum.ForeColor = System.Drawing.Color.White;
+            this.lblDataTeachNum.Location = new System.Drawing.Point(32, 86);
+            this.lblDataTeachNum.Name = "lblDataTeachNum";
+            this.lblDataTeachNum.Size = new System.Drawing.Size(201, 46);
+            this.lblDataTeachNum.TabIndex = 2;
+            this.lblDataTeachNum.Text = "TeachNum";
+            // 
+            // lblNumberofTeacher
+            // 
+            this.lblNumberofTeacher.AutoSize = true;
+            this.lblNumberofTeacher.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblNumberofTeacher.ForeColor = System.Drawing.Color.White;
+            this.lblNumberofTeacher.Location = new System.Drawing.Point(18, 22);
+            this.lblNumberofTeacher.Name = "lblNumberofTeacher";
+            this.lblNumberofTeacher.Size = new System.Drawing.Size(230, 27);
+            this.lblNumberofTeacher.TabIndex = 1;
+            this.lblNumberofTeacher.Text = " Number of Teacher";
+            this.lblNumberofTeacher.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblReports
             // 
@@ -393,154 +546,6 @@
             this.btnTest2.Text = "GET";
             this.btnTest2.UseVisualStyleBackColor = false;
             // 
-            // lblDataStuNum
-            // 
-            this.lblDataStuNum.AutoSize = true;
-            this.lblDataStuNum.Font = new System.Drawing.Font("Montserrat", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblDataStuNum.ForeColor = System.Drawing.Color.White;
-            this.lblDataStuNum.Location = new System.Drawing.Point(48, 86);
-            this.lblDataStuNum.Name = "lblDataStuNum";
-            this.lblDataStuNum.Size = new System.Drawing.Size(159, 46);
-            this.lblDataStuNum.TabIndex = 1;
-            this.lblDataStuNum.Text = "StuNum";
-            // 
-            // lblDataTeachNum
-            // 
-            this.lblDataTeachNum.AutoSize = true;
-            this.lblDataTeachNum.Font = new System.Drawing.Font("Montserrat", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblDataTeachNum.ForeColor = System.Drawing.Color.White;
-            this.lblDataTeachNum.Location = new System.Drawing.Point(32, 86);
-            this.lblDataTeachNum.Name = "lblDataTeachNum";
-            this.lblDataTeachNum.Size = new System.Drawing.Size(201, 46);
-            this.lblDataTeachNum.TabIndex = 2;
-            this.lblDataTeachNum.Text = "TeachNum";
-            // 
-            // lblDataClsNum
-            // 
-            this.lblDataClsNum.AutoSize = true;
-            this.lblDataClsNum.Font = new System.Drawing.Font("Montserrat", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblDataClsNum.ForeColor = System.Drawing.Color.White;
-            this.lblDataClsNum.Location = new System.Drawing.Point(56, 86);
-            this.lblDataClsNum.Name = "lblDataClsNum";
-            this.lblDataClsNum.Size = new System.Drawing.Size(153, 46);
-            this.lblDataClsNum.TabIndex = 2;
-            this.lblDataClsNum.Text = "ClsNum";
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.lblStudents);
-            this.panel3.Location = new System.Drawing.Point(15, 94);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(184, 63);
-            this.panel3.TabIndex = 1;
-            // 
-            // lblUsers
-            // 
-            this.lblUsers.AutoSize = true;
-            this.lblUsers.Font = new System.Drawing.Font("Montserrat SemiBold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblUsers.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.lblUsers.Location = new System.Drawing.Point(9, 17);
-            this.lblUsers.Name = "lblUsers";
-            this.lblUsers.Size = new System.Drawing.Size(83, 33);
-            this.lblUsers.TabIndex = 0;
-            this.lblUsers.Text = "Users";
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.lblUsers);
-            this.panel7.Location = new System.Drawing.Point(15, 407);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(184, 63);
-            this.panel7.TabIndex = 5;
-            // 
-            // lblCanteen
-            // 
-            this.lblCanteen.AutoSize = true;
-            this.lblCanteen.Font = new System.Drawing.Font("Montserrat SemiBold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblCanteen.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.lblCanteen.Location = new System.Drawing.Point(9, 15);
-            this.lblCanteen.Name = "lblCanteen";
-            this.lblCanteen.Size = new System.Drawing.Size(119, 33);
-            this.lblCanteen.TabIndex = 0;
-            this.lblCanteen.Text = "Canteen";
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.lblCanteen);
-            this.panel6.Location = new System.Drawing.Point(15, 301);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(184, 63);
-            this.panel6.TabIndex = 4;
-            // 
-            // lblClasses
-            // 
-            this.lblClasses.AutoSize = true;
-            this.lblClasses.Font = new System.Drawing.Font("Montserrat SemiBold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblClasses.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.lblClasses.Location = new System.Drawing.Point(9, 15);
-            this.lblClasses.Name = "lblClasses";
-            this.lblClasses.Size = new System.Drawing.Size(105, 33);
-            this.lblClasses.TabIndex = 0;
-            this.lblClasses.Text = "Classes";
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.lblClasses);
-            this.panel5.Location = new System.Drawing.Point(15, 232);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(184, 63);
-            this.panel5.TabIndex = 3;
-            // 
-            // lblTeachers
-            // 
-            this.lblTeachers.AutoSize = true;
-            this.lblTeachers.Font = new System.Drawing.Font("Montserrat SemiBold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblTeachers.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.lblTeachers.Location = new System.Drawing.Point(9, 15);
-            this.lblTeachers.Name = "lblTeachers";
-            this.lblTeachers.Size = new System.Drawing.Size(125, 33);
-            this.lblTeachers.TabIndex = 0;
-            this.lblTeachers.Text = "Teachers";
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.lblTeachers);
-            this.panel4.Location = new System.Drawing.Point(15, 163);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(184, 63);
-            this.panel4.TabIndex = 2;
-            // 
-            // lblStudents
-            // 
-            this.lblStudents.AutoSize = true;
-            this.lblStudents.Font = new System.Drawing.Font("Montserrat SemiBold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblStudents.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.lblStudents.Location = new System.Drawing.Point(9, 15);
-            this.lblStudents.Name = "lblStudents";
-            this.lblStudents.Size = new System.Drawing.Size(125, 33);
-            this.lblStudents.TabIndex = 0;
-            this.lblStudents.Text = "Students";
-            // 
-            // lblHome
-            // 
-            this.lblHome.AutoSize = true;
-            this.lblHome.Font = new System.Drawing.Font("Montserrat SemiBold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblHome.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.lblHome.Location = new System.Drawing.Point(9, 14);
-            this.lblHome.Name = "lblHome";
-            this.lblHome.Size = new System.Drawing.Size(89, 33);
-            this.lblHome.TabIndex = 0;
-            this.lblHome.Text = "Home";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.lblHome);
-            this.panel2.Location = new System.Drawing.Point(15, 25);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(184, 63);
-            this.panel2.TabIndex = 0;
-            // 
             // homepage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -558,10 +563,10 @@
             this.Controls.Add(this.lblAttandanceofAllStudents);
             this.Controls.Add(this.lblStudentsAttandance);
             this.Controls.Add(this.lblReports);
-            this.Controls.Add(this.lblClassNumber);
-            this.Controls.Add(this.lblTeacherNumber);
+            this.Controls.Add(this.pnlClassNumber);
+            this.Controls.Add(this.pnlTeacherNumber);
             this.Controls.Add(this.pnlStudentNumber);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlTopBar);
             this.Controls.Add(this.panelPagesSidebar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
@@ -577,27 +582,27 @@
             this.Load += new System.EventHandler(this.homepage_Load);
             this.panelPagesSidebar.ResumeLayout(false);
             this.panelPagesSidebar.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.pnlStudentNumber.ResumeLayout(false);
-            this.pnlStudentNumber.PerformLayout();
-            this.lblTeacherNumber.ResumeLayout(false);
-            this.lblTeacherNumber.PerformLayout();
-            this.lblClassNumber.ResumeLayout(false);
-            this.lblClassNumber.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            this.pnlUsers.ResumeLayout(false);
+            this.pnlUsers.PerformLayout();
+            this.pnlCanteen.ResumeLayout(false);
+            this.pnlCanteen.PerformLayout();
+            this.pnlClasses.ResumeLayout(false);
+            this.pnlClasses.PerformLayout();
+            this.pnlTeachers.ResumeLayout(false);
+            this.pnlTeachers.PerformLayout();
+            this.pnlStudents.ResumeLayout(false);
+            this.pnlStudents.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.pnlTopBar.ResumeLayout(false);
+            this.pnlTopBar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picQuitHome)).EndInit();
+            this.pnlStudentNumber.ResumeLayout(false);
+            this.pnlStudentNumber.PerformLayout();
+            this.pnlTeacherNumber.ResumeLayout(false);
+            this.pnlTeacherNumber.PerformLayout();
+            this.pnlClassNumber.ResumeLayout(false);
+            this.pnlClassNumber.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -606,14 +611,14 @@
         #endregion
 
         private System.Windows.Forms.Panel panelPagesSidebar;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel pnlTopBar;
+        private System.Windows.Forms.PictureBox picQuitHome;
         private System.Windows.Forms.Label lblMenu;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel pnlStudentNumber;
         private System.Windows.Forms.Label lblNumberofStudent;
-        private System.Windows.Forms.Panel lblTeacherNumber;
-        private System.Windows.Forms.Panel lblClassNumber;
+        private System.Windows.Forms.Panel pnlTeacherNumber;
+        private System.Windows.Forms.Panel pnlClassNumber;
         private System.Windows.Forms.Label lblNumberofTeacher;
         private System.Windows.Forms.Label lblNumberofClass;
         private System.Windows.Forms.Label lblReports;
@@ -635,15 +640,15 @@
         private System.Windows.Forms.Label lblDataStuNum;
         private System.Windows.Forms.Label lblDataClsNum;
         private System.Windows.Forms.Label lblDataTeachNum;
-        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel pnlUsers;
         private System.Windows.Forms.Label lblUsers;
-        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel pnlCanteen;
         private System.Windows.Forms.Label lblCanteen;
-        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel pnlClasses;
         private System.Windows.Forms.Label lblClasses;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel pnlTeachers;
         private System.Windows.Forms.Label lblTeachers;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel pnlStudents;
         private System.Windows.Forms.Label lblStudents;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblHome;

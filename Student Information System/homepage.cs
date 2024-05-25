@@ -53,5 +53,11 @@ namespace Student_Information_System
 
         }
 
+        private void pnlStudents_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Students studentsForm = new Students();
+            studentsForm.Show();
+        }
     }
 }
