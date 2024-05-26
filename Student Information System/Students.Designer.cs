@@ -63,6 +63,7 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.pnlTopBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picQuitStudents)).BeginInit();
             this.panelPagesSidebar.SuspendLayout();
@@ -80,6 +81,7 @@
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picDeleteStudents)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStudents)).BeginInit();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlTopBar
@@ -272,7 +274,7 @@
             this.txtSearchStudents.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSearchStudents.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtSearchStudents.ForeColor = System.Drawing.Color.Black;
-            this.txtSearchStudents.Location = new System.Drawing.Point(235, 96);
+            this.txtSearchStudents.Location = new System.Drawing.Point(0, 0);
             this.txtSearchStudents.MaximumSize = new System.Drawing.Size(312, 53);
             this.txtSearchStudents.Name = "txtSearchStudents";
             this.txtSearchStudents.Size = new System.Drawing.Size(241, 44);
@@ -283,21 +285,25 @@
             // 
             this.picSearchStudents.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picSearchStudents.Image = ((System.Drawing.Image)(resources.GetObject("picSearchStudents.Image")));
-            this.picSearchStudents.Location = new System.Drawing.Point(482, 96);
+            this.picSearchStudents.Location = new System.Drawing.Point(247, 0);
             this.picSearchStudents.Name = "picSearchStudents";
             this.picSearchStudents.Size = new System.Drawing.Size(44, 44);
             this.picSearchStudents.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picSearchStudents.TabIndex = 6;
             this.picSearchStudents.TabStop = false;
+            this.picSearchStudents.Height = txtSearchStudents.Height;
+            this.picSearchStudents.Width = txtSearchStudents.Height;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(72)))), ((int)(((byte)(192)))));
             this.panel1.Controls.Add(this.picAddStudents);
-            this.panel1.Location = new System.Drawing.Point(879, 96);
+            this.panel1.Location = new System.Drawing.Point(922, 96);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(44, 44);
             this.panel1.TabIndex = 7;
+            this.panel1.Height = txtSearchStudents.Height;
+            this.panel1.Width = txtSearchStudents.Height;
             // 
             // picAddStudents
             // 
@@ -308,15 +314,19 @@
             this.picAddStudents.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picAddStudents.TabIndex = 10;
             this.picAddStudents.TabStop = false;
+            this.picAddStudents.Height = txtSearchStudents.Height;
+            this.picAddStudents.Width = txtSearchStudents.Height;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(72)))), ((int)(((byte)(192)))));
             this.panel2.Controls.Add(this.pictEditStudents);
-            this.panel2.Location = new System.Drawing.Point(929, 96);
+            this.panel2.Location = new System.Drawing.Point(972, 96);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(44, 44);
             this.panel2.TabIndex = 8;
+            this.panel2.Height = txtSearchStudents.Height;
+            this.panel2.Width = txtSearchStudents.Height;
             // 
             // pictEditStudents
             // 
@@ -327,15 +337,20 @@
             this.pictEditStudents.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictEditStudents.TabIndex = 11;
             this.pictEditStudents.TabStop = false;
+            this.pictEditStudents.Height = txtSearchStudents.Height;
+            this.pictEditStudents.Width = txtSearchStudents.Height;
+
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(72)))), ((int)(((byte)(192)))));
             this.panel3.Controls.Add(this.picDeleteStudents);
-            this.panel3.Location = new System.Drawing.Point(979, 96);
+            this.panel3.Location = new System.Drawing.Point(1022, 96);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(44, 44);
             this.panel3.TabIndex = 9;
+            this.panel3.Height = txtSearchStudents.Height;
+            this.panel3.Width = txtSearchStudents.Height;
             // 
             // picDeleteStudents
             // 
@@ -346,6 +361,8 @@
             this.picDeleteStudents.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picDeleteStudents.TabIndex = 12;
             this.picDeleteStudents.TabStop = false;
+            this.picDeleteStudents.Height = txtSearchStudents.Height;
+            this.picDeleteStudents.Width = txtSearchStudents.Height;
             // 
             // dataGridViewStudents
             // 
@@ -417,6 +434,15 @@
             this.Column8.MinimumWidth = 6;
             this.Column8.Name = "Column8";
             // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.txtSearchStudents);
+            this.panel4.Controls.Add(this.picSearchStudents);
+            this.panel4.Location = new System.Drawing.Point(238, 96);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(828, 44);
+            this.panel4.TabIndex = 15;
+            // 
             // Students
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -426,10 +452,9 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.picSearchStudents);
-            this.Controls.Add(this.txtSearchStudents);
             this.Controls.Add(this.pnlTopBar);
             this.Controls.Add(this.panelPagesSidebar);
+            this.Controls.Add(this.panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximumSize = new System.Drawing.Size(1122, 650);
             this.MinimumSize = new System.Drawing.Size(1122, 650);
@@ -461,8 +486,9 @@
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picDeleteStudents)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStudents)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -502,5 +528,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.Panel panel4;
     }
 }

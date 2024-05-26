@@ -262,17 +262,6 @@
             this.lblHome.TabIndex = 0;
             this.lblHome.Text = "Home";
             // 
-            // picSearchCanteen
-            // 
-            this.picSearchCanteen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picSearchCanteen.Image = ((System.Drawing.Image)(resources.GetObject("picSearchCanteen.Image")));
-            this.picSearchCanteen.Location = new System.Drawing.Point(480, 96);
-            this.picSearchCanteen.Name = "picSearchCanteen";
-            this.picSearchCanteen.Size = new System.Drawing.Size(44, 44);
-            this.picSearchCanteen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picSearchCanteen.TabIndex = 19;
-            this.picSearchCanteen.TabStop = false;
-            // 
             // txtSearchCanteen
             // 
             this.txtSearchCanteen.BackColor = System.Drawing.Color.White;
@@ -285,6 +274,21 @@
             this.txtSearchCanteen.Size = new System.Drawing.Size(241, 44);
             this.txtSearchCanteen.TabIndex = 18;
             this.txtSearchCanteen.Text = "Search";
+            this.txtSearchCanteen.Height = 44;
+            // 
+            // picSearchCanteen
+            // 
+            this.picSearchCanteen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picSearchCanteen.Image = ((System.Drawing.Image)(resources.GetObject("picSearchCanteen.Image")));
+            this.picSearchCanteen.Location = new System.Drawing.Point(480, 96);
+            this.picSearchCanteen.Name = "picSearchCanteen";
+            this.picSearchCanteen.Size = new System.Drawing.Size(44, 44);
+            this.picSearchCanteen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picSearchCanteen.TabIndex = 19;
+            this.picSearchCanteen.TabStop = false;
+            this.picSearchCanteen.Height = this.txtSearchCanteen.Height;
+            this.picSearchCanteen.Width = this.txtSearchCanteen.Height;
+            
             // 
             // panel3
             // 
@@ -294,6 +298,8 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(44, 44);
             this.panel3.TabIndex = 23;
+            this.panel3.Height = txtSearchCanteen.Height;
+            this.panel3.Width = txtSearchCanteen.Height;
             // 
             // picDeleteCanteen
             // 
@@ -304,6 +310,8 @@
             this.picDeleteCanteen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picDeleteCanteen.TabIndex = 12;
             this.picDeleteCanteen.TabStop = false;
+            this.picDeleteCanteen.Height = txtSearchCanteen.Height;
+            this.picDeleteCanteen.Width = txtSearchCanteen.Height;
             // 
             // panel2
             // 
@@ -313,6 +321,8 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(44, 44);
             this.panel2.TabIndex = 22;
+            this.panel2.Height = txtSearchCanteen.Height;
+            this.panel2.Width = txtSearchCanteen.Height;
             // 
             // picEditCanteen
             // 
@@ -323,6 +333,8 @@
             this.picEditCanteen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picEditCanteen.TabIndex = 11;
             this.picEditCanteen.TabStop = false;
+            this.picEditCanteen.Height = txtSearchCanteen.Height;
+            this.picEditCanteen.Width = txtSearchCanteen.Height;
             // 
             // panel1
             // 
@@ -332,6 +344,8 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(44, 44);
             this.panel1.TabIndex = 21;
+            this.panel1.Height = txtSearchCanteen.Height;
+            this.panel1.Width = txtSearchCanteen.Height;
             // 
             // picAddCanteen
             // 
@@ -342,6 +356,8 @@
             this.picAddCanteen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picAddCanteen.TabIndex = 10;
             this.picAddCanteen.TabStop = false;
+            this.picAddCanteen.Height = txtSearchCanteen.Height;
+            this.picAddCanteen.Width = txtSearchCanteen.Height;
             // 
             // dataGridViewCanteen
             // 

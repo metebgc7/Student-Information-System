@@ -48,13 +48,13 @@
             this.lblHome = new System.Windows.Forms.Label();
             this.txtUsernameUsers = new System.Windows.Forms.TextBox();
             this.txtPasswordUsers = new System.Windows.Forms.TextBox();
-            this.btnSaveUsers = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.picDeleteUsers = new System.Windows.Forms.PictureBox();
             this.dataGridViewUsers = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSaveUsers = new System.Windows.Forms.Button();
             this.pnlTopBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picQuit)).BeginInit();
             this.panelPagesSidebar.SuspendLayout();
@@ -281,36 +281,29 @@
             this.txtPasswordUsers.TabIndex = 19;
             this.txtPasswordUsers.Text = "Password";
             // 
-            // btnSaveUsers
-            // 
-            this.btnSaveUsers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(72)))), ((int)(((byte)(192)))));
-            this.btnSaveUsers.Font = new System.Drawing.Font("Montserrat Medium", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnSaveUsers.ForeColor = System.Drawing.Color.White;
-            this.btnSaveUsers.Location = new System.Drawing.Point(637, 97);
-            this.btnSaveUsers.Name = "btnSaveUsers";
-            this.btnSaveUsers.Size = new System.Drawing.Size(76, 43);
-            this.btnSaveUsers.TabIndex = 20;
-            this.btnSaveUsers.Text = "SAVE";
-            this.btnSaveUsers.UseVisualStyleBackColor = false;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Red;
             this.panel1.Controls.Add(this.picDeleteUsers);
             this.panel1.Location = new System.Drawing.Point(719, 97);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(42, 42);
+            this.panel1.Size = new System.Drawing.Size(44, 43);
             this.panel1.TabIndex = 21;
+            this.panel1.Height = txtPasswordUsers.Height;
+            this.panel1.Width = txtPasswordUsers.Height;
             // 
             // picDeleteUsers
             // 
+            this.picDeleteUsers.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picDeleteUsers.Image = ((System.Drawing.Image)(resources.GetObject("picDeleteUsers.Image")));
-            this.picDeleteUsers.Location = new System.Drawing.Point(0, 0);
+            this.picDeleteUsers.Location = new System.Drawing.Point(0, -1);
             this.picDeleteUsers.Name = "picDeleteUsers";
-            this.picDeleteUsers.Size = new System.Drawing.Size(40, 40);
+            this.picDeleteUsers.Size = new System.Drawing.Size(44, 44);
             this.picDeleteUsers.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picDeleteUsers.TabIndex = 22;
             this.picDeleteUsers.TabStop = false;
+            this.picDeleteUsers.Height = txtPasswordUsers.Height;
+            this.picDeleteUsers.Width = txtPasswordUsers.Height;
             // 
             // dataGridViewUsers
             // 
@@ -346,14 +339,29 @@
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
             // 
+            // btnSaveUsers
+            // 
+            this.btnSaveUsers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(72)))), ((int)(((byte)(192)))));
+            this.btnSaveUsers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnSaveUsers.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSaveUsers.Font = new System.Drawing.Font("Montserrat Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnSaveUsers.ForeColor = System.Drawing.Color.White;
+            this.btnSaveUsers.Location = new System.Drawing.Point(628, 96);
+            this.btnSaveUsers.Name = "btnSaveUsers";
+            this.btnSaveUsers.Size = new System.Drawing.Size(75, 44);
+            this.btnSaveUsers.TabIndex = 23;
+            this.btnSaveUsers.Text = "SAVE";
+            this.btnSaveUsers.UseVisualStyleBackColor = false;
+            this.btnSaveUsers.Height = txtPasswordUsers.Height;
+            // 
             // Users
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1122, 650);
+            this.Controls.Add(this.btnSaveUsers);
             this.Controls.Add(this.dataGridViewUsers);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnSaveUsers);
             this.Controls.Add(this.txtPasswordUsers);
             this.Controls.Add(this.txtUsernameUsers);
             this.Controls.Add(this.panelPagesSidebar);
@@ -408,12 +416,12 @@
         private System.Windows.Forms.Label lblHome;
         private System.Windows.Forms.TextBox txtUsernameUsers;
         private System.Windows.Forms.TextBox txtPasswordUsers;
-        private System.Windows.Forms.Button btnSaveUsers;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox picDeleteUsers;
         private System.Windows.Forms.DataGridView dataGridViewUsers;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.Button btnSaveUsers;
     }
 }

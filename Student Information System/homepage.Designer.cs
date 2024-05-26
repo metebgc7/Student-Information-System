@@ -285,7 +285,7 @@
             this.lblDataStuNum.AutoSize = true;
             this.lblDataStuNum.Font = new System.Drawing.Font("Montserrat", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblDataStuNum.ForeColor = System.Drawing.Color.White;
-            this.lblDataStuNum.Location = new System.Drawing.Point(48, 86);
+            this.lblDataStuNum.Location = new System.Drawing.Point(70, 86);
             this.lblDataStuNum.Name = "lblDataStuNum";
             this.lblDataStuNum.Size = new System.Drawing.Size(159, 46);
             this.lblDataStuNum.TabIndex = 1;
@@ -296,7 +296,7 @@
             this.lblNumberofStudent.AutoSize = true;
             this.lblNumberofStudent.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblNumberofStudent.ForeColor = System.Drawing.Color.White;
-            this.lblNumberofStudent.Location = new System.Drawing.Point(15, 20);
+            this.lblNumberofStudent.Location = new System.Drawing.Point(31, 22);
             this.lblNumberofStudent.Name = "lblNumberofStudent";
             this.lblNumberofStudent.Size = new System.Drawing.Size(232, 27);
             this.lblNumberofStudent.TabIndex = 0;
@@ -318,7 +318,7 @@
             this.lblDataClsNum.AutoSize = true;
             this.lblDataClsNum.Font = new System.Drawing.Font("Montserrat", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblDataClsNum.ForeColor = System.Drawing.Color.White;
-            this.lblDataClsNum.Location = new System.Drawing.Point(56, 86);
+            this.lblDataClsNum.Location = new System.Drawing.Point(69, 86);
             this.lblDataClsNum.Name = "lblDataClsNum";
             this.lblDataClsNum.Size = new System.Drawing.Size(153, 46);
             this.lblDataClsNum.TabIndex = 2;
@@ -329,7 +329,7 @@
             this.lblNumberofClass.AutoSize = true;
             this.lblNumberofClass.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblNumberofClass.ForeColor = System.Drawing.Color.White;
-            this.lblNumberofClass.Location = new System.Drawing.Point(30, 20);
+            this.lblNumberofClass.Location = new System.Drawing.Point(46, 22);
             this.lblNumberofClass.Name = "lblNumberofClass";
             this.lblNumberofClass.Size = new System.Drawing.Size(200, 27);
             this.lblNumberofClass.TabIndex = 1;
@@ -351,7 +351,7 @@
             this.lblDataTeachNum.AutoSize = true;
             this.lblDataTeachNum.Font = new System.Drawing.Font("Montserrat", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblDataTeachNum.ForeColor = System.Drawing.Color.White;
-            this.lblDataTeachNum.Location = new System.Drawing.Point(32, 86);
+            this.lblDataTeachNum.Location = new System.Drawing.Point(43, 86);
             this.lblDataTeachNum.Name = "lblDataTeachNum";
             this.lblDataTeachNum.Size = new System.Drawing.Size(201, 46);
             this.lblDataTeachNum.TabIndex = 2;
@@ -362,7 +362,7 @@
             this.lblNumberofTeacher.AutoSize = true;
             this.lblNumberofTeacher.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblNumberofTeacher.ForeColor = System.Drawing.Color.White;
-            this.lblNumberofTeacher.Location = new System.Drawing.Point(18, 22);
+            this.lblNumberofTeacher.Location = new System.Drawing.Point(32, 22);
             this.lblNumberofTeacher.Name = "lblNumberofTeacher";
             this.lblNumberofTeacher.Size = new System.Drawing.Size(230, 27);
             this.lblNumberofTeacher.TabIndex = 1;
@@ -552,8 +552,7 @@
             // 
             // homepage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1122, 650);
             this.Controls.Add(this.btnTest2);
