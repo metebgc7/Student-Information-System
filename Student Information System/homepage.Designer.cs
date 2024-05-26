@@ -108,6 +108,7 @@
             this.pnlUsers.Name = "pnlUsers";
             this.pnlUsers.Size = new System.Drawing.Size(184, 63);
             this.pnlUsers.TabIndex = 5;
+            this.pnlUsers.Click += new System.EventHandler(this.pnlUsers_Click);
             // 
             // lblUsers
             // 
@@ -128,6 +129,7 @@
             this.pnlCanteen.Name = "pnlCanteen";
             this.pnlCanteen.Size = new System.Drawing.Size(184, 63);
             this.pnlCanteen.TabIndex = 4;
+            this.pnlCanteen.Click += new System.EventHandler(this.pnlCanteen_Click);
             // 
             // lblCanteen
             // 
@@ -148,6 +150,7 @@
             this.pnlClasses.Name = "pnlClasses";
             this.pnlClasses.Size = new System.Drawing.Size(184, 63);
             this.pnlClasses.TabIndex = 3;
+            this.pnlClasses.Click += new System.EventHandler(this.pnlClasses_Click);
             // 
             // lblClasses
             // 
@@ -168,6 +171,7 @@
             this.pnlTeachers.Name = "pnlTeachers";
             this.pnlTeachers.Size = new System.Drawing.Size(184, 63);
             this.pnlTeachers.TabIndex = 2;
+            this.pnlTeachers.Click += new System.EventHandler(this.pnlTeachers_Click);
             // 
             // lblTeachers
             // 

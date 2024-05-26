@@ -131,10 +131,12 @@
             // pnlUsers
             // 
             this.pnlUsers.Controls.Add(this.lblUsers);
+            this.pnlUsers.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnlUsers.Location = new System.Drawing.Point(15, 407);
             this.pnlUsers.Name = "pnlUsers";
             this.pnlUsers.Size = new System.Drawing.Size(184, 63);
             this.pnlUsers.TabIndex = 5;
+            this.pnlUsers.Click += new System.EventHandler(this.pnlUsers_Click);
             // 
             // lblUsers
             // 
@@ -150,10 +152,12 @@
             // pnlCanteen
             // 
             this.pnlCanteen.Controls.Add(this.lblCanteen);
+            this.pnlCanteen.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnlCanteen.Location = new System.Drawing.Point(15, 301);
             this.pnlCanteen.Name = "pnlCanteen";
             this.pnlCanteen.Size = new System.Drawing.Size(184, 63);
             this.pnlCanteen.TabIndex = 4;
+            this.pnlCanteen.Click += new System.EventHandler(this.pnlCanteen_Click);
             // 
             // lblCanteen
             // 
@@ -169,10 +173,12 @@
             // pnlClasses
             // 
             this.pnlClasses.Controls.Add(this.lblClasses);
+            this.pnlClasses.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnlClasses.Location = new System.Drawing.Point(15, 232);
             this.pnlClasses.Name = "pnlClasses";
             this.pnlClasses.Size = new System.Drawing.Size(184, 63);
             this.pnlClasses.TabIndex = 3;
+            this.pnlClasses.Click += new System.EventHandler(this.pnlClasses_Click);
             // 
             // lblClasses
             // 
@@ -189,10 +195,12 @@
             // 
             this.pnlTeachers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(72)))), ((int)(((byte)(192)))));
             this.pnlTeachers.Controls.Add(this.lblTeachers);
+            this.pnlTeachers.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnlTeachers.Location = new System.Drawing.Point(15, 163);
             this.pnlTeachers.Name = "pnlTeachers";
             this.pnlTeachers.Size = new System.Drawing.Size(184, 63);
             this.pnlTeachers.TabIndex = 2;
+            this.pnlTeachers.Click += new System.EventHandler(this.pnlTeachers_Click);
             // 
             // lblTeachers
             // 
@@ -240,10 +248,12 @@
             // 
             this.pnlHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(72)))), ((int)(((byte)(192)))));
             this.pnlHome.Controls.Add(this.lblHome);
+            this.pnlHome.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnlHome.Location = new System.Drawing.Point(15, 25);
             this.pnlHome.Name = "pnlHome";
             this.pnlHome.Size = new System.Drawing.Size(184, 63);
             this.pnlHome.TabIndex = 0;
+            this.pnlHome.Click += new System.EventHandler(this.pnlHome_Click);
             // 
             // lblHome
             // 
@@ -409,8 +419,7 @@
             // 
             // Students
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1122, 650);
             this.Controls.Add(this.dataGridViewStudents);
@@ -422,6 +431,8 @@
             this.Controls.Add(this.pnlTopBar);
             this.Controls.Add(this.panelPagesSidebar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximumSize = new System.Drawing.Size(1122, 650);
+            this.MinimumSize = new System.Drawing.Size(1122, 650);
             this.Name = "Students";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Students";

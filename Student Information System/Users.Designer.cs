@@ -51,6 +51,10 @@
             this.btnSaveUsers = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.picDeleteUsers = new System.Windows.Forms.PictureBox();
+            this.dataGridViewUsers = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlTopBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picQuit)).BeginInit();
             this.panelPagesSidebar.SuspendLayout();
@@ -62,6 +66,7 @@
             this.pnlHome.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picDeleteUsers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsers)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlTopBar
@@ -134,10 +139,12 @@
             // 
             this.pnlCanteen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(72)))), ((int)(((byte)(192)))));
             this.pnlCanteen.Controls.Add(this.lblCanteen);
+            this.pnlCanteen.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnlCanteen.Location = new System.Drawing.Point(15, 301);
             this.pnlCanteen.Name = "pnlCanteen";
             this.pnlCanteen.Size = new System.Drawing.Size(184, 63);
             this.pnlCanteen.TabIndex = 4;
+            this.pnlCanteen.Click += new System.EventHandler(this.pnlCanteen_Click);
             // 
             // lblCanteen
             // 
@@ -154,10 +161,12 @@
             // 
             this.pnlClasses.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(72)))), ((int)(((byte)(192)))));
             this.pnlClasses.Controls.Add(this.lblClasses);
+            this.pnlClasses.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnlClasses.Location = new System.Drawing.Point(15, 232);
             this.pnlClasses.Name = "pnlClasses";
             this.pnlClasses.Size = new System.Drawing.Size(184, 63);
             this.pnlClasses.TabIndex = 3;
+            this.pnlClasses.Click += new System.EventHandler(this.pnlClasses_Click);
             // 
             // lblClasses
             // 
@@ -173,10 +182,12 @@
             // pnlTeachers
             // 
             this.pnlTeachers.Controls.Add(this.lblTeachers);
+            this.pnlTeachers.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnlTeachers.Location = new System.Drawing.Point(15, 163);
             this.pnlTeachers.Name = "pnlTeachers";
             this.pnlTeachers.Size = new System.Drawing.Size(184, 63);
             this.pnlTeachers.TabIndex = 2;
+            this.pnlTeachers.Click += new System.EventHandler(this.pnlTeachers_Click);
             // 
             // lblTeachers
             // 
@@ -193,10 +204,12 @@
             // 
             this.pnlStudents.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(72)))), ((int)(((byte)(192)))));
             this.pnlStudents.Controls.Add(this.lblStudents);
+            this.pnlStudents.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnlStudents.Location = new System.Drawing.Point(15, 94);
             this.pnlStudents.Name = "pnlStudents";
             this.pnlStudents.Size = new System.Drawing.Size(184, 63);
             this.pnlStudents.TabIndex = 1;
+            this.pnlStudents.Click += new System.EventHandler(this.pnlStudents_Click);
             // 
             // lblStudents
             // 
@@ -224,10 +237,12 @@
             // 
             this.pnlHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(72)))), ((int)(((byte)(192)))));
             this.pnlHome.Controls.Add(this.lblHome);
+            this.pnlHome.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnlHome.Location = new System.Drawing.Point(15, 25);
             this.pnlHome.Name = "pnlHome";
             this.pnlHome.Size = new System.Drawing.Size(184, 63);
             this.pnlHome.TabIndex = 0;
+            this.pnlHome.Click += new System.EventHandler(this.pnlHome_Click);
             // 
             // lblHome
             // 
@@ -297,12 +312,46 @@
             this.picDeleteUsers.TabIndex = 22;
             this.picDeleteUsers.TabStop = false;
             // 
+            // dataGridViewUsers
+            // 
+            this.dataGridViewUsers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewUsers.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewUsers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3});
+            this.dataGridViewUsers.Location = new System.Drawing.Point(207, 215);
+            this.dataGridViewUsers.Name = "dataGridViewUsers";
+            this.dataGridViewUsers.RowHeadersWidth = 51;
+            this.dataGridViewUsers.RowTemplate.Height = 24;
+            this.dataGridViewUsers.Size = new System.Drawing.Size(915, 435);
+            this.dataGridViewUsers.TabIndex = 22;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "User ID";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Username";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Password";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            // 
             // Users
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1122, 650);
+            this.Controls.Add(this.dataGridViewUsers);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnSaveUsers);
             this.Controls.Add(this.txtPasswordUsers);
@@ -332,6 +381,7 @@
             this.pnlHome.PerformLayout();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picDeleteUsers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsers)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -361,5 +411,9 @@
         private System.Windows.Forms.Button btnSaveUsers;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox picDeleteUsers;
+        private System.Windows.Forms.DataGridView dataGridViewUsers;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
     }
 }

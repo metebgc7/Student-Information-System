@@ -126,10 +126,12 @@
             // pnlUsers
             // 
             this.pnlUsers.Controls.Add(this.lblUsers);
+            this.pnlUsers.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnlUsers.Location = new System.Drawing.Point(15, 407);
             this.pnlUsers.Name = "pnlUsers";
             this.pnlUsers.Size = new System.Drawing.Size(184, 63);
             this.pnlUsers.TabIndex = 5;
+            this.pnlUsers.Click += new System.EventHandler(this.pnlUsers_Click);
             // 
             // lblUsers
             // 
@@ -145,10 +147,12 @@
             // pnlCanteen
             // 
             this.pnlCanteen.Controls.Add(this.lblCanteen);
+            this.pnlCanteen.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnlCanteen.Location = new System.Drawing.Point(15, 301);
             this.pnlCanteen.Name = "pnlCanteen";
             this.pnlCanteen.Size = new System.Drawing.Size(184, 63);
             this.pnlCanteen.TabIndex = 4;
+            this.pnlCanteen.Click += new System.EventHandler(this.pnlCanteen_Click);
             // 
             // lblCanteen
             // 
@@ -184,10 +188,12 @@
             // pnlTeachers
             // 
             this.pnlTeachers.Controls.Add(this.lblTeachers);
+            this.pnlTeachers.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnlTeachers.Location = new System.Drawing.Point(15, 163);
             this.pnlTeachers.Name = "pnlTeachers";
             this.pnlTeachers.Size = new System.Drawing.Size(184, 63);
             this.pnlTeachers.TabIndex = 2;
+            this.pnlTeachers.Click += new System.EventHandler(this.pnlTeachers_Click);
             // 
             // lblTeachers
             // 
@@ -204,10 +210,12 @@
             // 
             this.pnlStudents.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(72)))), ((int)(((byte)(192)))));
             this.pnlStudents.Controls.Add(this.lblStudents);
+            this.pnlStudents.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnlStudents.Location = new System.Drawing.Point(15, 94);
             this.pnlStudents.Name = "pnlStudents";
             this.pnlStudents.Size = new System.Drawing.Size(184, 63);
             this.pnlStudents.TabIndex = 1;
+            this.pnlStudents.Click += new System.EventHandler(this.pnlStudents_Click);
             // 
             // lblStudents
             // 
@@ -235,10 +243,12 @@
             // 
             this.pnlHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(72)))), ((int)(((byte)(192)))));
             this.pnlHome.Controls.Add(this.lblHome);
+            this.pnlHome.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnlHome.Location = new System.Drawing.Point(15, 25);
             this.pnlHome.Name = "pnlHome";
             this.pnlHome.Size = new System.Drawing.Size(184, 63);
             this.pnlHome.TabIndex = 0;
+            this.pnlHome.Click += new System.EventHandler(this.pnlHome_Click);
             // 
             // lblHome
             // 
@@ -256,6 +266,8 @@
             this.picSearchClasses.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picSearchClasses.Image = ((System.Drawing.Image)(resources.GetObject("picSearchClasses.Image")));
             this.picSearchClasses.Location = new System.Drawing.Point(480, 96);
+            this.picSearchClasses.MaximumSize = new System.Drawing.Size(44, 44);
+            this.picSearchClasses.MinimumSize = new System.Drawing.Size(44, 44);
             this.picSearchClasses.Name = "picSearchClasses";
             this.picSearchClasses.Size = new System.Drawing.Size(44, 44);
             this.picSearchClasses.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -368,8 +380,7 @@
             // 
             // Classes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1122, 650);
             this.Controls.Add(this.dataGridViewClasses);
