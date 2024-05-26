@@ -493,6 +493,7 @@
             // btnGetStudentsAttandance
             // 
             this.btnGetStudentsAttandance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(72)))), ((int)(((byte)(192)))));
+            this.btnGetStudentsAttandance.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGetStudentsAttandance.Font = new System.Drawing.Font("Montserrat Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnGetStudentsAttandance.ForeColor = System.Drawing.Color.White;
             this.btnGetStudentsAttandance.Location = new System.Drawing.Point(1002, 338);
@@ -505,6 +506,7 @@
             // btnGetAttandanceofAllStudents
             // 
             this.btnGetAttandanceofAllStudents.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(72)))), ((int)(((byte)(192)))));
+            this.btnGetAttandanceofAllStudents.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGetAttandanceofAllStudents.Font = new System.Drawing.Font("Montserrat Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnGetAttandanceofAllStudents.ForeColor = System.Drawing.Color.White;
             this.btnGetAttandanceofAllStudents.Location = new System.Drawing.Point(1002, 388);
@@ -517,6 +519,7 @@
             // btnGetStudentsCanteenShopping
             // 
             this.btnGetStudentsCanteenShopping.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(72)))), ((int)(((byte)(192)))));
+            this.btnGetStudentsCanteenShopping.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGetStudentsCanteenShopping.Font = new System.Drawing.Font("Montserrat Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnGetStudentsCanteenShopping.ForeColor = System.Drawing.Color.White;
             this.btnGetStudentsCanteenShopping.Location = new System.Drawing.Point(1002, 438);
@@ -529,6 +532,7 @@
             // btnGetTest1
             // 
             this.btnGetTest1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(72)))), ((int)(((byte)(192)))));
+            this.btnGetTest1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGetTest1.Font = new System.Drawing.Font("Montserrat Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnGetTest1.ForeColor = System.Drawing.Color.White;
             this.btnGetTest1.Location = new System.Drawing.Point(1002, 488);
@@ -541,6 +545,7 @@
             // btnTest2
             // 
             this.btnTest2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(72)))), ((int)(((byte)(192)))));
+            this.btnTest2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTest2.Font = new System.Drawing.Font("Montserrat Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnTest2.ForeColor = System.Drawing.Color.White;
             this.btnTest2.Location = new System.Drawing.Point(1002, 538);

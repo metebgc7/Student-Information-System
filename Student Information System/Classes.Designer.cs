@@ -263,6 +263,18 @@
             this.lblHome.TabIndex = 0;
             this.lblHome.Text = "Home";
             // 
+            // picSearchClasses
+            // 
+            this.picSearchClasses.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picSearchClasses.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picSearchClasses.Image = ((System.Drawing.Image)(resources.GetObject("picSearchClasses.Image")));
+            this.picSearchClasses.Location = new System.Drawing.Point(247, 0);
+            this.picSearchClasses.Name = "picSearchClasses";
+            this.picSearchClasses.Size = new System.Drawing.Size(44, 44);
+            this.picSearchClasses.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picSearchClasses.TabIndex = 17;
+            this.picSearchClasses.TabStop = false;
+            // 
             // txtSearchClasses
             // 
             this.txtSearchClasses.BackColor = System.Drawing.Color.White;
@@ -275,23 +287,6 @@
             this.txtSearchClasses.Size = new System.Drawing.Size(241, 44);
             this.txtSearchClasses.TabIndex = 16;
             this.txtSearchClasses.Text = "Search";
-            this.txtSearchClasses.Height = 44;
-            // 
-            // picSearchClasses
-            // 
-            this.picSearchClasses.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picSearchClasses.Image = ((System.Drawing.Image)(resources.GetObject("picSearchClasses.Image")));
-            this.picSearchClasses.Location = new System.Drawing.Point(247, 0);
-            //this.picSearchClasses.MaximumSize = new System.Drawing.Size(44, 44);
-            //this.picSearchClasses.MinimumSize = new System.Drawing.Size(44, 44);
-            this.picSearchClasses.Name = "picSearchClasses";
-            this.picSearchClasses.Size = new System.Drawing.Size(44, 44);
-            this.picSearchClasses.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picSearchClasses.TabIndex = 17;
-            this.picSearchClasses.TabStop = false;
-            this.picSearchClasses.Height = this.txtSearchClasses.Height;
-            this.picSearchClasses.Width = this.txtSearchClasses.Height;
-
             // 
             // panel3
             // 
@@ -301,11 +296,10 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(44, 44);
             this.panel3.TabIndex = 20;
-            this.panel3.Height = txtSearchClasses.Height;
-            this.panel3.Width = txtSearchClasses.Height;
             // 
             // picDeleteClasses
             // 
+            this.picDeleteClasses.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picDeleteClasses.Image = ((System.Drawing.Image)(resources.GetObject("picDeleteClasses.Image")));
             this.picDeleteClasses.Location = new System.Drawing.Point(0, 0);
             this.picDeleteClasses.Name = "picDeleteClasses";
@@ -313,8 +307,6 @@
             this.picDeleteClasses.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picDeleteClasses.TabIndex = 12;
             this.picDeleteClasses.TabStop = false;
-            this.picDeleteClasses.Height = txtSearchClasses.Height;
-            this.picDeleteClasses.Width = txtSearchClasses.Height;
             // 
             // panel2
             // 
@@ -324,11 +316,10 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(44, 44);
             this.panel2.TabIndex = 19;
-            this.panel2.Height = txtSearchClasses.Height;
-            this.panel2.Width = txtSearchClasses.Height;
             // 
             // picEditClasses
             // 
+            this.picEditClasses.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picEditClasses.Image = ((System.Drawing.Image)(resources.GetObject("picEditClasses.Image")));
             this.picEditClasses.Location = new System.Drawing.Point(0, 0);
             this.picEditClasses.Name = "picEditClasses";
@@ -336,8 +327,6 @@
             this.picEditClasses.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picEditClasses.TabIndex = 11;
             this.picEditClasses.TabStop = false;
-            this.picEditClasses.Height = txtSearchClasses.Height;
-            this.picEditClasses.Width = txtSearchClasses.Height;
             // 
             // panel1
             // 
@@ -347,11 +336,10 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(44, 44);
             this.panel1.TabIndex = 18;
-            this.panel1.Height = txtSearchClasses.Height;
-            this.panel1.Width = txtSearchClasses.Height;
             // 
             // picAddClasses
             // 
+            this.picAddClasses.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picAddClasses.Image = ((System.Drawing.Image)(resources.GetObject("picAddClasses.Image")));
             this.picAddClasses.Location = new System.Drawing.Point(0, 0);
             this.picAddClasses.Name = "picAddClasses";
@@ -359,8 +347,6 @@
             this.picAddClasses.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picAddClasses.TabIndex = 10;
             this.picAddClasses.TabStop = false;
-            this.picAddClasses.Height = txtSearchClasses.Height;
-            this.picAddClasses.Width = txtSearchClasses.Height;
             // 
             // dataGridViewClasses
             // 

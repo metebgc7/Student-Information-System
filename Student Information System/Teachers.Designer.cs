@@ -111,6 +111,18 @@
             this.picQuitTeachers.TabStop = false;
             this.picQuitTeachers.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
+            // picSearchTeachers
+            // 
+            this.picSearchTeachers.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picSearchTeachers.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picSearchTeachers.Image = ((System.Drawing.Image)(resources.GetObject("picSearchTeachers.Image")));
+            this.picSearchTeachers.Location = new System.Drawing.Point(247, 0);
+            this.picSearchTeachers.Name = "picSearchTeachers";
+            this.picSearchTeachers.Size = new System.Drawing.Size(44, 44);
+            this.picSearchTeachers.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picSearchTeachers.TabIndex = 8;
+            this.picSearchTeachers.TabStop = false;
+            // 
             // txtSearchTeachers
             // 
             this.txtSearchTeachers.BackColor = System.Drawing.Color.White;
@@ -123,21 +135,6 @@
             this.txtSearchTeachers.Size = new System.Drawing.Size(241, 44);
             this.txtSearchTeachers.TabIndex = 7;
             this.txtSearchTeachers.Text = "Search";
-            this.txtSearchTeachers.Height = 44;
-            // 
-            // picSearchTeachers
-            // 
-            this.picSearchTeachers.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picSearchTeachers.Image = ((System.Drawing.Image)(resources.GetObject("picSearchTeachers.Image")));
-            this.picSearchTeachers.Location = new System.Drawing.Point(247, 0);
-            this.picSearchTeachers.Name = "picSearchTeachers";
-            this.picSearchTeachers.Size = new System.Drawing.Size(44, 44);
-            this.picSearchTeachers.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picSearchTeachers.TabIndex = 8;
-            this.picSearchTeachers.TabStop = false;
-            this.picSearchTeachers.Height = txtSearchTeachers.Height;
-            this.picSearchTeachers.Width = txtSearchTeachers.Height;
-            
             // 
             // panel3
             // 
@@ -147,11 +144,10 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(44, 44);
             this.panel3.TabIndex = 12;
-            this.panel3.Height = txtSearchTeachers.Height;
-            this.panel3.Width = txtSearchTeachers.Height;
             // 
             // picDeleteTeachers
             // 
+            this.picDeleteTeachers.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picDeleteTeachers.Image = ((System.Drawing.Image)(resources.GetObject("picDeleteTeachers.Image")));
             this.picDeleteTeachers.Location = new System.Drawing.Point(0, 0);
             this.picDeleteTeachers.Name = "picDeleteTeachers";
@@ -159,8 +155,6 @@
             this.picDeleteTeachers.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picDeleteTeachers.TabIndex = 12;
             this.picDeleteTeachers.TabStop = false;
-            this.picDeleteTeachers.Height = txtSearchTeachers.Height;
-            this.picDeleteTeachers.Width = txtSearchTeachers.Height;
             // 
             // panel2
             // 
@@ -170,11 +164,10 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(44, 44);
             this.panel2.TabIndex = 11;
-            this.panel2.Height = txtSearchTeachers.Height;
-            this.panel2.Width = txtSearchTeachers.Height;
             // 
             // picEditTeachers
             // 
+            this.picEditTeachers.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picEditTeachers.Image = ((System.Drawing.Image)(resources.GetObject("picEditTeachers.Image")));
             this.picEditTeachers.Location = new System.Drawing.Point(0, 0);
             this.picEditTeachers.Name = "picEditTeachers";
@@ -182,8 +175,6 @@
             this.picEditTeachers.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picEditTeachers.TabIndex = 11;
             this.picEditTeachers.TabStop = false;
-            this.picEditTeachers.Height = txtSearchTeachers.Height;
-            this.picEditTeachers.Width = txtSearchTeachers.Height;
             // 
             // panel1
             // 
@@ -193,11 +184,10 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(44, 44);
             this.panel1.TabIndex = 10;
-            this.panel1.Height = txtSearchTeachers.Height;
-            this.panel1.Width = txtSearchTeachers.Height;
             // 
             // picAddTeachers
             // 
+            this.picAddTeachers.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picAddTeachers.Image = ((System.Drawing.Image)(resources.GetObject("picAddTeachers.Image")));
             this.picAddTeachers.Location = new System.Drawing.Point(0, 0);
             this.picAddTeachers.Name = "picAddTeachers";
@@ -205,8 +195,6 @@
             this.picAddTeachers.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picAddTeachers.TabIndex = 10;
             this.picAddTeachers.TabStop = false;
-            this.picAddTeachers.Height = txtSearchTeachers.Height;
-            this.picAddTeachers.Width = txtSearchTeachers.Height;
             // 
             // panelPagesSidebar
             // 

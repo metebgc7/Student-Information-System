@@ -284,6 +284,7 @@
             // picSearchStudents
             // 
             this.picSearchStudents.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picSearchStudents.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picSearchStudents.Image = ((System.Drawing.Image)(resources.GetObject("picSearchStudents.Image")));
             this.picSearchStudents.Location = new System.Drawing.Point(247, 0);
             this.picSearchStudents.Name = "picSearchStudents";
@@ -291,8 +292,6 @@
             this.picSearchStudents.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picSearchStudents.TabIndex = 6;
             this.picSearchStudents.TabStop = false;
-            this.picSearchStudents.Height = txtSearchStudents.Height;
-            this.picSearchStudents.Width = txtSearchStudents.Height;
             // 
             // panel1
             // 
@@ -302,11 +301,10 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(44, 44);
             this.panel1.TabIndex = 7;
-            this.panel1.Height = txtSearchStudents.Height;
-            this.panel1.Width = txtSearchStudents.Height;
             // 
             // picAddStudents
             // 
+            this.picAddStudents.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picAddStudents.Image = ((System.Drawing.Image)(resources.GetObject("picAddStudents.Image")));
             this.picAddStudents.Location = new System.Drawing.Point(0, 0);
             this.picAddStudents.Name = "picAddStudents";
@@ -314,8 +312,6 @@
             this.picAddStudents.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picAddStudents.TabIndex = 10;
             this.picAddStudents.TabStop = false;
-            this.picAddStudents.Height = txtSearchStudents.Height;
-            this.picAddStudents.Width = txtSearchStudents.Height;
             // 
             // panel2
             // 
@@ -325,11 +321,10 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(44, 44);
             this.panel2.TabIndex = 8;
-            this.panel2.Height = txtSearchStudents.Height;
-            this.panel2.Width = txtSearchStudents.Height;
             // 
             // pictEditStudents
             // 
+            this.pictEditStudents.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictEditStudents.Image = ((System.Drawing.Image)(resources.GetObject("pictEditStudents.Image")));
             this.pictEditStudents.Location = new System.Drawing.Point(0, 0);
             this.pictEditStudents.Name = "pictEditStudents";
@@ -337,9 +332,6 @@
             this.pictEditStudents.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictEditStudents.TabIndex = 11;
             this.pictEditStudents.TabStop = false;
-            this.pictEditStudents.Height = txtSearchStudents.Height;
-            this.pictEditStudents.Width = txtSearchStudents.Height;
-
             // 
             // panel3
             // 
@@ -349,11 +341,10 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(44, 44);
             this.panel3.TabIndex = 9;
-            this.panel3.Height = txtSearchStudents.Height;
-            this.panel3.Width = txtSearchStudents.Height;
             // 
             // picDeleteStudents
             // 
+            this.picDeleteStudents.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picDeleteStudents.Image = ((System.Drawing.Image)(resources.GetObject("picDeleteStudents.Image")));
             this.picDeleteStudents.Location = new System.Drawing.Point(0, 0);
             this.picDeleteStudents.Name = "picDeleteStudents";
@@ -361,8 +352,6 @@
             this.picDeleteStudents.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picDeleteStudents.TabIndex = 12;
             this.picDeleteStudents.TabStop = false;
-            this.picDeleteStudents.Height = txtSearchStudents.Height;
-            this.picDeleteStudents.Width = txtSearchStudents.Height;
             // 
             // dataGridViewStudents
             // 
