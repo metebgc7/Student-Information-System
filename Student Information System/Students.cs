@@ -58,5 +58,12 @@ namespace Student_Information_System
             Users usersForm = new Users();
             usersForm.Show();
         }
+
+        private void picAddStudents_Click(object sender, EventArgs e)
+        {
+            Add addForm = new Add();
+            addForm.Show();
+
+        }
     }
 }

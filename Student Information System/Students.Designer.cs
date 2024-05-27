@@ -312,6 +312,7 @@
             this.picAddStudents.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picAddStudents.TabIndex = 10;
             this.picAddStudents.TabStop = false;
+            this.picAddStudents.Click += new System.EventHandler(this.picAddStudents_Click);
             // 
             // panel2
             // 
