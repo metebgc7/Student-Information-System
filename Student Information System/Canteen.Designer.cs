@@ -262,18 +262,6 @@
             this.lblHome.TabIndex = 0;
             this.lblHome.Text = "Home";
             // 
-            // picSearchCanteen
-            // 
-            this.picSearchCanteen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picSearchCanteen.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picSearchCanteen.Image = ((System.Drawing.Image)(resources.GetObject("picSearchCanteen.Image")));
-            this.picSearchCanteen.Location = new System.Drawing.Point(480, 96);
-            this.picSearchCanteen.Name = "picSearchCanteen";
-            this.picSearchCanteen.Size = new System.Drawing.Size(44, 44);
-            this.picSearchCanteen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picSearchCanteen.TabIndex = 19;
-            this.picSearchCanteen.TabStop = false;
-            // 
             // txtSearchCanteen
             // 
             this.txtSearchCanteen.BackColor = System.Drawing.Color.White;
@@ -286,6 +274,21 @@
             this.txtSearchCanteen.Size = new System.Drawing.Size(241, 44);
             this.txtSearchCanteen.TabIndex = 18;
             this.txtSearchCanteen.Text = "Search";
+            this.txtSearchCanteen.Height = 44;
+            // 
+            // picSearchCanteen
+            // 
+            this.picSearchCanteen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picSearchCanteen.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picSearchCanteen.Image = ((System.Drawing.Image)(resources.GetObject("picSearchCanteen.Image")));
+            this.picSearchCanteen.Location = new System.Drawing.Point(480, 96);
+            this.picSearchCanteen.Name = "picSearchCanteen";
+            this.picSearchCanteen.Size = new System.Drawing.Size(44, 44);
+            this.picSearchCanteen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picSearchCanteen.TabIndex = 19;
+            this.picSearchCanteen.TabStop = false;
+            this.picSearchCanteen.Height = this.txtSearchCanteen.Height;
+            this.picSearchCanteen.Width = this.txtSearchCanteen.Height;
             // 
             // panel3
             // 

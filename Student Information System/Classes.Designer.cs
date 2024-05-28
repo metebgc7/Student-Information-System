@@ -263,18 +263,6 @@
             this.lblHome.TabIndex = 0;
             this.lblHome.Text = "Home";
             // 
-            // picSearchClasses
-            // 
-            this.picSearchClasses.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picSearchClasses.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picSearchClasses.Image = ((System.Drawing.Image)(resources.GetObject("picSearchClasses.Image")));
-            this.picSearchClasses.Location = new System.Drawing.Point(247, 0);
-            this.picSearchClasses.Name = "picSearchClasses";
-            this.picSearchClasses.Size = new System.Drawing.Size(44, 44);
-            this.picSearchClasses.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picSearchClasses.TabIndex = 17;
-            this.picSearchClasses.TabStop = false;
-            // 
             // txtSearchClasses
             // 
             this.txtSearchClasses.BackColor = System.Drawing.Color.White;
@@ -287,6 +275,21 @@
             this.txtSearchClasses.Size = new System.Drawing.Size(241, 44);
             this.txtSearchClasses.TabIndex = 16;
             this.txtSearchClasses.Text = "Search";
+            this.txtSearchClasses.Height = 44;
+            // 
+            // picSearchClasses
+            // 
+            this.picSearchClasses.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picSearchClasses.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picSearchClasses.Image = ((System.Drawing.Image)(resources.GetObject("picSearchClasses.Image")));
+            this.picSearchClasses.Location = new System.Drawing.Point(247, 0);
+            this.picSearchClasses.Name = "picSearchClasses";
+            this.picSearchClasses.Size = new System.Drawing.Size(44, 44);
+            this.picSearchClasses.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picSearchClasses.TabIndex = 17;
+            this.picSearchClasses.TabStop = false;
+            this.picSearchClasses.Height = this.txtSearchClasses.Height;
+            this.picSearchClasses.Width = this.txtSearchClasses.Height;
             // 
             // panel3
             // 

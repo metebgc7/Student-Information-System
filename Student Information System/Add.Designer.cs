@@ -35,49 +35,49 @@
             this.picQuitHome = new System.Windows.Forms.PictureBox();
             this.tabControlAdd = new System.Windows.Forms.TabControl();
             this.tabPageStudents = new System.Windows.Forms.TabPage();
-            this.tabPageTeachers = new System.Windows.Forms.TabPage();
-            this.tabPageClasses = new System.Windows.Forms.TabPage();
-            this.tabPageCanteen = new System.Windows.Forms.TabPage();
-            this.txtNameStudent = new System.Windows.Forms.TextBox();
-            this.txtSurnameStudent = new System.Windows.Forms.TextBox();
-            this.txtClass = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.lblNameStudent = new System.Windows.Forms.Label();
-            this.lblSurnameStudent = new System.Windows.Forms.Label();
-            this.lblClass = new System.Windows.Forms.Label();
-            this.lblGender = new System.Windows.Forms.Label();
-            this.lblBirthDate = new System.Windows.Forms.Label();
-            this.lblID = new System.Windows.Forms.Label();
-            this.lblStudentsAttributes = new System.Windows.Forms.Label();
-            this.lblParentsAttributes = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.txtNameParent = new System.Windows.Forms.TextBox();
-            this.lblNameParent = new System.Windows.Forms.Label();
-            this.lblSurnameParent = new System.Windows.Forms.Label();
-            this.txtSurnameParent = new System.Windows.Forms.TextBox();
-            this.maskedTextBoxPhoneNumber = new System.Windows.Forms.MaskedTextBox();
-            this.lblPhoneNumber = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.lblEmail = new System.Windows.Forms.Label();
             this.maskedTextBoxIdNo = new System.Windows.Forms.MaskedTextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.txtPriceCanteen = new System.Windows.Forms.TextBox();
-            this.lblPriceCanteen = new System.Windows.Forms.Label();
-            this.lblNameCanteen = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.lblNameTeachers = new System.Windows.Forms.Label();
-            this.lblSurnameTeachers = new System.Windows.Forms.Label();
-            this.lblSubjectTeachers = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.lblPhoneNumber = new System.Windows.Forms.Label();
+            this.maskedTextBoxPhoneNumber = new System.Windows.Forms.MaskedTextBox();
+            this.txtSurnameParent = new System.Windows.Forms.TextBox();
+            this.lblSurnameParent = new System.Windows.Forms.Label();
+            this.lblNameParent = new System.Windows.Forms.Label();
+            this.txtNameParent = new System.Windows.Forms.TextBox();
+            this.lblParentsAttributes = new System.Windows.Forms.Label();
+            this.lblStudentsAttributes = new System.Windows.Forms.Label();
+            this.lblID = new System.Windows.Forms.Label();
+            this.lblBirthDate = new System.Windows.Forms.Label();
+            this.lblGender = new System.Windows.Forms.Label();
+            this.lblClass = new System.Windows.Forms.Label();
+            this.lblSurnameStudent = new System.Windows.Forms.Label();
+            this.lblNameStudent = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.txtClass = new System.Windows.Forms.TextBox();
+            this.txtSurnameStudent = new System.Windows.Forms.TextBox();
+            this.txtNameStudent = new System.Windows.Forms.TextBox();
+            this.tabPageTeachers = new System.Windows.Forms.TabPage();
             this.button3 = new System.Windows.Forms.Button();
-            this.lblNameClass = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.lblTeacherClasses = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.lblSubjectTeachers = new System.Windows.Forms.Label();
+            this.lblSurnameTeachers = new System.Windows.Forms.Label();
+            this.lblNameTeachers = new System.Windows.Forms.Label();
+            this.tabPageClasses = new System.Windows.Forms.TabPage();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.lblTeacherClasses = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.lblNameClass = new System.Windows.Forms.Label();
+            this.tabPageCanteen = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
+            this.lblNameCanteen = new System.Windows.Forms.Label();
+            this.lblPriceCanteen = new System.Windows.Forms.Label();
+            this.txtPriceCanteen = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.pnlTopBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picQuitHome)).BeginInit();
@@ -179,6 +179,225 @@
             this.tabPageStudents.TabIndex = 0;
             this.tabPageStudents.Text = "Students";
             // 
+            // maskedTextBoxIdNo
+            // 
+            this.maskedTextBoxIdNo.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.maskedTextBoxIdNo.Location = new System.Drawing.Point(543, 165);
+            this.maskedTextBoxIdNo.Mask = "00000000000";
+            this.maskedTextBoxIdNo.Name = "maskedTextBoxIdNo";
+            this.maskedTextBoxIdNo.Size = new System.Drawing.Size(198, 32);
+            this.maskedTextBoxIdNo.TabIndex = 22;
+            this.maskedTextBoxIdNo.ValidatingType = typeof(int);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(72)))), ((int)(((byte)(192)))));
+            this.button1.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(350, 402);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(100, 50);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "SAVE";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblEmail.Location = new System.Drawing.Point(455, 331);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(85, 27);
+            this.lblEmail.TabIndex = 21;
+            this.lblEmail.Text = "E-mail :";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtEmail.Location = new System.Drawing.Point(543, 328);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(198, 32);
+            this.txtEmail.TabIndex = 20;
+            // 
+            // lblPhoneNumber
+            // 
+            this.lblPhoneNumber.AutoSize = true;
+            this.lblPhoneNumber.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblPhoneNumber.Location = new System.Drawing.Point(363, 280);
+            this.lblPhoneNumber.Name = "lblPhoneNumber";
+            this.lblPhoneNumber.Size = new System.Drawing.Size(177, 27);
+            this.lblPhoneNumber.TabIndex = 19;
+            this.lblPhoneNumber.Text = "Phone Number :";
+            // 
+            // maskedTextBoxPhoneNumber
+            // 
+            this.maskedTextBoxPhoneNumber.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.maskedTextBoxPhoneNumber.Location = new System.Drawing.Point(543, 277);
+            this.maskedTextBoxPhoneNumber.Mask = "(999) 000-0000";
+            this.maskedTextBoxPhoneNumber.Name = "maskedTextBoxPhoneNumber";
+            this.maskedTextBoxPhoneNumber.Size = new System.Drawing.Size(198, 32);
+            this.maskedTextBoxPhoneNumber.TabIndex = 18;
+            // 
+            // txtSurnameParent
+            // 
+            this.txtSurnameParent.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtSurnameParent.Location = new System.Drawing.Point(140, 326);
+            this.txtSurnameParent.Name = "txtSurnameParent";
+            this.txtSurnameParent.Size = new System.Drawing.Size(198, 32);
+            this.txtSurnameParent.TabIndex = 17;
+            // 
+            // lblSurnameParent
+            // 
+            this.lblSurnameParent.AutoSize = true;
+            this.lblSurnameParent.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblSurnameParent.Location = new System.Drawing.Point(24, 331);
+            this.lblSurnameParent.Name = "lblSurnameParent";
+            this.lblSurnameParent.Size = new System.Drawing.Size(113, 27);
+            this.lblSurnameParent.TabIndex = 16;
+            this.lblSurnameParent.Text = "Surname :";
+            // 
+            // lblNameParent
+            // 
+            this.lblNameParent.AutoSize = true;
+            this.lblNameParent.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblNameParent.Location = new System.Drawing.Point(55, 280);
+            this.lblNameParent.Name = "lblNameParent";
+            this.lblNameParent.Size = new System.Drawing.Size(82, 27);
+            this.lblNameParent.TabIndex = 15;
+            this.lblNameParent.Text = "Name :";
+            // 
+            // txtNameParent
+            // 
+            this.txtNameParent.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtNameParent.Location = new System.Drawing.Point(140, 277);
+            this.txtNameParent.Name = "txtNameParent";
+            this.txtNameParent.Size = new System.Drawing.Size(198, 32);
+            this.txtNameParent.TabIndex = 14;
+            // 
+            // lblParentsAttributes
+            // 
+            this.lblParentsAttributes.AutoSize = true;
+            this.lblParentsAttributes.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblParentsAttributes.Location = new System.Drawing.Point(11, 223);
+            this.lblParentsAttributes.Name = "lblParentsAttributes";
+            this.lblParentsAttributes.Size = new System.Drawing.Size(199, 27);
+            this.lblParentsAttributes.TabIndex = 13;
+            this.lblParentsAttributes.Text = "Parent\'s Attributes";
+            // 
+            // lblStudentsAttributes
+            // 
+            this.lblStudentsAttributes.AutoSize = true;
+            this.lblStudentsAttributes.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblStudentsAttributes.Location = new System.Drawing.Point(11, 3);
+            this.lblStudentsAttributes.Name = "lblStudentsAttributes";
+            this.lblStudentsAttributes.Size = new System.Drawing.Size(212, 27);
+            this.lblStudentsAttributes.TabIndex = 12;
+            this.lblStudentsAttributes.Text = "Student\'s Attributes";
+            // 
+            // lblID
+            // 
+            this.lblID.AutoSize = true;
+            this.lblID.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblID.Location = new System.Drawing.Point(462, 168);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(78, 27);
+            this.lblID.TabIndex = 11;
+            this.lblID.Text = "ID No :";
+            // 
+            // lblBirthDate
+            // 
+            this.lblBirthDate.AutoSize = true;
+            this.lblBirthDate.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblBirthDate.Location = new System.Drawing.Point(415, 109);
+            this.lblBirthDate.Name = "lblBirthDate";
+            this.lblBirthDate.Size = new System.Drawing.Size(125, 27);
+            this.lblBirthDate.TabIndex = 10;
+            this.lblBirthDate.Text = "Birth Date :";
+            // 
+            // lblGender
+            // 
+            this.lblGender.AutoSize = true;
+            this.lblGender.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblGender.Location = new System.Drawing.Point(444, 54);
+            this.lblGender.Name = "lblGender";
+            this.lblGender.Size = new System.Drawing.Size(96, 27);
+            this.lblGender.TabIndex = 9;
+            this.lblGender.Text = "Gender :";
+            // 
+            // lblClass
+            // 
+            this.lblClass.AutoSize = true;
+            this.lblClass.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblClass.Location = new System.Drawing.Point(65, 168);
+            this.lblClass.Name = "lblClass";
+            this.lblClass.Size = new System.Drawing.Size(72, 27);
+            this.lblClass.TabIndex = 8;
+            this.lblClass.Text = "Class :";
+            // 
+            // lblSurnameStudent
+            // 
+            this.lblSurnameStudent.AutoSize = true;
+            this.lblSurnameStudent.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblSurnameStudent.Location = new System.Drawing.Point(24, 109);
+            this.lblSurnameStudent.Name = "lblSurnameStudent";
+            this.lblSurnameStudent.Size = new System.Drawing.Size(113, 27);
+            this.lblSurnameStudent.TabIndex = 7;
+            this.lblSurnameStudent.Text = "Surname :";
+            // 
+            // lblNameStudent
+            // 
+            this.lblNameStudent.AutoSize = true;
+            this.lblNameStudent.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblNameStudent.Location = new System.Drawing.Point(55, 54);
+            this.lblNameStudent.Name = "lblNameStudent";
+            this.lblNameStudent.Size = new System.Drawing.Size(82, 27);
+            this.lblNameStudent.TabIndex = 6;
+            this.lblNameStudent.Text = "Name :";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.dateTimePicker1.Location = new System.Drawing.Point(543, 106);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(198, 32);
+            this.dateTimePicker1.TabIndex = 4;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.comboBox1.Location = new System.Drawing.Point(543, 51);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(198, 35);
+            this.comboBox1.TabIndex = 3;
+            // 
+            // txtClass
+            // 
+            this.txtClass.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtClass.Location = new System.Drawing.Point(140, 165);
+            this.txtClass.Name = "txtClass";
+            this.txtClass.Size = new System.Drawing.Size(198, 32);
+            this.txtClass.TabIndex = 2;
+            // 
+            // txtSurnameStudent
+            // 
+            this.txtSurnameStudent.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtSurnameStudent.Location = new System.Drawing.Point(140, 106);
+            this.txtSurnameStudent.Name = "txtSurnameStudent";
+            this.txtSurnameStudent.Size = new System.Drawing.Size(198, 32);
+            this.txtSurnameStudent.TabIndex = 1;
+            // 
+            // txtNameStudent
+            // 
+            this.txtNameStudent.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtNameStudent.Location = new System.Drawing.Point(140, 51);
+            this.txtNameStudent.Name = "txtNameStudent";
+            this.txtNameStudent.Size = new System.Drawing.Size(198, 32);
+            this.txtNameStudent.TabIndex = 0;
+            // 
             // tabPageTeachers
             // 
             this.tabPageTeachers.BackColor = System.Drawing.Color.Gainsboro;
@@ -197,6 +416,66 @@
             this.tabPageTeachers.TabIndex = 1;
             this.tabPageTeachers.Text = "Teachers";
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(72)))), ((int)(((byte)(192)))));
+            this.button3.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(350, 402);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(100, 50);
+            this.button3.TabIndex = 6;
+            this.button3.Text = "SAVE";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(369, 192);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(154, 32);
+            this.textBox4.TabIndex = 5;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(369, 125);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(154, 32);
+            this.textBox3.TabIndex = 4;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(369, 57);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(154, 32);
+            this.textBox2.TabIndex = 3;
+            // 
+            // lblSubjectTeachers
+            // 
+            this.lblSubjectTeachers.AutoSize = true;
+            this.lblSubjectTeachers.Location = new System.Drawing.Point(267, 195);
+            this.lblSubjectTeachers.Name = "lblSubjectTeachers";
+            this.lblSubjectTeachers.Size = new System.Drawing.Size(96, 27);
+            this.lblSubjectTeachers.TabIndex = 2;
+            this.lblSubjectTeachers.Text = "Subject :";
+            // 
+            // lblSurnameTeachers
+            // 
+            this.lblSurnameTeachers.AutoSize = true;
+            this.lblSurnameTeachers.Location = new System.Drawing.Point(250, 128);
+            this.lblSurnameTeachers.Name = "lblSurnameTeachers";
+            this.lblSurnameTeachers.Size = new System.Drawing.Size(113, 27);
+            this.lblSurnameTeachers.TabIndex = 1;
+            this.lblSurnameTeachers.Text = "Surname :";
+            // 
+            // lblNameTeachers
+            // 
+            this.lblNameTeachers.AutoSize = true;
+            this.lblNameTeachers.Location = new System.Drawing.Point(281, 60);
+            this.lblNameTeachers.Name = "lblNameTeachers";
+            this.lblNameTeachers.Size = new System.Drawing.Size(82, 27);
+            this.lblNameTeachers.TabIndex = 0;
+            this.lblNameTeachers.Text = "Name :";
+            // 
             // tabPageClasses
             // 
             this.tabPageClasses.BackColor = System.Drawing.Color.Gainsboro;
@@ -214,6 +493,51 @@
             this.tabPageClasses.TabIndex = 2;
             this.tabPageClasses.Text = "Classes";
             // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(338, 148);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(227, 35);
+            this.comboBox2.TabIndex = 9;
+            // 
+            // lblTeacherClasses
+            // 
+            this.lblTeacherClasses.AutoSize = true;
+            this.lblTeacherClasses.Location = new System.Drawing.Point(232, 151);
+            this.lblTeacherClasses.Name = "lblTeacherClasses";
+            this.lblTeacherClasses.Size = new System.Drawing.Size(100, 27);
+            this.lblTeacherClasses.TabIndex = 8;
+            this.lblTeacherClasses.Text = "Teacher :";
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(72)))), ((int)(((byte)(192)))));
+            this.button4.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(350, 402);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(100, 50);
+            this.button4.TabIndex = 7;
+            this.button4.Text = "SAVE";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(338, 79);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(227, 32);
+            this.textBox5.TabIndex = 1;
+            // 
+            // lblNameClass
+            // 
+            this.lblNameClass.AutoSize = true;
+            this.lblNameClass.Location = new System.Drawing.Point(194, 82);
+            this.lblNameClass.Name = "lblNameClass";
+            this.lblNameClass.Size = new System.Drawing.Size(138, 27);
+            this.lblNameClass.TabIndex = 0;
+            this.lblNameClass.Text = "Class Name :";
+            // 
             // tabPageCanteen
             // 
             this.tabPageCanteen.BackColor = System.Drawing.Color.Gainsboro;
@@ -230,261 +554,6 @@
             this.tabPageCanteen.TabIndex = 3;
             this.tabPageCanteen.Text = "Canteen";
             // 
-            // txtNameStudent
-            // 
-            this.txtNameStudent.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtNameStudent.Location = new System.Drawing.Point(140, 51);
-            this.txtNameStudent.Name = "txtNameStudent";
-            this.txtNameStudent.Size = new System.Drawing.Size(198, 32);
-            this.txtNameStudent.TabIndex = 0;
-            // 
-            // txtSurnameStudent
-            // 
-            this.txtSurnameStudent.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtSurnameStudent.Location = new System.Drawing.Point(140, 106);
-            this.txtSurnameStudent.Name = "txtSurnameStudent";
-            this.txtSurnameStudent.Size = new System.Drawing.Size(198, 32);
-            this.txtSurnameStudent.TabIndex = 1;
-            // 
-            // txtClass
-            // 
-            this.txtClass.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtClass.Location = new System.Drawing.Point(140, 165);
-            this.txtClass.Name = "txtClass";
-            this.txtClass.Size = new System.Drawing.Size(198, 32);
-            this.txtClass.TabIndex = 2;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
-            this.comboBox1.Location = new System.Drawing.Point(543, 51);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(198, 35);
-            this.comboBox1.TabIndex = 3;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(543, 106);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(198, 32);
-            this.dateTimePicker1.TabIndex = 4;
-            // 
-            // lblNameStudent
-            // 
-            this.lblNameStudent.AutoSize = true;
-            this.lblNameStudent.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblNameStudent.Location = new System.Drawing.Point(55, 54);
-            this.lblNameStudent.Name = "lblNameStudent";
-            this.lblNameStudent.Size = new System.Drawing.Size(82, 27);
-            this.lblNameStudent.TabIndex = 6;
-            this.lblNameStudent.Text = "Name :";
-            // 
-            // lblSurnameStudent
-            // 
-            this.lblSurnameStudent.AutoSize = true;
-            this.lblSurnameStudent.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblSurnameStudent.Location = new System.Drawing.Point(24, 109);
-            this.lblSurnameStudent.Name = "lblSurnameStudent";
-            this.lblSurnameStudent.Size = new System.Drawing.Size(113, 27);
-            this.lblSurnameStudent.TabIndex = 7;
-            this.lblSurnameStudent.Text = "Surname :";
-            // 
-            // lblClass
-            // 
-            this.lblClass.AutoSize = true;
-            this.lblClass.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblClass.Location = new System.Drawing.Point(65, 168);
-            this.lblClass.Name = "lblClass";
-            this.lblClass.Size = new System.Drawing.Size(72, 27);
-            this.lblClass.TabIndex = 8;
-            this.lblClass.Text = "Class :";
-            // 
-            // lblGender
-            // 
-            this.lblGender.AutoSize = true;
-            this.lblGender.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblGender.Location = new System.Drawing.Point(444, 54);
-            this.lblGender.Name = "lblGender";
-            this.lblGender.Size = new System.Drawing.Size(96, 27);
-            this.lblGender.TabIndex = 9;
-            this.lblGender.Text = "Gender :";
-            // 
-            // lblBirthDate
-            // 
-            this.lblBirthDate.AutoSize = true;
-            this.lblBirthDate.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblBirthDate.Location = new System.Drawing.Point(415, 109);
-            this.lblBirthDate.Name = "lblBirthDate";
-            this.lblBirthDate.Size = new System.Drawing.Size(125, 27);
-            this.lblBirthDate.TabIndex = 10;
-            this.lblBirthDate.Text = "Birth Date :";
-            // 
-            // lblID
-            // 
-            this.lblID.AutoSize = true;
-            this.lblID.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblID.Location = new System.Drawing.Point(462, 168);
-            this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(78, 27);
-            this.lblID.TabIndex = 11;
-            this.lblID.Text = "ID No :";
-            // 
-            // lblStudentsAttributes
-            // 
-            this.lblStudentsAttributes.AutoSize = true;
-            this.lblStudentsAttributes.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblStudentsAttributes.Location = new System.Drawing.Point(11, 3);
-            this.lblStudentsAttributes.Name = "lblStudentsAttributes";
-            this.lblStudentsAttributes.Size = new System.Drawing.Size(212, 27);
-            this.lblStudentsAttributes.TabIndex = 12;
-            this.lblStudentsAttributes.Text = "Student\'s Attributes";
-            // 
-            // lblParentsAttributes
-            // 
-            this.lblParentsAttributes.AutoSize = true;
-            this.lblParentsAttributes.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblParentsAttributes.Location = new System.Drawing.Point(11, 223);
-            this.lblParentsAttributes.Name = "lblParentsAttributes";
-            this.lblParentsAttributes.Size = new System.Drawing.Size(199, 27);
-            this.lblParentsAttributes.TabIndex = 13;
-            this.lblParentsAttributes.Text = "Parent\'s Attributes";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(72)))), ((int)(((byte)(192)))));
-            this.button1.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(350, 402);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 50);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "SAVE";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // txtNameParent
-            // 
-            this.txtNameParent.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtNameParent.Location = new System.Drawing.Point(140, 277);
-            this.txtNameParent.Name = "txtNameParent";
-            this.txtNameParent.Size = new System.Drawing.Size(198, 32);
-            this.txtNameParent.TabIndex = 14;
-            // 
-            // lblNameParent
-            // 
-            this.lblNameParent.AutoSize = true;
-            this.lblNameParent.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblNameParent.Location = new System.Drawing.Point(55, 280);
-            this.lblNameParent.Name = "lblNameParent";
-            this.lblNameParent.Size = new System.Drawing.Size(82, 27);
-            this.lblNameParent.TabIndex = 15;
-            this.lblNameParent.Text = "Name :";
-            // 
-            // lblSurnameParent
-            // 
-            this.lblSurnameParent.AutoSize = true;
-            this.lblSurnameParent.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblSurnameParent.Location = new System.Drawing.Point(24, 331);
-            this.lblSurnameParent.Name = "lblSurnameParent";
-            this.lblSurnameParent.Size = new System.Drawing.Size(113, 27);
-            this.lblSurnameParent.TabIndex = 16;
-            this.lblSurnameParent.Text = "Surname :";
-            // 
-            // txtSurnameParent
-            // 
-            this.txtSurnameParent.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtSurnameParent.Location = new System.Drawing.Point(140, 326);
-            this.txtSurnameParent.Name = "txtSurnameParent";
-            this.txtSurnameParent.Size = new System.Drawing.Size(198, 32);
-            this.txtSurnameParent.TabIndex = 17;
-            // 
-            // maskedTextBoxPhoneNumber
-            // 
-            this.maskedTextBoxPhoneNumber.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.maskedTextBoxPhoneNumber.Location = new System.Drawing.Point(543, 277);
-            this.maskedTextBoxPhoneNumber.Mask = "(999) 000-0000";
-            this.maskedTextBoxPhoneNumber.Name = "maskedTextBoxPhoneNumber";
-            this.maskedTextBoxPhoneNumber.Size = new System.Drawing.Size(198, 32);
-            this.maskedTextBoxPhoneNumber.TabIndex = 18;
-            // 
-            // lblPhoneNumber
-            // 
-            this.lblPhoneNumber.AutoSize = true;
-            this.lblPhoneNumber.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblPhoneNumber.Location = new System.Drawing.Point(363, 280);
-            this.lblPhoneNumber.Name = "lblPhoneNumber";
-            this.lblPhoneNumber.Size = new System.Drawing.Size(177, 27);
-            this.lblPhoneNumber.TabIndex = 19;
-            this.lblPhoneNumber.Text = "Phone Number :";
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtEmail.Location = new System.Drawing.Point(543, 328);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(198, 32);
-            this.txtEmail.TabIndex = 20;
-            // 
-            // lblEmail
-            // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblEmail.Location = new System.Drawing.Point(455, 331);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(85, 27);
-            this.lblEmail.TabIndex = 21;
-            this.lblEmail.Text = "E-mail :";
-            // 
-            // maskedTextBoxIdNo
-            // 
-            this.maskedTextBoxIdNo.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.maskedTextBoxIdNo.Location = new System.Drawing.Point(543, 165);
-            this.maskedTextBoxIdNo.Mask = "00000000000";
-            this.maskedTextBoxIdNo.Name = "maskedTextBoxIdNo";
-            this.maskedTextBoxIdNo.Size = new System.Drawing.Size(198, 32);
-            this.maskedTextBoxIdNo.TabIndex = 22;
-            this.maskedTextBoxIdNo.ValidatingType = typeof(int);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox1.Location = new System.Drawing.Point(383, 74);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(167, 32);
-            this.textBox1.TabIndex = 1;
-            // 
-            // txtPriceCanteen
-            // 
-            this.txtPriceCanteen.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtPriceCanteen.Location = new System.Drawing.Point(383, 158);
-            this.txtPriceCanteen.Name = "txtPriceCanteen";
-            this.txtPriceCanteen.Size = new System.Drawing.Size(167, 32);
-            this.txtPriceCanteen.TabIndex = 2;
-            // 
-            // lblPriceCanteen
-            // 
-            this.lblPriceCanteen.AutoSize = true;
-            this.lblPriceCanteen.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblPriceCanteen.Location = new System.Drawing.Point(222, 161);
-            this.lblPriceCanteen.Name = "lblPriceCanteen";
-            this.lblPriceCanteen.Size = new System.Drawing.Size(155, 27);
-            this.lblPriceCanteen.TabIndex = 3;
-            this.lblPriceCanteen.Text = "Product Price :";
-            // 
-            // lblNameCanteen
-            // 
-            this.lblNameCanteen.AutoSize = true;
-            this.lblNameCanteen.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblNameCanteen.Location = new System.Drawing.Point(210, 77);
-            this.lblNameCanteen.Name = "lblNameCanteen";
-            this.lblNameCanteen.Size = new System.Drawing.Size(167, 27);
-            this.lblNameCanteen.TabIndex = 4;
-            this.lblNameCanteen.Text = "Product Name :";
-            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(72)))), ((int)(((byte)(192)))));
@@ -497,110 +566,41 @@
             this.button2.Text = "SAVE";
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // lblNameTeachers
+            // lblNameCanteen
             // 
-            this.lblNameTeachers.AutoSize = true;
-            this.lblNameTeachers.Location = new System.Drawing.Point(281, 60);
-            this.lblNameTeachers.Name = "lblNameTeachers";
-            this.lblNameTeachers.Size = new System.Drawing.Size(82, 27);
-            this.lblNameTeachers.TabIndex = 0;
-            this.lblNameTeachers.Text = "Name :";
+            this.lblNameCanteen.AutoSize = true;
+            this.lblNameCanteen.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblNameCanteen.Location = new System.Drawing.Point(210, 77);
+            this.lblNameCanteen.Name = "lblNameCanteen";
+            this.lblNameCanteen.Size = new System.Drawing.Size(167, 27);
+            this.lblNameCanteen.TabIndex = 4;
+            this.lblNameCanteen.Text = "Product Name :";
             // 
-            // lblSurnameTeachers
+            // lblPriceCanteen
             // 
-            this.lblSurnameTeachers.AutoSize = true;
-            this.lblSurnameTeachers.Location = new System.Drawing.Point(250, 128);
-            this.lblSurnameTeachers.Name = "lblSurnameTeachers";
-            this.lblSurnameTeachers.Size = new System.Drawing.Size(113, 27);
-            this.lblSurnameTeachers.TabIndex = 1;
-            this.lblSurnameTeachers.Text = "Surname :";
+            this.lblPriceCanteen.AutoSize = true;
+            this.lblPriceCanteen.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblPriceCanteen.Location = new System.Drawing.Point(222, 161);
+            this.lblPriceCanteen.Name = "lblPriceCanteen";
+            this.lblPriceCanteen.Size = new System.Drawing.Size(155, 27);
+            this.lblPriceCanteen.TabIndex = 3;
+            this.lblPriceCanteen.Text = "Product Price :";
             // 
-            // lblSubjectTeachers
+            // txtPriceCanteen
             // 
-            this.lblSubjectTeachers.AutoSize = true;
-            this.lblSubjectTeachers.Location = new System.Drawing.Point(267, 195);
-            this.lblSubjectTeachers.Name = "lblSubjectTeachers";
-            this.lblSubjectTeachers.Size = new System.Drawing.Size(96, 27);
-            this.lblSubjectTeachers.TabIndex = 2;
-            this.lblSubjectTeachers.Text = "Subject :";
+            this.txtPriceCanteen.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtPriceCanteen.Location = new System.Drawing.Point(383, 158);
+            this.txtPriceCanteen.Name = "txtPriceCanteen";
+            this.txtPriceCanteen.Size = new System.Drawing.Size(167, 32);
+            this.txtPriceCanteen.TabIndex = 2;
             // 
-            // textBox2
+            // textBox1
             // 
-            this.textBox2.Location = new System.Drawing.Point(369, 57);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(154, 32);
-            this.textBox2.TabIndex = 3;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(369, 125);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(154, 32);
-            this.textBox3.TabIndex = 4;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(369, 192);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(154, 32);
-            this.textBox4.TabIndex = 5;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(72)))), ((int)(((byte)(192)))));
-            this.button3.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(350, 402);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 50);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "SAVE";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // lblNameClass
-            // 
-            this.lblNameClass.AutoSize = true;
-            this.lblNameClass.Location = new System.Drawing.Point(194, 82);
-            this.lblNameClass.Name = "lblNameClass";
-            this.lblNameClass.Size = new System.Drawing.Size(138, 27);
-            this.lblNameClass.TabIndex = 0;
-            this.lblNameClass.Text = "Class Name :";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(338, 79);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(227, 32);
-            this.textBox5.TabIndex = 1;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(72)))), ((int)(((byte)(192)))));
-            this.button4.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(350, 402);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(100, 50);
-            this.button4.TabIndex = 7;
-            this.button4.Text = "SAVE";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // lblTeacherClasses
-            // 
-            this.lblTeacherClasses.AutoSize = true;
-            this.lblTeacherClasses.Location = new System.Drawing.Point(232, 151);
-            this.lblTeacherClasses.Name = "lblTeacherClasses";
-            this.lblTeacherClasses.Size = new System.Drawing.Size(100, 27);
-            this.lblTeacherClasses.TabIndex = 8;
-            this.lblTeacherClasses.Text = "Teacher :";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(338, 148);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(227, 35);
-            this.comboBox2.TabIndex = 9;
+            this.textBox1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textBox1.Location = new System.Drawing.Point(383, 74);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(167, 32);
+            this.textBox1.TabIndex = 1;
             // 
             // Add
             // 

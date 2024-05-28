@@ -280,6 +280,7 @@
             this.txtSearchStudents.Size = new System.Drawing.Size(241, 44);
             this.txtSearchStudents.TabIndex = 5;
             this.txtSearchStudents.Text = "Search";
+            this.txtSearchStudents.Height = 44;
             // 
             // picSearchStudents
             // 
@@ -292,6 +293,8 @@
             this.picSearchStudents.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picSearchStudents.TabIndex = 6;
             this.picSearchStudents.TabStop = false;
+            this.picSearchStudents.Height = this.txtSearchStudents.Height;
+            this.picSearchStudents.Width = this.txtSearchStudents.Height;
             // 
             // panel1
             // 

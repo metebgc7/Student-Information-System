@@ -111,18 +111,6 @@
             this.picQuitTeachers.TabStop = false;
             this.picQuitTeachers.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
-            // picSearchTeachers
-            // 
-            this.picSearchTeachers.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picSearchTeachers.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picSearchTeachers.Image = ((System.Drawing.Image)(resources.GetObject("picSearchTeachers.Image")));
-            this.picSearchTeachers.Location = new System.Drawing.Point(247, 0);
-            this.picSearchTeachers.Name = "picSearchTeachers";
-            this.picSearchTeachers.Size = new System.Drawing.Size(44, 44);
-            this.picSearchTeachers.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picSearchTeachers.TabIndex = 8;
-            this.picSearchTeachers.TabStop = false;
-            // 
             // txtSearchTeachers
             // 
             this.txtSearchTeachers.BackColor = System.Drawing.Color.White;
@@ -135,6 +123,22 @@
             this.txtSearchTeachers.Size = new System.Drawing.Size(241, 44);
             this.txtSearchTeachers.TabIndex = 7;
             this.txtSearchTeachers.Text = "Search";
+            this.txtSearchTeachers.Height = 44;
+            // 
+            // picSearchTeachers
+            // 
+            this.picSearchTeachers.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picSearchTeachers.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picSearchTeachers.Image = ((System.Drawing.Image)(resources.GetObject("picSearchTeachers.Image")));
+            this.picSearchTeachers.Location = new System.Drawing.Point(247, 0);
+            this.picSearchTeachers.Name = "picSearchTeachers";
+            this.picSearchTeachers.Size = new System.Drawing.Size(44, 44);
+            this.picSearchTeachers.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picSearchTeachers.TabIndex = 8;
+            this.picSearchTeachers.TabStop = false;
+            this.picSearchTeachers.Height = this.txtSearchTeachers.Height;
+            this.picSearchTeachers.Width = this.txtSearchTeachers.Height;
+
             // 
             // panel3
             // 
