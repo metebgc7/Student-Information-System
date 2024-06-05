@@ -10,6 +10,19 @@
 *.userosscache
 *.sln.docstates
 
+# config directory
+config/database.yml
+
+# Environment variables file
+.env
+
+# Ignore other common sensitive files and directories
+*.log
+*.sql
+*.sqlite
+*.db
+*.bak
+
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
