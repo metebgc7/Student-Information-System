@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Data.SqlClient;
 
 namespace Student_Information_System
 {
@@ -17,6 +18,8 @@ namespace Student_Information_System
         {
             InitializeComponent();
         }
+        static string ConnString = "Data Source=METEHAN\\SQLEXPRESS;Initial Catalog=SchoolDB;Integrated Security=True";
+        SqlConnection connect = new SqlConnection(ConnString);
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
@@ -35,19 +38,54 @@ namespace Student_Information_System
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (txtUsername.Text == "33" && txtPassword.Text == "33")
-            {    
-                this.Hide();
-                new homepage().Show(); 
-            }
-            else
+            try
             {
-                MessageBox.Show("Kullanıcı adı veya şifre hatalı, tekrar deneyiniz.");
-                txtUsername.Clear();
-                txtPassword.Clear();
-                txtUsername.Focus();
+                // Open the connection if it is not already open
+                if (connect.State == ConnectionState.Closed)
+                    connect.Open();
+
+                // Define the query to check username and password
+                string query = "SELECT COUNT(1) FROM [SchoolDB].[dbo].[Users] WHERE [Username] = @Username AND [Password] = @Password";
+
+                // Create a SqlCommand to execute the query
+                using (SqlCommand command = new SqlCommand(query, connect))
+                {
+                    // Add parameters to prevent SQL injection
+                    command.Parameters.AddWithValue("@Username", txtUsername.Text);
+                    command.Parameters.AddWithValue("@Password", txtPassword.Text);
+
+                    // Execute the query and get the result
+                    int count = Convert.ToInt32(command.ExecuteScalar());
+
+                    if (count == 1)
+                    {
+                        // Authentication successful, navigate to homepage
+                        new SplashScreen().Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        // Authentication failed, show error message
+                        MessageBox.Show("Kullanıcı adı veya şifre hatalı, tekrar deneyiniz.");
+                        txtUsername.Clear();
+                        txtPassword.Clear();
+                        txtUsername.Focus();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle any errors that may have occurred
+                MessageBox.Show("An error occurred: " + ex.Message);
+            }
+            finally
+            {
+                // Close the connection
+                if (connect.State == ConnectionState.Open)
+                    connect.Close();
             }
         }
+
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
@@ -73,6 +111,9 @@ namespace Student_Information_System
         {
 
         }
+
+
+
 
         bool mouseDown;
         private Point offset;

@@ -287,10 +287,8 @@
             this.panel1.Controls.Add(this.picDeleteUsers);
             this.panel1.Location = new System.Drawing.Point(719, 97);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(44, 43);
+            this.panel1.Size = new System.Drawing.Size(44, 44);
             this.panel1.TabIndex = 21;
-            this.panel1.Height = txtPasswordUsers.Height;
-            this.panel1.Width = txtPasswordUsers.Height;
             // 
             // picDeleteUsers
             // 
@@ -302,8 +300,7 @@
             this.picDeleteUsers.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picDeleteUsers.TabIndex = 22;
             this.picDeleteUsers.TabStop = false;
-            this.picDeleteUsers.Height = txtPasswordUsers.Height;
-            this.picDeleteUsers.Width = txtPasswordUsers.Height;
+            this.picDeleteUsers.Click += new System.EventHandler(this.picDeleteUsers_Click);
             // 
             // dataGridViewUsers
             // 
@@ -352,7 +349,7 @@
             this.btnSaveUsers.TabIndex = 23;
             this.btnSaveUsers.Text = "SAVE";
             this.btnSaveUsers.UseVisualStyleBackColor = false;
-            this.btnSaveUsers.Height = txtPasswordUsers.Height;
+            this.btnSaveUsers.Click += new System.EventHandler(this.btnSaveUsers_Click);
             // 
             // Users
             // 

@@ -53,7 +53,6 @@
             this.lblClass = new System.Windows.Forms.Label();
             this.lblSurnameStudent = new System.Windows.Forms.Label();
             this.lblNameStudent = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.txtClass = new System.Windows.Forms.TextBox();
             this.txtSurnameStudent = new System.Windows.Forms.TextBox();
@@ -78,6 +77,7 @@
             this.lblPriceCanteen = new System.Windows.Forms.Label();
             this.txtPriceCanteen = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.maskedTextBoxBirthDate = new System.Windows.Forms.MaskedTextBox();
             this.pnlTopBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picQuitHome)).BeginInit();
@@ -149,6 +149,7 @@
             // tabPageStudents
             // 
             this.tabPageStudents.BackColor = System.Drawing.Color.Gainsboro;
+            this.tabPageStudents.Controls.Add(this.maskedTextBoxBirthDate);
             this.tabPageStudents.Controls.Add(this.maskedTextBoxIdNo);
             this.tabPageStudents.Controls.Add(this.button1);
             this.tabPageStudents.Controls.Add(this.lblEmail);
@@ -167,7 +168,6 @@
             this.tabPageStudents.Controls.Add(this.lblClass);
             this.tabPageStudents.Controls.Add(this.lblSurnameStudent);
             this.tabPageStudents.Controls.Add(this.lblNameStudent);
-            this.tabPageStudents.Controls.Add(this.dateTimePicker1);
             this.tabPageStudents.Controls.Add(this.comboBox1);
             this.tabPageStudents.Controls.Add(this.txtClass);
             this.tabPageStudents.Controls.Add(this.txtSurnameStudent);
@@ -353,14 +353,6 @@
             this.lblNameStudent.Size = new System.Drawing.Size(82, 27);
             this.lblNameStudent.TabIndex = 6;
             this.lblNameStudent.Text = "Name :";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(543, 106);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(198, 32);
-            this.dateTimePicker1.TabIndex = 4;
             // 
             // comboBox1
             // 
@@ -602,6 +594,16 @@
             this.textBox1.Size = new System.Drawing.Size(167, 32);
             this.textBox1.TabIndex = 1;
             // 
+            // maskedTextBoxBirthDate
+            // 
+            this.maskedTextBoxBirthDate.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.maskedTextBoxBirthDate.Location = new System.Drawing.Point(543, 108);
+            this.maskedTextBoxBirthDate.Mask = "00/00/0000";
+            this.maskedTextBoxBirthDate.Name = "maskedTextBoxBirthDate";
+            this.maskedTextBoxBirthDate.Size = new System.Drawing.Size(198, 32);
+            this.maskedTextBoxBirthDate.TabIndex = 23;
+            this.maskedTextBoxBirthDate.ValidatingType = typeof(System.DateTime);
+            // 
             // Add
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -645,7 +647,6 @@
         private System.Windows.Forms.TextBox txtSurnameStudent;
         private System.Windows.Forms.TextBox txtClass;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label lblSurnameStudent;
         private System.Windows.Forms.Label lblNameStudent;
         private System.Windows.Forms.Label lblBirthDate;
@@ -681,5 +682,6 @@
         private System.Windows.Forms.Label lblNameClass;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label lblTeacherClasses;
+        private System.Windows.Forms.MaskedTextBox maskedTextBoxBirthDate;
     }
 }

@@ -61,9 +61,8 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.lblAttandanceStudents = new System.Windows.Forms.Button();
             this.pnlTopBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picQuitStudents)).BeginInit();
             this.panelPagesSidebar.SuspendLayout();
@@ -280,7 +279,6 @@
             this.txtSearchStudents.Size = new System.Drawing.Size(241, 44);
             this.txtSearchStudents.TabIndex = 5;
             this.txtSearchStudents.Text = "Search";
-            this.txtSearchStudents.Height = 44;
             // 
             // picSearchStudents
             // 
@@ -293,8 +291,7 @@
             this.picSearchStudents.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picSearchStudents.TabIndex = 6;
             this.picSearchStudents.TabStop = false;
-            this.picSearchStudents.Height = this.txtSearchStudents.Height;
-            this.picSearchStudents.Width = this.txtSearchStudents.Height;
+            this.picSearchStudents.Click += new System.EventHandler(this.picSearchStudents_Click);
             // 
             // panel1
             // 
@@ -315,6 +312,7 @@
             this.picAddStudents.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picAddStudents.TabIndex = 10;
             this.picAddStudents.TabStop = false;
+            this.picAddStudents.Tag = "";
             this.picAddStudents.Click += new System.EventHandler(this.picAddStudents_Click);
             // 
             // panel2
@@ -356,6 +354,7 @@
             this.picDeleteStudents.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picDeleteStudents.TabIndex = 12;
             this.picDeleteStudents.TabStop = false;
+            this.picDeleteStudents.Click += new System.EventHandler(this.picDeleteStudents_Click);
             // 
             // dataGridViewStudents
             // 
@@ -369,9 +368,7 @@
             this.Column3,
             this.Column4,
             this.Column5,
-            this.Column6,
-            this.Column7,
-            this.Column8});
+            this.Column6});
             this.dataGridViewStudents.Location = new System.Drawing.Point(207, 215);
             this.dataGridViewStudents.Name = "dataGridViewStudents";
             this.dataGridViewStudents.RowHeadersWidth = 35;
@@ -415,18 +412,6 @@
             this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
             // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Card ID";
-            this.Column7.MinimumWidth = 6;
-            this.Column7.Name = "Column7";
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Parent ID";
-            this.Column8.MinimumWidth = 6;
-            this.Column8.Name = "Column8";
-            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.txtSearchStudents);
@@ -436,11 +421,26 @@
             this.panel4.Size = new System.Drawing.Size(828, 44);
             this.panel4.TabIndex = 15;
             // 
+            // lblAttandanceStudents
+            // 
+            this.lblAttandanceStudents.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(72)))), ((int)(((byte)(192)))));
+            this.lblAttandanceStudents.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblAttandanceStudents.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblAttandanceStudents.ForeColor = System.Drawing.Color.White;
+            this.lblAttandanceStudents.Location = new System.Drawing.Point(922, 150);
+            this.lblAttandanceStudents.Name = "lblAttandanceStudents";
+            this.lblAttandanceStudents.Size = new System.Drawing.Size(144, 44);
+            this.lblAttandanceStudents.TabIndex = 16;
+            this.lblAttandanceStudents.Text = "ATTANDANCE";
+            this.lblAttandanceStudents.UseVisualStyleBackColor = false;
+            this.lblAttandanceStudents.Click += new System.EventHandler(this.lblAttandanceStudents_Click);
+            // 
             // Students
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1122, 650);
+            this.Controls.Add(this.lblAttandanceStudents);
             this.Controls.Add(this.dataGridViewStudents);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -513,14 +513,13 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox picDeleteStudents;
         private System.Windows.Forms.DataGridView dataGridViewStudents;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button lblAttandanceStudents;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.Panel panel4;
     }
 }

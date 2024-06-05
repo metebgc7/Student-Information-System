@@ -283,11 +283,11 @@
             // lblDataStuNum
             // 
             this.lblDataStuNum.AutoSize = true;
-            this.lblDataStuNum.Font = new System.Drawing.Font("Montserrat", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblDataStuNum.Font = new System.Drawing.Font("Montserrat SemiBold", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblDataStuNum.ForeColor = System.Drawing.Color.White;
-            this.lblDataStuNum.Location = new System.Drawing.Point(70, 86);
+            this.lblDataStuNum.Location = new System.Drawing.Point(107, 69);
             this.lblDataStuNum.Name = "lblDataStuNum";
-            this.lblDataStuNum.Size = new System.Drawing.Size(159, 46);
+            this.lblDataStuNum.Size = new System.Drawing.Size(229, 65);
             this.lblDataStuNum.TabIndex = 1;
             this.lblDataStuNum.Text = "StuNum";
             // 
@@ -316,11 +316,11 @@
             // lblDataClsNum
             // 
             this.lblDataClsNum.AutoSize = true;
-            this.lblDataClsNum.Font = new System.Drawing.Font("Montserrat", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblDataClsNum.Font = new System.Drawing.Font("Montserrat SemiBold", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblDataClsNum.ForeColor = System.Drawing.Color.White;
-            this.lblDataClsNum.Location = new System.Drawing.Point(69, 86);
+            this.lblDataClsNum.Location = new System.Drawing.Point(103, 69);
             this.lblDataClsNum.Name = "lblDataClsNum";
-            this.lblDataClsNum.Size = new System.Drawing.Size(153, 46);
+            this.lblDataClsNum.Size = new System.Drawing.Size(219, 65);
             this.lblDataClsNum.TabIndex = 2;
             this.lblDataClsNum.Text = "ClsNum";
             // 
@@ -349,11 +349,11 @@
             // lblDataTeachNum
             // 
             this.lblDataTeachNum.AutoSize = true;
-            this.lblDataTeachNum.Font = new System.Drawing.Font("Montserrat", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblDataTeachNum.Font = new System.Drawing.Font("Montserrat SemiBold", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblDataTeachNum.ForeColor = System.Drawing.Color.White;
-            this.lblDataTeachNum.Location = new System.Drawing.Point(43, 86);
+            this.lblDataTeachNum.Location = new System.Drawing.Point(110, 69);
             this.lblDataTeachNum.Name = "lblDataTeachNum";
-            this.lblDataTeachNum.Size = new System.Drawing.Size(201, 46);
+            this.lblDataTeachNum.Size = new System.Drawing.Size(288, 65);
             this.lblDataTeachNum.TabIndex = 2;
             this.lblDataTeachNum.Text = "TeachNum";
             // 

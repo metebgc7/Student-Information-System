@@ -67,6 +67,12 @@
     <Compile Include="Add.Designer.cs">
       <DependentUpon>Add.cs</DependentUpon>
     </Compile>
+    <Compile Include="Attandance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Attandance.Designer.cs">
+      <DependentUpon>Attandance.cs</DependentUpon>
+    </Compile>
     <Compile Include="Canteen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SchoolDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SchoolDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Students.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +130,9 @@
     </Compile>
     <EmbeddedResource Include="Add.resx">
       <DependentUpon>Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Attandance.resx">
+      <DependentUpon>Attandance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Canteen.resx">
       <DependentUpon>Canteen.cs</DependentUpon>
@@ -135,6 +155,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Students.resx">
       <DependentUpon>Students.cs</DependentUpon>
     </EmbeddedResource>
@@ -154,6 +177,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="SchoolDBDataSet.xsc">
+      <DependentUpon>SchoolDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SchoolDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SchoolDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SchoolDBDataSet.xss">
+      <DependentUpon>SchoolDBDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

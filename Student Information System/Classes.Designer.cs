@@ -46,8 +46,6 @@
             this.lblMenu = new System.Windows.Forms.Label();
             this.pnlHome = new System.Windows.Forms.Panel();
             this.lblHome = new System.Windows.Forms.Label();
-            this.picSearchClasses = new System.Windows.Forms.PictureBox();
-            this.txtSearchClasses = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.picDeleteClasses = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -57,8 +55,6 @@
             this.dataGridViewClasses = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.pnlTopBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picQuitClasses)).BeginInit();
             this.panelPagesSidebar.SuspendLayout();
@@ -68,7 +64,6 @@
             this.pnlTeachers.SuspendLayout();
             this.pnlStudents.SuspendLayout();
             this.pnlHome.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picSearchClasses)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picDeleteClasses)).BeginInit();
             this.panel2.SuspendLayout();
@@ -76,7 +71,6 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAddClasses)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClasses)).BeginInit();
-            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlTopBar
@@ -263,39 +257,11 @@
             this.lblHome.TabIndex = 0;
             this.lblHome.Text = "Home";
             // 
-            // txtSearchClasses
-            // 
-            this.txtSearchClasses.BackColor = System.Drawing.Color.White;
-            this.txtSearchClasses.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSearchClasses.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtSearchClasses.ForeColor = System.Drawing.Color.Black;
-            this.txtSearchClasses.Location = new System.Drawing.Point(0, 0);
-            this.txtSearchClasses.MaximumSize = new System.Drawing.Size(312, 53);
-            this.txtSearchClasses.Name = "txtSearchClasses";
-            this.txtSearchClasses.Size = new System.Drawing.Size(241, 44);
-            this.txtSearchClasses.TabIndex = 16;
-            this.txtSearchClasses.Text = "Search";
-            this.txtSearchClasses.Height = 44;
-            // 
-            // picSearchClasses
-            // 
-            this.picSearchClasses.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picSearchClasses.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picSearchClasses.Image = ((System.Drawing.Image)(resources.GetObject("picSearchClasses.Image")));
-            this.picSearchClasses.Location = new System.Drawing.Point(247, 0);
-            this.picSearchClasses.Name = "picSearchClasses";
-            this.picSearchClasses.Size = new System.Drawing.Size(44, 44);
-            this.picSearchClasses.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picSearchClasses.TabIndex = 17;
-            this.picSearchClasses.TabStop = false;
-            this.picSearchClasses.Height = this.txtSearchClasses.Height;
-            this.picSearchClasses.Width = this.txtSearchClasses.Height;
-            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(72)))), ((int)(((byte)(192)))));
             this.panel3.Controls.Add(this.picDeleteClasses);
-            this.panel3.Location = new System.Drawing.Point(746, 0);
+            this.panel3.Location = new System.Drawing.Point(1014, 106);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(44, 44);
             this.panel3.TabIndex = 20;
@@ -310,12 +276,13 @@
             this.picDeleteClasses.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picDeleteClasses.TabIndex = 12;
             this.picDeleteClasses.TabStop = false;
+            this.picDeleteClasses.Click += new System.EventHandler(this.picDeleteClasses_Click);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(72)))), ((int)(((byte)(192)))));
             this.panel2.Controls.Add(this.picEditClasses);
-            this.panel2.Location = new System.Drawing.Point(696, 0);
+            this.panel2.Location = new System.Drawing.Point(964, 106);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(44, 44);
             this.panel2.TabIndex = 19;
@@ -335,7 +302,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(72)))), ((int)(((byte)(192)))));
             this.panel1.Controls.Add(this.picAddClasses);
-            this.panel1.Location = new System.Drawing.Point(646, 0);
+            this.panel1.Location = new System.Drawing.Point(914, 106);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(44, 44);
             this.panel1.TabIndex = 18;
@@ -350,6 +317,7 @@
             this.picAddClasses.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picAddClasses.TabIndex = 10;
             this.picAddClasses.TabStop = false;
+            this.picAddClasses.Click += new System.EventHandler(this.picAddClasses_Click);
             // 
             // dataGridViewClasses
             // 
@@ -358,8 +326,7 @@
             this.dataGridViewClasses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewClasses.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
-            this.Column2,
-            this.Column3});
+            this.Column2});
             this.dataGridViewClasses.Location = new System.Drawing.Point(208, 215);
             this.dataGridViewClasses.Name = "dataGridViewClasses";
             this.dataGridViewClasses.RowHeadersWidth = 51;
@@ -379,33 +346,17 @@
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Teacher ID";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.txtSearchClasses);
-            this.panel4.Controls.Add(this.panel3);
-            this.panel4.Controls.Add(this.picSearchClasses);
-            this.panel4.Controls.Add(this.panel2);
-            this.panel4.Controls.Add(this.panel1);
-            this.panel4.Location = new System.Drawing.Point(234, 96);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(790, 44);
-            this.panel4.TabIndex = 22;
-            // 
             // Classes
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1122, 650);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.dataGridViewClasses);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelPagesSidebar);
             this.Controls.Add(this.pnlTopBar);
-            this.Controls.Add(this.panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Classes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -427,7 +378,6 @@
             this.pnlStudents.PerformLayout();
             this.pnlHome.ResumeLayout(false);
             this.pnlHome.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picSearchClasses)).EndInit();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picDeleteClasses)).EndInit();
             this.panel2.ResumeLayout(false);
@@ -435,8 +385,6 @@
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picAddClasses)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClasses)).EndInit();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -460,8 +408,6 @@
         private System.Windows.Forms.Label lblMenu;
         private System.Windows.Forms.Panel pnlHome;
         private System.Windows.Forms.Label lblHome;
-        private System.Windows.Forms.PictureBox picSearchClasses;
-        private System.Windows.Forms.TextBox txtSearchClasses;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox picDeleteClasses;
         private System.Windows.Forms.Panel panel2;
@@ -471,7 +417,5 @@
         private System.Windows.Forms.DataGridView dataGridViewClasses;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.Panel panel4;
     }
 }
