@@ -34,7 +34,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtStudentID = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.maskedTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.txtDate = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picQuitStudents)).BeginInit();
             this.SuspendLayout();
             // 
@@ -92,22 +92,22 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // maskedTextBox
+            // txtDate
             // 
-            this.maskedTextBox.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.maskedTextBox.Location = new System.Drawing.Point(233, 177);
-            this.maskedTextBox.Mask = "00/00/0000";
-            this.maskedTextBox.Name = "maskedTextBox";
-            this.maskedTextBox.Size = new System.Drawing.Size(145, 36);
-            this.maskedTextBox.TabIndex = 16;
-            this.maskedTextBox.ValidatingType = typeof(System.DateTime);
+            this.txtDate.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtDate.Location = new System.Drawing.Point(233, 177);
+            this.txtDate.Mask = "00/00/0000";
+            this.txtDate.Name = "txtDate";
+            this.txtDate.Size = new System.Drawing.Size(145, 36);
+            this.txtDate.TabIndex = 16;
+            this.txtDate.ValidatingType = typeof(System.DateTime);
             // 
             // Attandance
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(491, 343);
-            this.Controls.Add(this.maskedTextBox);
+            this.Controls.Add(this.txtDate);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtStudentID);
             this.Controls.Add(this.label2);
@@ -131,6 +131,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtStudentID;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox;
+        private System.Windows.Forms.MaskedTextBox txtDate;
     }
 }

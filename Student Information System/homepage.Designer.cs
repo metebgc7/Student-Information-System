@@ -56,21 +56,6 @@
             this.lblDataTeachNum = new System.Windows.Forms.Label();
             this.lblNumberofTeacher = new System.Windows.Forms.Label();
             this.lblReports = new System.Windows.Forms.Label();
-            this.lblStudentsAttandance = new System.Windows.Forms.Label();
-            this.lblAttandanceofAllStudents = new System.Windows.Forms.Label();
-            this.lblStudentsCanteenShopping = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.btnGetStudentsAttandance = new System.Windows.Forms.Button();
-            this.btnGetAttandanceofAllStudents = new System.Windows.Forms.Button();
-            this.btnGetStudentsCanteenShopping = new System.Windows.Forms.Button();
-            this.btnGetTest1 = new System.Windows.Forms.Button();
-            this.btnTest2 = new System.Windows.Forms.Button();
             this.panelPagesSidebar.SuspendLayout();
             this.pnlUsers.SuspendLayout();
             this.pnlCanteen.SuspendLayout();
@@ -374,213 +359,23 @@
             this.lblReports.AutoSize = true;
             this.lblReports.Font = new System.Drawing.Font("Montserrat SemiBold", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblReports.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(72)))), ((int)(((byte)(192)))));
-            this.lblReports.Location = new System.Drawing.Point(242, 284);
+            this.lblReports.Location = new System.Drawing.Point(242, 264);
             this.lblReports.Name = "lblReports";
             this.lblReports.Size = new System.Drawing.Size(183, 46);
             this.lblReports.TabIndex = 4;
             this.lblReports.Text = "REPORTS";
-            // 
-            // lblStudentsAttandance
-            // 
-            this.lblStudentsAttandance.AutoSize = true;
-            this.lblStudentsAttandance.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblStudentsAttandance.Location = new System.Drawing.Point(246, 344);
-            this.lblStudentsAttandance.Name = "lblStudentsAttandance";
-            this.lblStudentsAttandance.Size = new System.Drawing.Size(193, 24);
-            this.lblStudentsAttandance.TabIndex = 5;
-            this.lblStudentsAttandance.Text = "Student\'s Attandance";
-            // 
-            // lblAttandanceofAllStudents
-            // 
-            this.lblAttandanceofAllStudents.AutoSize = true;
-            this.lblAttandanceofAllStudents.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblAttandanceofAllStudents.Location = new System.Drawing.Point(246, 392);
-            this.lblAttandanceofAllStudents.Name = "lblAttandanceofAllStudents";
-            this.lblAttandanceofAllStudents.Size = new System.Drawing.Size(233, 24);
-            this.lblAttandanceofAllStudents.TabIndex = 6;
-            this.lblAttandanceofAllStudents.Text = "Attandance of all students";
-            // 
-            // lblStudentsCanteenShopping
-            // 
-            this.lblStudentsCanteenShopping.AutoSize = true;
-            this.lblStudentsCanteenShopping.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblStudentsCanteenShopping.Location = new System.Drawing.Point(246, 442);
-            this.lblStudentsCanteenShopping.Name = "lblStudentsCanteenShopping";
-            this.lblStudentsCanteenShopping.Size = new System.Drawing.Size(248, 24);
-            this.lblStudentsCanteenShopping.TabIndex = 7;
-            this.lblStudentsCanteenShopping.Text = "Student\'s canteen shopping";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(246, 353);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(758, 24);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "                                                                                 " +
-    "                                                                                " +
-    "                          ";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(246, 403);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(758, 24);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "                                                                                 " +
-    "                                                                                " +
-    "                          ";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(246, 453);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(758, 24);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "                                                                                 " +
-    "                                                                                " +
-    "                          ";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(246, 490);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(48, 24);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "test1";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(246, 503);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(758, 24);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "                                                                                 " +
-    "                                                                                " +
-    "                          ";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.Location = new System.Drawing.Point(246, 543);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(52, 24);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "test2";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label8.Location = new System.Drawing.Point(246, 553);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(758, 24);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "                                                                                 " +
-    "                                                                                " +
-    "                          ";
-            // 
-            // btnGetStudentsAttandance
-            // 
-            this.btnGetStudentsAttandance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(72)))), ((int)(((byte)(192)))));
-            this.btnGetStudentsAttandance.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGetStudentsAttandance.Font = new System.Drawing.Font("Montserrat Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnGetStudentsAttandance.ForeColor = System.Drawing.Color.White;
-            this.btnGetStudentsAttandance.Location = new System.Drawing.Point(1002, 338);
-            this.btnGetStudentsAttandance.Name = "btnGetStudentsAttandance";
-            this.btnGetStudentsAttandance.Size = new System.Drawing.Size(75, 39);
-            this.btnGetStudentsAttandance.TabIndex = 20;
-            this.btnGetStudentsAttandance.Text = "GET";
-            this.btnGetStudentsAttandance.UseVisualStyleBackColor = false;
-            // 
-            // btnGetAttandanceofAllStudents
-            // 
-            this.btnGetAttandanceofAllStudents.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(72)))), ((int)(((byte)(192)))));
-            this.btnGetAttandanceofAllStudents.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGetAttandanceofAllStudents.Font = new System.Drawing.Font("Montserrat Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnGetAttandanceofAllStudents.ForeColor = System.Drawing.Color.White;
-            this.btnGetAttandanceofAllStudents.Location = new System.Drawing.Point(1002, 388);
-            this.btnGetAttandanceofAllStudents.Name = "btnGetAttandanceofAllStudents";
-            this.btnGetAttandanceofAllStudents.Size = new System.Drawing.Size(75, 39);
-            this.btnGetAttandanceofAllStudents.TabIndex = 21;
-            this.btnGetAttandanceofAllStudents.Text = "GET";
-            this.btnGetAttandanceofAllStudents.UseVisualStyleBackColor = false;
-            // 
-            // btnGetStudentsCanteenShopping
-            // 
-            this.btnGetStudentsCanteenShopping.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(72)))), ((int)(((byte)(192)))));
-            this.btnGetStudentsCanteenShopping.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGetStudentsCanteenShopping.Font = new System.Drawing.Font("Montserrat Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnGetStudentsCanteenShopping.ForeColor = System.Drawing.Color.White;
-            this.btnGetStudentsCanteenShopping.Location = new System.Drawing.Point(1002, 438);
-            this.btnGetStudentsCanteenShopping.Name = "btnGetStudentsCanteenShopping";
-            this.btnGetStudentsCanteenShopping.Size = new System.Drawing.Size(75, 39);
-            this.btnGetStudentsCanteenShopping.TabIndex = 22;
-            this.btnGetStudentsCanteenShopping.Text = "GET";
-            this.btnGetStudentsCanteenShopping.UseVisualStyleBackColor = false;
-            // 
-            // btnGetTest1
-            // 
-            this.btnGetTest1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(72)))), ((int)(((byte)(192)))));
-            this.btnGetTest1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGetTest1.Font = new System.Drawing.Font("Montserrat Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnGetTest1.ForeColor = System.Drawing.Color.White;
-            this.btnGetTest1.Location = new System.Drawing.Point(1002, 488);
-            this.btnGetTest1.Name = "btnGetTest1";
-            this.btnGetTest1.Size = new System.Drawing.Size(75, 39);
-            this.btnGetTest1.TabIndex = 23;
-            this.btnGetTest1.Text = "GET";
-            this.btnGetTest1.UseVisualStyleBackColor = false;
-            // 
-            // btnTest2
-            // 
-            this.btnTest2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(72)))), ((int)(((byte)(192)))));
-            this.btnTest2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTest2.Font = new System.Drawing.Font("Montserrat Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnTest2.ForeColor = System.Drawing.Color.White;
-            this.btnTest2.Location = new System.Drawing.Point(1002, 538);
-            this.btnTest2.Name = "btnTest2";
-            this.btnTest2.Size = new System.Drawing.Size(75, 39);
-            this.btnTest2.TabIndex = 24;
-            this.btnTest2.Text = "GET";
-            this.btnTest2.UseVisualStyleBackColor = false;
             // 
             // homepage
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1122, 650);
-            this.Controls.Add(this.btnTest2);
-            this.Controls.Add(this.btnGetTest1);
-            this.Controls.Add(this.btnGetStudentsCanteenShopping);
-            this.Controls.Add(this.btnGetAttandanceofAllStudents);
-            this.Controls.Add(this.btnGetStudentsAttandance);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.lblStudentsCanteenShopping);
-            this.Controls.Add(this.lblAttandanceofAllStudents);
-            this.Controls.Add(this.lblStudentsAttandance);
             this.Controls.Add(this.lblReports);
             this.Controls.Add(this.pnlClassNumber);
             this.Controls.Add(this.pnlTeacherNumber);
             this.Controls.Add(this.pnlStudentNumber);
             this.Controls.Add(this.pnlTopBar);
             this.Controls.Add(this.panelPagesSidebar);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label8);
             this.Font = new System.Drawing.Font("Montserrat", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -630,21 +425,6 @@
         private System.Windows.Forms.Label lblNumberofTeacher;
         private System.Windows.Forms.Label lblNumberofClass;
         private System.Windows.Forms.Label lblReports;
-        private System.Windows.Forms.Label lblStudentsAttandance;
-        private System.Windows.Forms.Label lblAttandanceofAllStudents;
-        private System.Windows.Forms.Label lblStudentsCanteenShopping;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button btnGetStudentsAttandance;
-        private System.Windows.Forms.Button btnGetAttandanceofAllStudents;
-        private System.Windows.Forms.Button btnGetStudentsCanteenShopping;
-        private System.Windows.Forms.Button btnGetTest1;
-        private System.Windows.Forms.Button btnTest2;
         private System.Windows.Forms.Label lblDataStuNum;
         private System.Windows.Forms.Label lblDataClsNum;
         private System.Windows.Forms.Label lblDataTeachNum;
