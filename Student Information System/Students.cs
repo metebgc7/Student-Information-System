@@ -98,7 +98,7 @@ namespace Student_Information_System
                 s.surname, 
                 c.className, 
                 s.gender, 
-                s.birthdate, 
+                CONVERT(VARCHAR(10), s.birthdate, 104) as birthdate, 
                 s.student_tc
             FROM 
                 [SchoolDB].[dbo].[Student] s
