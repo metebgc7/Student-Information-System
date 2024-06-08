@@ -328,6 +328,7 @@
             this.picEditCanteen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picEditCanteen.TabIndex = 11;
             this.picEditCanteen.TabStop = false;
+            this.picEditCanteen.Click += new System.EventHandler(this.picEditCanteen_Click);
             // 
             // panel1
             // 

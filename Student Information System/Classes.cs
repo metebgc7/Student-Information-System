@@ -162,5 +162,77 @@ namespace Student_Information_System
                 MessageBox.Show("Please select a class to delete.");
             }
         }
+
+        private void picEditClasses_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewClasses.SelectedRows.Count > 0)
+            {
+                // Seçili satırdaki verileri al
+                int selectedRowIndex = dataGridViewClasses.SelectedRows[0].Index;
+                DataGridViewRow selectedRow = dataGridViewClasses.Rows[selectedRowIndex];
+
+                int classId = Convert.ToInt32(selectedRow.Cells["Column1"].Value);
+                string className = selectedRow.Cells["Column2"].Value.ToString();
+
+                // Güncelleme sorgusu
+                string query = @"
+        UPDATE [SchoolDB].[dbo].[Class]
+        SET 
+            className = @ClassName
+        WHERE 
+            ClassID = @ClassID";
+
+                try
+                {
+                    // SqlCommand ile sorguyu hazırla
+                    using (SqlCommand command = new SqlCommand(query, connect))
+                    {
+                        // Parametreleri ekle
+                        command.Parameters.AddWithValue("@ClassID", classId);
+                        command.Parameters.AddWithValue("@ClassName", className);
+
+                        // Bağlantıyı aç
+                        if (connect.State == ConnectionState.Closed)
+                        {
+                            connect.Open();
+                        }
+
+                        // Sorguyu çalıştır
+                        int rowsAffected = command.ExecuteNonQuery();
+
+                        // Kullanıcıya sonucu bildir
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Class updated successfully!");
+
+                            // DataGridView'i güncelle
+                            dataGridViewClasses.Rows.Clear();
+                            get_data();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Failed to update the class.");
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+                finally
+                {
+                    // Bağlantıyı kapat
+                    if (connect.State == ConnectionState.Open)
+                    {
+                        connect.Close();
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a row to update.");
+            }
+        }
+
     }
 }

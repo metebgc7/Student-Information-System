@@ -177,6 +177,7 @@
             this.picEditTeachers.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picEditTeachers.TabIndex = 11;
             this.picEditTeachers.TabStop = false;
+            this.picEditTeachers.Click += new System.EventHandler(this.picEditTeachers_Click);
             // 
             // panel1
             // 

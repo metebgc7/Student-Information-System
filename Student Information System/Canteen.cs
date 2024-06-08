@@ -202,5 +202,80 @@ namespace Student_Information_System
                 MessageBox.Show("An error occurred: " + ex.Message);
             }
         }
+
+        private void picEditCanteen_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewCanteen.SelectedRows.Count > 0)
+            {
+                // Seçili satırdaki verileri al
+                int selectedRowIndex = dataGridViewCanteen.SelectedRows[0].Index;
+                DataGridViewRow selectedRow = dataGridViewCanteen.Rows[selectedRowIndex];
+
+                int productId = Convert.ToInt32(selectedRow.Cells["Column1"].Value);
+                string productName = selectedRow.Cells["Column2"].Value.ToString();
+                decimal productPrice = Convert.ToDecimal(selectedRow.Cells["Column3"].Value);
+
+                // Güncelleme sorgusu
+                string query = @"
+        UPDATE [SchoolDB].[dbo].[Canteen]
+        SET 
+            product_name = @ProductName,
+            product_price = @ProductPrice
+        WHERE 
+            ProductID = @ProductID";
+
+                try
+                {
+                    // SqlCommand ile sorguyu hazırla
+                    using (SqlCommand command = new SqlCommand(query, connect))
+                    {
+                        // Parametreleri ekle
+                        command.Parameters.AddWithValue("@ProductID", productId);
+                        command.Parameters.AddWithValue("@ProductName", productName);
+                        command.Parameters.AddWithValue("@ProductPrice", productPrice);
+
+                        // Bağlantıyı aç
+                        if (connect.State == ConnectionState.Closed)
+                        {
+                            connect.Open();
+                        }
+
+                        // Sorguyu çalıştır
+                        int rowsAffected = command.ExecuteNonQuery();
+
+                        // Kullanıcıya sonucu bildir
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Product updated successfully!");
+
+                            // DataGridView'i güncelle
+                            dataGridViewCanteen.Rows.Clear();
+                            get_data();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Failed to update the product.");
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+                finally
+                {
+                    // Bağlantıyı kapat
+                    if (connect.State == ConnectionState.Open)
+                    {
+                        connect.Close();
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a row to update.");
+            }
+        }
+
     }
 }

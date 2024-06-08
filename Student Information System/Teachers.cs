@@ -211,5 +211,90 @@ namespace Student_Information_System
                 MessageBox.Show("An error occurred: " + ex.Message);
             }
         }
+
+        private void picEditTeachers_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewTeachers.SelectedRows.Count > 0)
+            {
+                // Seçili satırdaki verileri al
+                int selectedRowIndex = dataGridViewTeachers.SelectedRows[0].Index;
+                DataGridViewRow selectedRow = dataGridViewTeachers.Rows[selectedRowIndex];
+
+                int teacherId = Convert.ToInt32(selectedRow.Cells["Column1"].Value);
+                string fullName = selectedRow.Cells["Column2"].Value.ToString();
+                string[] nameParts = fullName.Split(' ');
+                string name = nameParts[0];
+                string surname = nameParts.Length > 1 ? nameParts[1] : "";
+                string subject = selectedRow.Cells["Column3"].Value.ToString();
+                string phoneNumber = selectedRow.Cells["Column4"].Value.ToString();
+
+                // Güncelleme sorgusu
+                string query = @"
+        UPDATE [SchoolDB].[dbo].[Teacher]
+        SET 
+            Name = @Name,
+            Surname = @Surname,
+            Subject = @Subject,
+            PhoneNumber = @PhoneNumber
+        WHERE 
+            TeacherID = @TeacherID";
+
+                try
+                {
+                    // SqlCommand ile sorguyu hazırla
+                    using (SqlCommand command = new SqlCommand(query, connect))
+                    {
+                        // Parametreleri ekle
+                        command.Parameters.AddWithValue("@TeacherID", teacherId);
+                        command.Parameters.AddWithValue("@Name", name);
+                        command.Parameters.AddWithValue("@Surname", surname);
+                        command.Parameters.AddWithValue("@Subject", subject);
+                        command.Parameters.AddWithValue("@PhoneNumber", phoneNumber);
+
+                        // Bağlantıyı aç
+                        if (connect.State == ConnectionState.Closed)
+                        {
+                            connect.Open();
+                        }
+
+                        // Sorguyu çalıştır
+                        int rowsAffected = command.ExecuteNonQuery();
+
+                        // Kullanıcıya sonucu bildir
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Teacher updated successfully!");
+
+                            // DataGridView'i güncelle
+                            dataGridViewTeachers.Rows.Clear();
+                            get_data();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Failed to update the teacher.");
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+                finally
+                {
+                    // Bağlantıyı kapat
+                    if (connect.State == ConnectionState.Open)
+                    {
+                        connect.Close();
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a row to update.");
+            }
+        }
+
+
+
     }
 }

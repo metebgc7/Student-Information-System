@@ -236,5 +236,135 @@ namespace Student_Information_System
                 MessageBox.Show("Bir hata oluştu: " + ex.Message);
             }
         }
+
+        private void picEditStudents_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewStudents.SelectedRows.Count > 0)
+            {
+                // Seçili satırdaki verileri al
+                int selectedRowIndex = dataGridViewStudents.SelectedRows[0].Index;
+                DataGridViewRow selectedRow = dataGridViewStudents.Rows[selectedRowIndex];
+
+                int studentId = Convert.ToInt32(selectedRow.Cells["Column1"].Value);
+                string fullName = selectedRow.Cells["Column2"].Value.ToString();
+                string[] nameParts = fullName.Split(' ');
+                string name = nameParts[0];
+                string surname = nameParts.Length > 1 ? nameParts[1] : "";
+                string className = selectedRow.Cells["Column3"].Value.ToString();
+                string gender = selectedRow.Cells["Column4"].Value.ToString();
+                string birthdate = selectedRow.Cells["Column5"].Value.ToString();
+                string studentTC = selectedRow.Cells["Column6"].Value.ToString();
+
+                // ClassID'yi almak için ClassName'i sorgula
+                int classId = GetClassIDByClassName(className);
+
+                // Güncelleme sorgusu
+                string query = @"
+        UPDATE [SchoolDB].[dbo].[Student]
+        SET 
+            name = @Name,
+            surname = @Surname,
+            ClassID = @ClassID,
+            gender = @Gender,
+            birthdate = @Birthdate,
+            student_tc = @StudentTC
+        WHERE 
+            StudentID = @StudentID";
+
+                try
+                {
+                    // SqlCommand ile sorguyu hazırla
+                    using (SqlCommand command = new SqlCommand(query, connect))
+                    {
+                        // Parametreleri ekle
+                        command.Parameters.AddWithValue("@StudentID", studentId);
+                        command.Parameters.AddWithValue("@Name", name);
+                        command.Parameters.AddWithValue("@Surname", surname);
+                        command.Parameters.AddWithValue("@ClassID", classId);
+                        command.Parameters.AddWithValue("@Gender", gender);
+                        command.Parameters.AddWithValue("@Birthdate", Convert.ToDateTime(birthdate));
+                        command.Parameters.AddWithValue("@StudentTC", studentTC);
+
+                        // Bağlantıyı aç
+                        if (connect.State == ConnectionState.Closed)
+                        {
+                            connect.Open();
+                        }
+
+                        // Sorguyu çalıştır
+                        int rowsAffected = command.ExecuteNonQuery();
+
+                        // Kullanıcıya sonucu bildir
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Student updated successfully!");
+
+                            // DataGridView'i güncelle
+                            dataGridViewStudents.Rows.Clear();
+                            get_data();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Failed to update the student.");
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+                finally
+                {
+                    // Bağlantıyı kapat
+                    if (connect.State == ConnectionState.Open)
+                    {
+                        connect.Close();
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a row to update.");
+            }
+        }
+
+        // ClassName'e göre ClassID'yi almak için yardımcı metod
+        private int GetClassIDByClassName(string className)
+        {
+            int classId = 0;
+            try
+            {
+                string query = "SELECT ClassID FROM [SchoolDB].[dbo].[Class] WHERE className = @ClassName";
+
+                using (SqlCommand command = new SqlCommand(query, connect))
+                {
+                    command.Parameters.AddWithValue("@ClassName", className);
+
+                    if (connect.State == ConnectionState.Closed)
+                    {
+                        connect.Open();
+                    }
+
+                    object result = command.ExecuteScalar();
+                    if (result != null)
+                    {
+                        classId = Convert.ToInt32(result);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred while getting the ClassID: " + ex.Message);
+            }
+            finally
+            {
+                if (connect.State == ConnectionState.Open)
+                {
+                    connect.Close();
+                }
+            }
+            return classId;
+        }
+
     }
 }
