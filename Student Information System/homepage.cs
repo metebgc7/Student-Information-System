@@ -41,15 +41,15 @@ namespace Student_Information_System
                 {
                     connection.Open();
 
-                    // Öğrenci sayısını al
+                    // Student number
                     int studentCount = GetRecordCount(connection, "Student");
                     lblDataStuNum.Text = studentCount.ToString();
 
-                    // Öğretmen sayısını al
+                    // Teacher number
                     int teacherCount = GetRecordCount(connection, "Teacher");
                     lblDataTeachNum.Text = teacherCount.ToString();
 
-                    // Sınıf sayısını al
+                    // Class number
                     int classCount = GetRecordCount(connection, "Class");
                     lblDataClsNum.Text = classCount.ToString();
                 }
@@ -103,8 +103,6 @@ namespace Student_Information_System
         }
 
 
-
-
         private void homepage_Load(object sender, EventArgs e)
         {
 
@@ -152,7 +150,5 @@ namespace Student_Information_System
             usersForm.Show();
             this.Hide();
         }
-
-
     }
 }
