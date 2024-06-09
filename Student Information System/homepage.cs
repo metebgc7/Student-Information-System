@@ -4,10 +4,16 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using Font = iTextSharp.text.Font;
+
+
 
 namespace Student_Information_System
 {
@@ -71,9 +77,6 @@ namespace Student_Information_System
             }
         }
 
-
-
-
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -118,37 +121,168 @@ namespace Student_Information_System
         }
 
         private void pnlTeachers_Click(object sender, EventArgs e)
-        {
-            
+        {          
             Teachers teachersForm = new Teachers();
             teachersForm.Show();
             this.Hide();
-
-
         }
 
         private void pnlClasses_Click(object sender, EventArgs e)
-        {
-            
+        {            
             Classes classesForm = new Classes();
             classesForm.Show();
             this.Hide();
         }
 
         private void pnlCanteen_Click(object sender, EventArgs e)
-        {
-          
+        {          
             Canteen canteenForm = new Canteen();
             canteenForm.Show();
             this.Hide();
         }
 
         private void pnlUsers_Click(object sender, EventArgs e)
-        {
-            
+        {            
             Users usersForm = new Users();
             usersForm.Show();
             this.Hide();
         }
+
+
+        private void btnGetFourth_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                connect.Open();
+
+                // Öğrenci bilgilerini çekmek için SQL sorgusu
+                string query = "SELECT StudentID, name, surname FROM Student";
+                SqlCommand command = new SqlCommand(query, connect);
+                SqlDataReader reader = command.ExecuteReader();
+
+                // Öğrenci verilerini bir listeye ekleme
+                List<Student> students = new List<Student>();
+                while (reader.Read())
+                {
+                    students.Add(new Student
+                    {
+                        Id = reader.GetInt32(0),
+                        FullName = reader.GetString(1) + " " + reader.GetString(2)
+                    });
+                }
+                reader.Close();
+
+                // Attendance tablosundaki verileri çekmek için SQL sorgusu
+                query = "SELECT StudentID, date FROM Attendance";
+                command = new SqlCommand(query, connect);
+                reader = command.ExecuteReader();
+
+                // Attendance verilerini bir sözlüğe ekleme
+                Dictionary<int, List<string>> attendanceData = new Dictionary<int, List<string>>();
+                while (reader.Read())
+                {
+                    int studentId = reader.GetInt32(0);
+                    string date = reader.GetDateTime(1).ToString("dd.MM.yyyy");
+
+                    if (!attendanceData.ContainsKey(studentId))
+                    {
+                        attendanceData[studentId] = new List<string>();
+                    }
+                    attendanceData[studentId].Add(date);
+                }
+                reader.Close();
+
+                // Masaüstü yolunu alma
+                string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+                string folderPath = Path.Combine(desktopPath, "Attendance Report");
+
+                // "Attendance Report" klasörünü oluşturma
+                if (!Directory.Exists(folderPath))
+                {
+                    Directory.CreateDirectory(folderPath);
+                }
+
+                // PDF dosyasının kaydedileceği tam yol
+                string dateNow = DateTime.Now.ToString("dd.MM.yyyy");
+                string filePath = Path.Combine(folderPath, $"ogrenci_raporu {dateNow}.pdf");
+
+                // PDF oluşturma işlemi
+                Document document = new Document();
+                PdfWriter.GetInstance(document, new FileStream(filePath, FileMode.Create));
+                document.Open();
+
+                // Türkçe karakterleri destekleyen bir font yükleme
+                string fontPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Fonts), "arial.ttf");
+                BaseFont bf = BaseFont.CreateFont(fontPath, BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
+                var titleFont = new iTextSharp.text.Font(bf, 20, iTextSharp.text.Font.BOLD);
+
+                // Başlık ekleme
+                var title = new Paragraph("ÖĞRENCİ RAPORU", titleFont);
+                title.Alignment = Element.ALIGN_CENTER;
+                document.Add(title);
+
+                // Boşluk ekleme
+                document.Add(new Paragraph("\n"));
+
+                // Tablo oluşturma
+                PdfPTable table = new PdfPTable(3); // 3 sütunlu tablo
+
+                // Başlık hücrelerini oluşturma
+                var headerFont = new iTextSharp.text.Font(bf, 15, iTextSharp.text.Font.BOLD);
+                PdfPCell cell1 = new PdfPCell(new Phrase("ID", headerFont));
+                PdfPCell cell2 = new PdfPCell(new Phrase("Ad Soyad", headerFont));
+                PdfPCell cell3 = new PdfPCell(new Phrase("Devamsızlık Tarihleri", headerFont));
+
+                table.AddCell(cell1);
+                table.AddCell(cell2);
+                table.AddCell(cell3);
+
+                // İçerik hücrelerini oluşturma
+                var contentFont = new iTextSharp.text.Font(bf, 12, iTextSharp.text.Font.NORMAL);
+                foreach (var student in students)
+                {
+                    table.AddCell(new Phrase(student.Id.ToString(), contentFont));
+                    table.AddCell(new Phrase(student.FullName, contentFont));
+
+                    // Attendance verilerini ekleme
+                    if (attendanceData.ContainsKey(student.Id))
+                    {
+                        string dates = string.Join("\n", attendanceData[student.Id]);
+                        PdfPCell attendanceCell = new PdfPCell(new Phrase(dates, contentFont));
+                        table.AddCell(attendanceCell);
+                    }
+                    else
+                    {
+                        table.AddCell(new Phrase("", contentFont));
+                    }
+                }
+
+                document.Add(table);
+                document.Close();
+
+                MessageBox.Show($"PDF '{filePath}' olarak oluşturuldu.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hata: " + ex.Message);
+            }
+            finally
+            {
+                connect.Close();
+            }
+        }
+
+        public class Student
+        {
+            public int Id { get; set; }
+            public string FullName { get; set; } // Birleştirilmiş isim ve soyisim
+        }
+
+
+
+
+
+
+
     }
 }

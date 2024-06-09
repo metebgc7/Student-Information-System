@@ -578,6 +578,7 @@
             this.btnGetFourth.TabIndex = 23;
             this.btnGetFourth.Text = "GET";
             this.btnGetFourth.UseVisualStyleBackColor = false;
+            this.btnGetFourth.Click += new System.EventHandler(this.btnGetFourth_Click);
             // 
             // label11
             // 
