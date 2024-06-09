@@ -461,7 +461,7 @@
             this.txtStudentId2.Location = new System.Drawing.Point(481, 545);
             this.txtStudentId2.Mask = "0000";
             this.txtStudentId2.Name = "txtStudentId2";
-            this.txtStudentId2.Size = new System.Drawing.Size(35, 28);
+            this.txtStudentId2.Size = new System.Drawing.Size(41, 28);
             this.txtStudentId2.TabIndex = 12;
             this.txtStudentId2.ValidatingType = typeof(int);
             // 
@@ -506,6 +506,7 @@
             this.btnGetSecond.TabIndex = 16;
             this.btnGetSecond.Text = "GET";
             this.btnGetSecond.UseVisualStyleBackColor = false;
+            this.btnGetSecond.Click += new System.EventHandler(this.btnGetSecond_Click);
             // 
             // label8
             // 
@@ -566,6 +567,7 @@
             this.btnGetThird.TabIndex = 22;
             this.btnGetThird.Text = "GET";
             this.btnGetThird.UseVisualStyleBackColor = false;
+            this.btnGetThird.Click += new System.EventHandler(this.btnGetThird_Click);
             // 
             // btnGetFourth
             // 
