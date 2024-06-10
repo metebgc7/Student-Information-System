@@ -29,7 +29,7 @@ namespace Student_Information_System
             UpdateLabels();
 
             timer = new Timer();
-            timer.Interval = 5000; // 5 saniyede bir
+            timer.Interval = 5000; 
             timer.Tick += Timer_Tick;
             timer.Start();
         }
@@ -71,7 +71,7 @@ namespace Student_Information_System
             string query = $"SELECT COUNT(*) FROM {tableName}";
             using (SqlCommand command = new SqlCommand(query, connection))
             {
-                // Sorguyu çalıştır ve sonucu al
+                
                 int count = (int)command.ExecuteScalar();
                 return count;
             }
@@ -155,12 +155,12 @@ namespace Student_Information_System
             {
                 connect.Open();
 
-                // Öğrenci bilgilerini çekmek için SQL sorgusu
+                
                 string query = "SELECT StudentID, name, surname FROM Student";
                 SqlCommand command = new SqlCommand(query, connect);
                 SqlDataReader reader = command.ExecuteReader();
 
-                // Öğrenci verilerini bir listeye ekleme
+                // adding student data in a list
                 List<Student> students = new List<Student>();
                 while (reader.Read())
                 {
@@ -172,12 +172,12 @@ namespace Student_Information_System
                 }
                 reader.Close();
 
-                // Attendance tablosundaki verileri çekmek için SQL sorgusu
+                
                 query = "SELECT StudentID, date FROM Attendance";
                 command = new SqlCommand(query, connect);
                 reader = command.ExecuteReader();
 
-                // Attendance verilerini bir sözlüğe ekleme
+                // addin attendance data in a dictionary
                 Dictionary<int, List<string>> attendanceData = new Dictionary<int, List<string>>();
                 while (reader.Read())
                 {
@@ -192,42 +192,42 @@ namespace Student_Information_System
                 }
                 reader.Close();
 
-                // Masaüstü yolunu alma
+                
                 string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
                 string folderPath = Path.Combine(desktopPath, "Attendance Report");
 
-                // "Attendance Report" klasörünü oluşturma
+                
                 if (!Directory.Exists(folderPath))
                 {
                     Directory.CreateDirectory(folderPath);
                 }
 
-                // PDF dosyasının kaydedileceği tam yol
+                
                 string dateNow = DateTime.Now.ToString("dd.MM.yyyy");
                 string filePath = Path.Combine(folderPath, $"Genel Devamsızlık Raporu {dateNow}.pdf");
 
-                // PDF oluşturma işlemi
+                
                 Document document = new Document();
                 PdfWriter.GetInstance(document, new FileStream(filePath, FileMode.Create));
                 document.Open();
 
-                // Türkçe karakterleri destekleyen bir font yükleme
+                
                 string fontPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Fonts), "arial.ttf");
                 BaseFont bf = BaseFont.CreateFont(fontPath, BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
                 var titleFont = new iTextSharp.text.Font(bf, 20, iTextSharp.text.Font.BOLD);
 
-                // Başlık ekleme
+                
                 var title = new Paragraph("ÖĞRENCİ RAPORU", titleFont);
                 title.Alignment = Element.ALIGN_CENTER;
                 document.Add(title);
 
-                // Boşluk ekleme
+                
                 document.Add(new Paragraph("\n"));
 
-                // Tablo oluşturma
-                PdfPTable table = new PdfPTable(3); // 3 sütunlu tablo
+                
+                PdfPTable table = new PdfPTable(3); 
 
-                // Başlık hücrelerini oluşturma
+                
                 var headerFont = new Font(bf, 15, iTextSharp.text.Font.BOLD);
                 PdfPCell cell1 = new PdfPCell(new Phrase("ID", headerFont));
                 PdfPCell cell2 = new PdfPCell(new Phrase("Ad Soyad", headerFont));
@@ -237,14 +237,14 @@ namespace Student_Information_System
                 table.AddCell(cell2);
                 table.AddCell(cell3);
 
-                // İçerik hücrelerini oluşturma
+                // creating cells
                 var contentFont = new Font(bf, 12, iTextSharp.text.Font.NORMAL);
                 foreach (var student in students)
                 {
                     table.AddCell(new Phrase(student.Id.ToString(), contentFont));
                     table.AddCell(new Phrase(student.FullName, contentFont));
 
-                    // Attendance verilerini ekleme
+                    // attendance datas
                     if (attendanceData.ContainsKey(student.Id))
                     {
                         string dates = string.Join("\n", attendanceData[student.Id]);
@@ -275,7 +275,7 @@ namespace Student_Information_System
         public class Student
         {
             public int Id { get; set; }
-            public string FullName { get; set; } // Birleştirilmiş isim ve soyisim
+            public string FullName { get; set; } 
         }
 
 
@@ -283,7 +283,7 @@ namespace Student_Information_System
         {
             try
             {
-                // txtStudentId2'den gelen değeri al
+                
                 int studentId;
                 if (!int.TryParse(txtStudentId2.Text, out studentId))
                 {
@@ -293,7 +293,7 @@ namespace Student_Information_System
 
                 connect.Open();
 
-                // Öğrencinin ismi ve soyismini almak için SQL sorgusu
+                
                 string studentQuery = "SELECT name, surname FROM Student WHERE StudentID = @StudentID";
                 SqlCommand studentCommand = new SqlCommand(studentQuery, connect);
                 studentCommand.Parameters.AddWithValue("@StudentID", studentId);
@@ -314,13 +314,13 @@ namespace Student_Information_System
                     return;
                 }
 
-                // Attendance tablosundaki verileri çekmek için SQL sorgusu
+                
                 string query = "SELECT date FROM Attendance WHERE StudentID = @StudentID";
                 SqlCommand command = new SqlCommand(query, connect);
                 command.Parameters.AddWithValue("@StudentID", studentId);
                 SqlDataReader reader = command.ExecuteReader();
 
-                // Attendance verilerini bir listeye ekleme
+                // adding attendance data in a lise 
                 List<string> attendanceDates = new List<string>();
                 while (reader.Read())
                 {
@@ -334,40 +334,40 @@ namespace Student_Information_System
                     return;
                 }
 
-                // Masaüstü yolunu alma
+                
                 string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
                 string folderPath = Path.Combine(desktopPath, "Attendance Report");
 
-                // "Attendance Report" klasörünü oluşturma
+                
                 if (!Directory.Exists(folderPath))
                 {
                     Directory.CreateDirectory(folderPath);
                 }
 
-                // PDF dosyasının kaydedileceği tam yol
+                
                 string dateNow = DateTime.Now.ToString("dd.MM.yyyy");
                 string filePath = Path.Combine(folderPath, $"{studentName} {studentSurname} devamsızlık raporu {dateNow}.pdf");
 
-                // PDF oluşturma işlemi
+                // PDF creating
                 Document document = new Document();
                 PdfWriter.GetInstance(document, new FileStream(filePath, FileMode.Create));
                 document.Open();
 
-                // Türkçe karakterleri destekleyen bir font yükleme
+                
                 string fontPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Fonts), "arial.ttf");
                 BaseFont bf = BaseFont.CreateFont(fontPath, BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
                 var titleFont = new iTextSharp.text.Font(bf, 20, iTextSharp.text.Font.BOLD);
                 var contentFont = new iTextSharp.text.Font(bf, 12, iTextSharp.text.Font.NORMAL);
 
-                // Başlık ekleme
+                
                 var title = new Paragraph("ÖĞRENCİ DEVAMSIZLIK RAPORU", titleFont);
                 title.Alignment = Element.ALIGN_CENTER;
                 document.Add(title);
 
-                // Boşluk ekleme
+                
                 document.Add(new Paragraph("\n"));
 
-                // Devamsızlık bilgilerini ekleme
+                
                 string attendanceText = $"{studentId} numaralı öğrencimiz olan {studentName} {studentSurname}, {string.Join(", ", attendanceDates)} tarihlerinde devamsızlık yapmıştır.";
                 var attendanceParagraph = new Paragraph(attendanceText, contentFont);
                 document.Add(attendanceParagraph);
@@ -395,7 +395,7 @@ namespace Student_Information_System
 
                 connect.Open();
 
-                // Öğrenci ve devamsızlık bilgilerini çekmek için SQL sorgusu
+                // sql query for student and attendance data
                 string query = @"
                     SELECT s.StudentID, s.name, s.surname, a.date
                     FROM Student s
@@ -408,7 +408,7 @@ namespace Student_Information_System
                 command.Parameters.AddWithValue("@EndDate", endDate);
                 SqlDataReader reader = command.ExecuteReader();
 
-                // Öğrenci ve devamsızlık verilerini bir sözlüğe ekleme
+                // adding student and attendance datas in a dictionary
                 Dictionary<int, StudentAttendance> studentAttendanceData = new Dictionary<int, StudentAttendance>();
                 while (reader.Read())
                 {
@@ -434,45 +434,45 @@ namespace Student_Information_System
                 }
                 reader.Close();
 
-                // Masaüstü yolunu alma
+                //desktop path
                 string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
                 string folderPath = Path.Combine(desktopPath, "Attendance Report");
 
-                // "Attendance Report" klasörünü oluşturma
+                
                 if (!Directory.Exists(folderPath))
                 {
                     Directory.CreateDirectory(folderPath);
                 }
 
-                // PDF dosyasının kaydedileceği tam yol
+                // PDF file path
                 string startDateFormatted = startDate.ToString("dd.MM.yyyy");
                 string endDateFormatted = endDate.ToString("dd.MM.yyyy");
                 string filePath = Path.Combine(folderPath, $"{startDateFormatted} - {endDateFormatted} devamsızlık raporu.pdf");
 
-                // PDF oluşturma işlemi
+                // PDF creating
                 Document document = new Document();
                 PdfWriter.GetInstance(document, new FileStream(filePath, FileMode.Create));
                 document.Open();
 
-                // Türkçe karakterleri destekleyen bir font yükleme
+                
                 string fontPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Fonts), "arial.ttf");
                 BaseFont bf = BaseFont.CreateFont(fontPath, BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
                 var titleFont = new iTextSharp.text.Font(bf, 20, iTextSharp.text.Font.BOLD);
                 var headerFont = new iTextSharp.text.Font(bf, 15, iTextSharp.text.Font.BOLD);
                 var contentFont = new iTextSharp.text.Font(bf, 12, iTextSharp.text.Font.NORMAL);
 
-                // Başlık ekleme
+                
                 var title = new Paragraph("DEVAMSIZLIK RAPORU", titleFont);
                 title.Alignment = Element.ALIGN_CENTER;
                 document.Add(title);
 
-                // Boşluk ekleme
+                
                 document.Add(new Paragraph("\n"));
 
-                // Tablo oluşturma
-                PdfPTable table = new PdfPTable(3); // 3 sütunlu tablo
+               
+                PdfPTable table = new PdfPTable(3); 
 
-                // Başlık hücrelerini oluşturma
+                
                 PdfPCell cell1 = new PdfPCell(new Phrase("Öğrenci No", headerFont));
                 PdfPCell cell2 = new PdfPCell(new Phrase("Ad Soyad", headerFont));
                 PdfPCell cell3 = new PdfPCell(new Phrase("Devamsızlık Tarihleri", headerFont));
@@ -481,7 +481,7 @@ namespace Student_Information_System
                 table.AddCell(cell2);
                 table.AddCell(cell3);
 
-                // İçerik hücrelerini oluşturma
+                // creating cell
                 foreach (var student in studentAttendanceData.Values)
                 {
                     table.AddCell(new Phrase(student.Id.ToString(), contentFont));
@@ -514,6 +514,126 @@ namespace Student_Information_System
             public List<string> AttendanceDates { get; set; }
         }
 
+        private void btnGetFirst_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                
+                int studentId;
+                if (!int.TryParse(txtStudentId1.Text, out studentId))
+                {
+                    MessageBox.Show("Lütfen geçerli bir öğrenci numarası giriniz.");
+                    return;
+                }
+
+                DateTime startDate = dateTimePickerFirst.Value.Date;
+                DateTime endDate = dateTimePickerSecond.Value.Date;
+
+                connect.Open();
+
+                
+                string studentQuery = "SELECT name, surname FROM Student WHERE StudentID = @StudentID";
+                SqlCommand studentCommand = new SqlCommand(studentQuery, connect);
+                studentCommand.Parameters.AddWithValue("@StudentID", studentId);
+                SqlDataReader studentReader = studentCommand.ExecuteReader();
+
+                string studentName = "";
+                string studentSurname = "";
+                if (studentReader.Read())
+                {
+                    studentName = studentReader.GetString(0);
+                    studentSurname = studentReader.GetString(1);
+                }
+                studentReader.Close();
+
+                if (string.IsNullOrEmpty(studentName) || string.IsNullOrEmpty(studentSurname))
+                {
+                    MessageBox.Show("Böyle bir öğrenci numarası bulunamadı.");
+                    return;
+                }
+
+               
+                string query = "SELECT date FROM Attendance WHERE StudentID = @StudentID AND date BETWEEN @StartDate AND @EndDate";
+                SqlCommand command = new SqlCommand(query, connect);
+                command.Parameters.AddWithValue("@StudentID", studentId);
+                command.Parameters.AddWithValue("@StartDate", startDate);
+                command.Parameters.AddWithValue("@EndDate", endDate);
+                SqlDataReader reader = command.ExecuteReader();
+
+                // adding the attendance dates in a list
+                List<string> attendanceDates = new List<string>();
+                while (reader.Read())
+                {
+                    attendanceDates.Add(reader.GetDateTime(0).ToString("dd.MM.yyyy"));
+                }
+                reader.Close();
+
+                if (attendanceDates.Count == 0)
+                {
+                    MessageBox.Show("Belirtilen tarihler arasında bu öğrenciye ait devamsızlık bilgisi bulunamadı.");
+                    return;
+                }
+
+                
+                string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+                string folderPath = Path.Combine(desktopPath, "Attendance Report");
+
+                
+                if (!Directory.Exists(folderPath))
+                {
+                    Directory.CreateDirectory(folderPath);
+                }
+
+                // PDF file pathway
+                string dateNow = DateTime.Now.ToString("dd.MM.yyyy");
+                string filePath = Path.Combine(folderPath, $"{studentName} {studentSurname} devamsızlık raporu {dateNow}.pdf");
+
+                // PDF creating
+                Document document = new Document();
+                PdfWriter.GetInstance(document, new FileStream(filePath, FileMode.Create));
+                document.Open();
+
+                
+                string fontPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Fonts), "arial.ttf");
+                BaseFont bf = BaseFont.CreateFont(fontPath, BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
+                var titleFont = new iTextSharp.text.Font(bf, 20, iTextSharp.text.Font.BOLD);
+                var contentFont = new iTextSharp.text.Font(bf, 12, iTextSharp.text.Font.NORMAL);
+
+                
+                var title = new Paragraph("ÖĞRENCİ DEVAMSIZLIK RAPORU", titleFont);
+                title.Alignment = Element.ALIGN_CENTER;
+                document.Add(title);
+
+                
+                document.Add(new Paragraph("\n"));
+
+                
+                string attendanceText = $"{studentId} numaralı öğrencimiz olan {studentName} {studentSurname} şu tarihler arasında yaptığı devamsızlıklar aşağıda verilmiştir:";
+                var attendanceParagraph = new Paragraph(attendanceText, contentFont);
+                document.Add(attendanceParagraph);
+
+                
+                document.Add(new Paragraph("\n"));
+                foreach (var date in attendanceDates)
+                {
+                    document.Add(new Paragraph(date, contentFont));
+                }
+
+                document.Close();
+
+                MessageBox.Show($"PDF '{filePath}' olarak oluşturuldu.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hata: " + ex.Message);
+            }
+            finally
+            {
+                connect.Close();
+            }
+        }
 
     }
+
 }
+

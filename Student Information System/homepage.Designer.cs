@@ -454,6 +454,7 @@
             this.btnGetFirst.TabIndex = 11;
             this.btnGetFirst.Text = "GET";
             this.btnGetFirst.UseVisualStyleBackColor = false;
+            this.btnGetFirst.Click += new System.EventHandler(this.btnGetFirst_Click);
             // 
             // txtStudentId2
             // 
