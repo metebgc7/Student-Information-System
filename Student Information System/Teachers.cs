@@ -75,12 +75,11 @@ namespace Student_Information_System
         {
             try
             {
-                // Define your query
+                
                 string query = "SELECT * FROM [SchoolDB].[dbo].[Teacher]";
 
                 // Create a new DataTable to hold the query results
                 DataTable dataTable = new DataTable();
-
                 SqlDataAdapter adapter = new SqlDataAdapter(query, connect);
 
                 // Fill the DataTable with the results from the SQL query
@@ -129,12 +128,12 @@ namespace Student_Information_System
                         // Execute the query
                         int rowsAffected = command.ExecuteNonQuery();
 
-                        // Inform the teacher about the result
+                        
                         if (rowsAffected > 0)
                         {
                             MessageBox.Show("Teacher deleted successfully!");
 
-                            // Optionally, refresh the data in the DataGridView
+                            // refresh the data in the DataGridView
                             dataGridViewTeachers.Rows.Clear();
                             get_data();
                         }
@@ -146,12 +145,12 @@ namespace Student_Information_System
                 }
                 catch (Exception ex)
                 {
-                    // Handle any errors that may have occurred
+                    
                     MessageBox.Show("An error occurred: " + ex.Message);
                 }
                 finally
                 {
-                    // Close the connection
+                    
                     if (connect.State == ConnectionState.Open)
                     {
                         connect.Close();
@@ -175,18 +174,18 @@ namespace Student_Information_System
             try
             {
                 string query = @"
-                SELECT 
-                    TeacherID, 
-                    Name, 
-                    Surname, 
-                    Subject, 
-                    PhoneNumber
-                FROM 
-                    [SchoolDB].[dbo].[Teacher]
-                WHERE 
-                    Name LIKE @searchValue OR
-                    Surname LIKE @searchValue OR
-                    Subject LIKE @searchValue";
+                    SELECT 
+                        TeacherID, 
+                        Name, 
+                        Surname, 
+                        Subject, 
+                        PhoneNumber
+                    FROM 
+                        [SchoolDB].[dbo].[Teacher]
+                    WHERE 
+                        Name LIKE @searchValue OR
+                        Surname LIKE @searchValue OR
+                        Subject LIKE @searchValue";
 
                 DataTable dataTable = new DataTable();
 
@@ -216,7 +215,7 @@ namespace Student_Information_System
         {
             if (dataGridViewTeachers.SelectedRows.Count > 0)
             {
-                // Seçili satırdaki verileri al
+                // take data from selected row
                 int selectedRowIndex = dataGridViewTeachers.SelectedRows[0].Index;
                 DataGridViewRow selectedRow = dataGridViewTeachers.Rows[selectedRowIndex];
 
@@ -228,44 +227,44 @@ namespace Student_Information_System
                 string subject = selectedRow.Cells["Column3"].Value.ToString();
                 string phoneNumber = selectedRow.Cells["Column4"].Value.ToString();
 
-                // Güncelleme sorgusu
+                // update query
                 string query = @"
-        UPDATE [SchoolDB].[dbo].[Teacher]
-        SET 
-            Name = @Name,
-            Surname = @Surname,
-            Subject = @Subject,
-            PhoneNumber = @PhoneNumber
-        WHERE 
-            TeacherID = @TeacherID";
+                    UPDATE [SchoolDB].[dbo].[Teacher]
+                    SET 
+                        Name = @Name,
+                        Surname = @Surname,
+                        Subject = @Subject,
+                        PhoneNumber = @PhoneNumber
+                    WHERE 
+                        TeacherID = @TeacherID";
 
                 try
                 {
-                    // SqlCommand ile sorguyu hazırla
+                    
                     using (SqlCommand command = new SqlCommand(query, connect))
                     {
-                        // Parametreleri ekle
+                        
                         command.Parameters.AddWithValue("@TeacherID", teacherId);
                         command.Parameters.AddWithValue("@Name", name);
                         command.Parameters.AddWithValue("@Surname", surname);
                         command.Parameters.AddWithValue("@Subject", subject);
                         command.Parameters.AddWithValue("@PhoneNumber", phoneNumber);
 
-                        // Bağlantıyı aç
+                        
                         if (connect.State == ConnectionState.Closed)
                         {
                             connect.Open();
                         }
 
-                        // Sorguyu çalıştır
+                        
                         int rowsAffected = command.ExecuteNonQuery();
 
-                        // Kullanıcıya sonucu bildir
+                        
                         if (rowsAffected > 0)
                         {
                             MessageBox.Show("Teacher updated successfully!");
 
-                            // DataGridView'i güncelle
+                            // update DataGridView
                             dataGridViewTeachers.Rows.Clear();
                             get_data();
                         }
@@ -281,7 +280,7 @@ namespace Student_Information_System
                 }
                 finally
                 {
-                    // Bağlantıyı kapat
+                    
                     if (connect.State == ConnectionState.Open)
                     {
                         connect.Close();

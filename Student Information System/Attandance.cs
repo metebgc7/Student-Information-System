@@ -34,12 +34,12 @@ namespace Student_Information_System
             string studentID = txtStudentID.Text.Trim();
             string date = txtDate.Text.Trim();
 
-            // Veritabanı bağlantısı kurma
+            
             using (SqlConnection conn = new SqlConnection(ConnString))
             {
                 conn.Open();
 
-                // StudentID kontrolü
+                // checck StudentID
                 string checkStudentQuery = "SELECT COUNT(*) FROM Student WHERE StudentID = @StudentID";
                 using (SqlCommand cmd = new SqlCommand(checkStudentQuery, conn))
                 {
@@ -48,7 +48,7 @@ namespace Student_Information_System
 
                     if (count > 0)
                     {
-                        // Kayıt ekleme
+                        // attendance record
                         string insertAttendanceQuery = "INSERT INTO Attendance (StudentID, Date) VALUES (@StudentID, @Date)";
                         using (SqlCommand insertCmd = new SqlCommand(insertAttendanceQuery, conn))
                         {

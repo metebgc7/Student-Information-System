@@ -177,7 +177,7 @@ namespace Student_Information_System
                 command = new SqlCommand(query, connect);
                 reader = command.ExecuteReader();
 
-                // addin attendance data in a dictionary
+                // adding attendance data in a dictionary
                 Dictionary<int, List<string>> attendanceData = new Dictionary<int, List<string>>();
                 while (reader.Read())
                 {
@@ -320,7 +320,7 @@ namespace Student_Information_System
                 command.Parameters.AddWithValue("@StudentID", studentId);
                 SqlDataReader reader = command.ExecuteReader();
 
-                // adding attendance data in a lise 
+                // adding attendance data in a list
                 List<string> attendanceDates = new List<string>();
                 while (reader.Read())
                 {

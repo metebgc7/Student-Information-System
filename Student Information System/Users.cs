@@ -70,7 +70,7 @@ namespace Student_Information_System
         {
             try
             {
-                // Define your query
+                // query
                 string query = "SELECT TOP (1000) [User ID], [Username], [Password] FROM [SchoolDB].[dbo].[Users]";
 
                 // Create a new DataTable to hold the query results
@@ -82,7 +82,7 @@ namespace Student_Information_System
                 adapter.Fill(dataTable);
 
 
-                // Bind the DataTable to the DataGridView
+                
                 foreach (DataRow row in dataTable.Rows)
                 {
                     dataGridViewUsers.Rows.Add(row["User ID"], row["Username"], row["Password"]);
@@ -106,14 +106,14 @@ namespace Student_Information_System
                 // Define the insert query
                 string query = "INSERT INTO [SchoolDB].[dbo].[Users] (Username, Password) VALUES (@Username, @Password)";
 
-                // Create a SqlCommand to execute the query
+                
                 using (SqlCommand command = new SqlCommand(query, connect))
                 {
                     // Add parameters to prevent SQL injection
                     command.Parameters.AddWithValue("@Username", username);
                     command.Parameters.AddWithValue("@Password", password);
 
-                    // Open the connection if it is not already open
+                    
                     if (connect.State == ConnectionState.Closed)
                     {
                         connect.Open();
@@ -127,7 +127,7 @@ namespace Student_Information_System
                     {
                         MessageBox.Show("User added successfully!");
 
-                        // Optionally, refresh the data in the DataGridView
+                        
                         dataGridViewUsers.Rows.Clear();
                         get_data();
                     }
@@ -139,12 +139,12 @@ namespace Student_Information_System
             }
             catch (Exception ex)
             {
-                // Handle any errors that may have occurred
+                
                 MessageBox.Show("An error occurred: " + ex.Message);
             }
             finally
             {
-                // Close the connection
+                
                 if (connect.State == ConnectionState.Open)
                 {
                     connect.Close();
@@ -177,7 +177,7 @@ namespace Student_Information_System
                             connect.Open();
                         }
 
-                        // Execute the query
+                        
                         int rowsAffected = command.ExecuteNonQuery();
 
                         // Inform the user about the result
@@ -185,7 +185,7 @@ namespace Student_Information_System
                         {
                             MessageBox.Show("User deleted successfully!");
 
-                            // Optionally, refresh the data in the DataGridView
+                            
                             dataGridViewUsers.Rows.Clear();
                             get_data();
                         }
@@ -197,12 +197,12 @@ namespace Student_Information_System
                 }
                 catch (Exception ex)
                 {
-                    // Handle any errors that may have occurred
+                   
                     MessageBox.Show("An error occurred: " + ex.Message);
                 }
                 finally
                 {
-                    // Close the connection
+                    
                     if (connect.State == ConnectionState.Open)
                     {
                         connect.Close();

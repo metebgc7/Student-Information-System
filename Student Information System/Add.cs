@@ -70,18 +70,18 @@ namespace Student_Information_System
 
         private void button2_Click(object sender, EventArgs e)
         {
-            // TextBox'lardan veriyi al
+            // data from textbox
             string productName = txtProductName.Text;
             decimal productPrice;
 
-            // Fiyatın geçerli bir decimal olduğundan emin olun
+            // check the decimal value
             if (!decimal.TryParse(txtPriceCanteen.Text, out productPrice))
             {
                 MessageBox.Show("Geçerli bir fiyat girin.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            // Veritabanına veriyi kaydet
+            // save data
             using (SqlConnection connection = new SqlConnection(ConnString))
             {
                 try
@@ -116,10 +116,10 @@ namespace Student_Information_System
 
         private void button4_Click(object sender, EventArgs e)
         {
-            // TextBox'lardan veriyi al
+            // data from textbox
             string className = txtClassName.Text;
 
-            // Veritabanına veriyi kaydet
+            // save data
             using (SqlConnection connection = new SqlConnection(ConnString))
             {
                 try
@@ -154,7 +154,7 @@ namespace Student_Information_System
 
         private void button3_Click(object sender, EventArgs e)
         {
-            // TextBox'lardan veriyi al
+            // data from textbox
             string teacherName = txtNameTeachers.Text;
             string teacherSurname = txtSurnameTeachers.Text;
             string teacherSubject = txtSubjectTeachers.Text;
@@ -163,7 +163,7 @@ namespace Student_Information_System
             string teacherPhoneNumber = txtPhoneNumberTeachers.Text;
             txtPhoneNumberTeachers.TextMaskFormat = MaskFormat.IncludePromptAndLiterals;
 
-            // Veritabanına veriyi kaydet
+            // save data
             using (SqlConnection connection = new SqlConnection(ConnString))
             {
                 try
@@ -206,13 +206,13 @@ namespace Student_Information_System
                 {
                     connection.Open();
 
-                    // comboBoxClass'tan seçilen sınıf ismine göre ClassID'yi almak için sorgu
+                    // take the classID choosen from combobox
                     string classQuery = "SELECT ClassID FROM Class WHERE ClassName = @className";
                     SqlCommand classCommand = new SqlCommand(classQuery, connection);
                     classCommand.Parameters.AddWithValue("@className", comboBoxClass.SelectedItem.ToString());
                     int classId = (int)classCommand.ExecuteScalar(); // ClassID'yi alıyoruz
 
-                    // Parent'ın var olup olmadığını kontrol etmek için sorgu
+                    // check the parent
                     string checkParentQuery = "SELECT ParentID FROM Parent WHERE phoneNumber = @phoneNumber";
                     SqlCommand checkParentCommand = new SqlCommand(checkParentQuery, connection);
                     checkParentCommand.Parameters.AddWithValue("@phoneNumber", maskedTextBoxPhoneNumber.Text);
@@ -221,27 +221,26 @@ namespace Student_Information_System
                     int parentId;
                     if (parentIdObj != null)
                     {
-                        // Parent mevcut, ParentID'yi al
+                        // take the parentID (there is parent)
                         parentId = (int)parentIdObj;
                     }
                     else
                     {
-                        // Parent mevcut değil, yeni Parent kaydı ekle ve ParentID'yi al
+                        // there is no parent, take the parent attributes and save
                         string parentQuery = "INSERT INTO Parent (name, surname, phoneNumber, email, address) OUTPUT INSERTED.ParentID VALUES (@name, @surname, @phoneNumber, @email, @address)";
                         SqlCommand parentCommand = new SqlCommand(parentQuery, connection);
 
-                        // Parent parametrelerini ekleyin
+                        // Parent parameters
                         parentCommand.Parameters.AddWithValue("@name", txtNameParent.Text);
                         parentCommand.Parameters.AddWithValue("@surname", txtSurnameParent.Text);
                         parentCommand.Parameters.AddWithValue("@phoneNumber", maskedTextBoxPhoneNumber.Text);
                         parentCommand.Parameters.AddWithValue("@email", txtEmail.Text);
                         parentCommand.Parameters.AddWithValue("@address", txtAddress.Text);
-
-                        // ParentID'yi almak için OUTPUT clause kullanıldı
+                        
                         parentId = (int)parentCommand.ExecuteScalar();
                     }
 
-                    // maskedTextBoxBirthDate değerini DateTime türüne dönüştürme
+                    //convertion for the datetime type
                     DateTime birthdate;
                     if (!DateTime.TryParse(maskedTextBoxBirthDate.Text, out birthdate))
                     {
@@ -249,20 +248,20 @@ namespace Student_Information_System
                         return;
                     }
 
-                    // Student tablosuna kayıt eklemek için sorgu
+                    // student table query
                     string studentQuery = "INSERT INTO Student (name, surname, gender, birthdate, student_tc, ClassID, ParentID) VALUES (@name, @surname, @gender, @birthdate, @student_tc, @classId, @parentId)";
                     using (SqlCommand studentCommand = new SqlCommand(studentQuery, connection))
                     {
-                        // Student parametrelerini ekleyin
+                    
                         studentCommand.Parameters.AddWithValue("@name", txtNameStudent.Text);
                         studentCommand.Parameters.AddWithValue("@surname", txtSurnameStudent.Text);
                         studentCommand.Parameters.AddWithValue("@gender", comboBoxGender.SelectedItem.ToString());
-                        studentCommand.Parameters.AddWithValue("@birthdate", birthdate); // DateTime türünde
+                        studentCommand.Parameters.AddWithValue("@birthdate", birthdate);
                         studentCommand.Parameters.AddWithValue("@student_tc", maskedTextBoxIdNo.Text);
                         studentCommand.Parameters.AddWithValue("@classId", classId);
                         studentCommand.Parameters.AddWithValue("@parentId", parentId);
 
-                        // Sorguyu çalıştırın
+                        
                         studentCommand.ExecuteNonQuery();
                     }
 

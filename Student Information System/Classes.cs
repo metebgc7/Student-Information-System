@@ -167,45 +167,45 @@ namespace Student_Information_System
         {
             if (dataGridViewClasses.SelectedRows.Count > 0)
             {
-                // Seçili satırdaki verileri al
+                // take datas from selected row
                 int selectedRowIndex = dataGridViewClasses.SelectedRows[0].Index;
                 DataGridViewRow selectedRow = dataGridViewClasses.Rows[selectedRowIndex];
 
                 int classId = Convert.ToInt32(selectedRow.Cells["Column1"].Value);
                 string className = selectedRow.Cells["Column2"].Value.ToString();
 
-                // Güncelleme sorgusu
+                // update query
                 string query = @"
-        UPDATE [SchoolDB].[dbo].[Class]
-        SET 
-            className = @ClassName
-        WHERE 
-            ClassID = @ClassID";
+                    UPDATE [SchoolDB].[dbo].[Class]
+                    SET 
+                        className = @ClassName
+                    WHERE 
+                        ClassID = @ClassID";
 
                 try
                 {
-                    // SqlCommand ile sorguyu hazırla
+                    // SqlCommand query
                     using (SqlCommand command = new SqlCommand(query, connect))
                     {
-                        // Parametreleri ekle
+                        // add parameters
                         command.Parameters.AddWithValue("@ClassID", classId);
                         command.Parameters.AddWithValue("@ClassName", className);
 
-                        // Bağlantıyı aç
+                        
                         if (connect.State == ConnectionState.Closed)
                         {
                             connect.Open();
                         }
 
-                        // Sorguyu çalıştır
+                        
                         int rowsAffected = command.ExecuteNonQuery();
 
-                        // Kullanıcıya sonucu bildir
+                        
                         if (rowsAffected > 0)
                         {
                             MessageBox.Show("Class updated successfully!");
 
-                            // DataGridView'i güncelle
+                            // update datagridview
                             dataGridViewClasses.Rows.Clear();
                             get_data();
                         }
@@ -221,7 +221,7 @@ namespace Student_Information_System
                 }
                 finally
                 {
-                    // Bağlantıyı kapat
+                    
                     if (connect.State == ConnectionState.Open)
                     {
                         connect.Close();

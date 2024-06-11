@@ -92,20 +92,20 @@ namespace Student_Information_System
             try
             {
                 string query = @"
-            SELECT 
-                s.StudentID, 
-                s.name, 
-                s.surname, 
-                c.className, 
-                s.gender, 
-                CONVERT(VARCHAR(10), s.birthdate, 104) as birthdate, 
-                s.student_tc
-            FROM 
-                [SchoolDB].[dbo].[Student] s
-            INNER JOIN 
-                [SchoolDB].[dbo].[Class] c
-            ON 
-                s.ClassID = c.ClassID";
+                    SELECT 
+                        s.StudentID, 
+                        s.name, 
+                        s.surname, 
+                        c.className, 
+                        s.gender, 
+                        CONVERT(VARCHAR(10), s.birthdate, 104) as birthdate, 
+                        s.student_tc
+                    FROM 
+                        [SchoolDB].[dbo].[Student] s
+                    INNER JOIN 
+                        [SchoolDB].[dbo].[Class] c
+                    ON 
+                        s.ClassID = c.ClassID";
 
                 DataTable dataTable = new DataTable();
 
@@ -192,24 +192,24 @@ namespace Student_Information_System
             try
             {
                 string query = @"
-                SELECT 
-                    s.StudentID, 
-                    s.name, 
-                    s.surname, 
-                    c.className, 
-                    s.gender, 
-                    s.birthdate, 
-                    s.student_tc
-                FROM 
-                    [SchoolDB].[dbo].[Student] s
-                INNER JOIN 
-                    [SchoolDB].[dbo].[Class] c
-                ON 
-                    s.ClassID = c.ClassID
-                WHERE 
-                    s.StudentID LIKE @searchValue OR
-                    s.name LIKE @searchValue OR
-                    s.surname LIKE @searchValue";
+                    SELECT 
+                        s.StudentID, 
+                        s.name, 
+                        s.surname, 
+                        c.className, 
+                        s.gender, 
+                        s.birthdate, 
+                        s.student_tc
+                    FROM 
+                        [SchoolDB].[dbo].[Student] s
+                    INNER JOIN 
+                        [SchoolDB].[dbo].[Class] c
+                    ON 
+                        s.ClassID = c.ClassID
+                    WHERE 
+                        s.StudentID LIKE @searchValue OR
+                        s.name LIKE @searchValue OR
+                        s.surname LIKE @searchValue";
 
                 DataTable dataTable = new DataTable();
 
@@ -241,7 +241,7 @@ namespace Student_Information_System
         {
             if (dataGridViewStudents.SelectedRows.Count > 0)
             {
-                // Seçili satırdaki verileri al
+                // take datas from selected row
                 int selectedRowIndex = dataGridViewStudents.SelectedRows[0].Index;
                 DataGridViewRow selectedRow = dataGridViewStudents.Rows[selectedRowIndex];
 
@@ -255,28 +255,28 @@ namespace Student_Information_System
                 string birthdate = selectedRow.Cells["Column5"].Value.ToString();
                 string studentTC = selectedRow.Cells["Column6"].Value.ToString();
 
-                // ClassID'yi almak için ClassName'i sorgula
+                // query for the class id
                 int classId = GetClassIDByClassName(className);
 
-                // Güncelleme sorgusu
+                // update query
                 string query = @"
-        UPDATE [SchoolDB].[dbo].[Student]
-        SET 
-            name = @Name,
-            surname = @Surname,
-            ClassID = @ClassID,
-            gender = @Gender,
-            birthdate = @Birthdate,
-            student_tc = @StudentTC
-        WHERE 
-            StudentID = @StudentID";
+                    UPDATE [SchoolDB].[dbo].[Student]
+                    SET 
+                        name = @Name,
+                        surname = @Surname,
+                        ClassID = @ClassID,
+                        gender = @Gender,
+                        birthdate = @Birthdate,
+                        student_tc = @StudentTC
+                    WHERE 
+                        StudentID = @StudentID";
 
                 try
                 {
-                    // SqlCommand ile sorguyu hazırla
+                    // SqlCommand for query
                     using (SqlCommand command = new SqlCommand(query, connect))
                     {
-                        // Parametreleri ekle
+                        
                         command.Parameters.AddWithValue("@StudentID", studentId);
                         command.Parameters.AddWithValue("@Name", name);
                         command.Parameters.AddWithValue("@Surname", surname);
@@ -285,21 +285,21 @@ namespace Student_Information_System
                         command.Parameters.AddWithValue("@Birthdate", Convert.ToDateTime(birthdate));
                         command.Parameters.AddWithValue("@StudentTC", studentTC);
 
-                        // Bağlantıyı aç
+                        
                         if (connect.State == ConnectionState.Closed)
                         {
                             connect.Open();
                         }
 
-                        // Sorguyu çalıştır
+                        
                         int rowsAffected = command.ExecuteNonQuery();
 
-                        // Kullanıcıya sonucu bildir
+                        
                         if (rowsAffected > 0)
                         {
                             MessageBox.Show("Student updated successfully!");
 
-                            // DataGridView'i güncelle
+                            // updaet DataGridView
                             dataGridViewStudents.Rows.Clear();
                             get_data();
                         }
@@ -315,7 +315,7 @@ namespace Student_Information_System
                 }
                 finally
                 {
-                    // Bağlantıyı kapat
+                    
                     if (connect.State == ConnectionState.Open)
                     {
                         connect.Close();
@@ -328,7 +328,7 @@ namespace Student_Information_System
             }
         }
 
-        // ClassName'e göre ClassID'yi almak için yardımcı metod
+        // check the class id by class name
         private int GetClassIDByClassName(string className)
         {
             int classId = 0;

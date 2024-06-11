@@ -72,7 +72,7 @@ namespace Student_Information_System
         {
             try
             {
-                // Define your query
+                
                 string query = "SELECT * FROM [SchoolDB].[dbo].[Canteen]";
 
                 // Create a new DataTable to hold the query results
@@ -130,7 +130,7 @@ namespace Student_Information_System
                         {
                             MessageBox.Show("Product deleted successfully!");
 
-                            // Optionally, refresh the data in the DataGridView
+                            // refresh the data in the DataGridView
                             dataGridViewCanteen.Rows.Clear();
                             get_data();
                         }
@@ -207,7 +207,7 @@ namespace Student_Information_System
         {
             if (dataGridViewCanteen.SelectedRows.Count > 0)
             {
-                // Seçili satırdaki verileri al
+                
                 int selectedRowIndex = dataGridViewCanteen.SelectedRows[0].Index;
                 DataGridViewRow selectedRow = dataGridViewCanteen.Rows[selectedRowIndex];
 
@@ -215,40 +215,40 @@ namespace Student_Information_System
                 string productName = selectedRow.Cells["Column2"].Value.ToString();
                 decimal productPrice = Convert.ToDecimal(selectedRow.Cells["Column3"].Value);
 
-                // Güncelleme sorgusu
+                // update query
                 string query = @"
-        UPDATE [SchoolDB].[dbo].[Canteen]
-        SET 
-            product_name = @ProductName,
-            product_price = @ProductPrice
-        WHERE 
-            ProductID = @ProductID";
+                    UPDATE [SchoolDB].[dbo].[Canteen]
+                    SET 
+                        product_name = @ProductName,
+                        product_price = @ProductPrice
+                    WHERE 
+                        ProductID = @ProductID";
 
                 try
                 {
-                    // SqlCommand ile sorguyu hazırla
+                    // SqlCommand query
                     using (SqlCommand command = new SqlCommand(query, connect))
                     {
-                        // Parametreleri ekle
+                        // add parameters
                         command.Parameters.AddWithValue("@ProductID", productId);
                         command.Parameters.AddWithValue("@ProductName", productName);
                         command.Parameters.AddWithValue("@ProductPrice", productPrice);
 
-                        // Bağlantıyı aç
+                        
                         if (connect.State == ConnectionState.Closed)
                         {
                             connect.Open();
                         }
 
-                        // Sorguyu çalıştır
+                        // execution
                         int rowsAffected = command.ExecuteNonQuery();
 
-                        // Kullanıcıya sonucu bildir
+                        
                         if (rowsAffected > 0)
                         {
                             MessageBox.Show("Product updated successfully!");
 
-                            // DataGridView'i güncelle
+                            // DataGridView update
                             dataGridViewCanteen.Rows.Clear();
                             get_data();
                         }
@@ -264,7 +264,7 @@ namespace Student_Information_System
                 }
                 finally
                 {
-                    // Bağlantıyı kapat
+                    
                     if (connect.State == ConnectionState.Open)
                     {
                         connect.Close();

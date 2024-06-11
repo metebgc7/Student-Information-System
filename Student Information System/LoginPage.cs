@@ -40,7 +40,7 @@ namespace Student_Information_System
         {
             try
             {
-                // Open the connection if it is not already open
+                // Open the connection 
                 if (connect.State == ConnectionState.Closed)
                     connect.Open();
 
